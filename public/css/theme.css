@@ -23140,7 +23140,7 @@ table.dataTable.no-footer {
 
 .dataTablesCard {
   background-color: #fff;
-  border-radius: 1.75rem; }
+  border-radius: 12px; }
   .dataTablesCard.border-no td {
     border-top: 0 !important; }
 

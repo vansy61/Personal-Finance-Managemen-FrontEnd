@@ -7,7 +7,7 @@ function Footer() {
           <a href="#" target="_blank">
             C02 Codegym HN x ĐN
           </a>{" "}
-          2022
+          2024
         </p>
       </div>
     </div>
