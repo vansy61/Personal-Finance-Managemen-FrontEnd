@@ -12,6 +12,8 @@
 
 .wrapper-content {
     display: flex;
+    z-index: 999;
+    position: relative;
 }
 
 .user-con {
@@ -44,4 +46,15 @@
     height: 100%;
     background: #222260;
     border-radius: 0 10px 10px 0;
+}
+
+.invoice-card {
+    transition: 0.3s;
+}
+
+.invoice-card:hover {
+    transform: translateY(-10px);
+}
+.login-page {
+    height: 100vh;
 }

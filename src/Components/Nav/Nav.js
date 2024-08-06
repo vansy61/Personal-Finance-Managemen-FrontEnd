@@ -4,7 +4,7 @@ function Nav() {
   return (
     <div className="dlabnav box-style">
       <div className="nav-header">
-        <a href="index.html" className="brand-logo">
+        <a href="/" className="brand-logo">
           <svg className="logo-abbr" width={53} height={53} viewBox="0 0 53 53">
             <path
               d="M21.6348 8.04782C21.6348 5.1939 23.9566 2.87204 26.8105 2.87204H28.6018L28.0614 1.37003C27.7576 0.525342 26.9616 0 26.1132 0C25.8781 0 25.639 0.0403711 25.4052 0.125461L7.3052 6.7133C6.22916 7.105 5.67535 8.29574 6.06933 9.37096L7.02571 11.9814H21.6348V8.04782Z"
@@ -41,7 +41,7 @@ function Nav() {
 
           <li>
             <NavLink to={"/"} className="has-arrow ai-icon">
-              <i className="fa-solid fa-chart-line"></i>
+              <i className="fa-solid fa-house"></i>
               <span className="nav-text">Tổng Quan</span>
             </NavLink>
           </li>
@@ -53,49 +53,40 @@ function Nav() {
             </NavLink>
           </li>
           <li>
-            <a
-              className="has-arrow ai-icon"
-              href="#"
-            >
+            <NavLink to={"/transactions"} className="has-arrow ai-icon">
               <i className="fa-solid fa-money-bill-transfer"></i>
               <span className="nav-text">Sổ Giao Dịch</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              className="has-arrow ai-icon"
-              href="#"
-            >
+            <NavLink to={"/budgets"} className="has-arrow ai-icon">
               <i className="fa-solid fa-coins"></i>
               <span className="nav-text">Ngân Sách</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              className="has-arrow ai-icon"
-              href="#"
-            >
+            <NavLink to={"/categories"} className="has-arrow ai-icon">
               <i className="fa-solid fa-layer-group"></i>
               <span className="nav-text">Danh Mục</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              className="has-arrow ai-icon"
-              href="#"
-            >
+            <NavLink to={"/reports"} className="has-arrow ai-icon">
+              <i className="fa-solid fa-chart-line"></i>
+              <span className="nav-text">Báo cáo</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/profile"} className="has-arrow ai-icon">
               <i className="fa-solid fa-user"></i>
               <span className="nav-text">Tài Khoản</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              className="has-arrow ai-icon"
-              href="#"
-            >
+            <NavLink to={"/setting"} className="has-arrow ai-icon">
               <i className="fa-solid fa-gear"></i>
               <span className="nav-text">Cài Đặt</span>
-            </a>
+            </NavLink>
           </li>
 
         </ul>

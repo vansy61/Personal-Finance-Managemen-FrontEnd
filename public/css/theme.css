@@ -230,7 +230,7 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: #222260;
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -251,7 +251,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #000; }
+  color: #222260; }
 
 h1, .h1 {
   font-size: calc(1.35rem + 1.2vw); }
@@ -1545,78 +1545,78 @@ progress {
 .table-primary {
   --bs-table-bg: #def5f3;
   --bs-table-striped-bg: #d3e9e7;
-  --bs-table-striped-color: #000;
+  --bs-table-striped-color: #222260;
   --bs-table-active-bg: #c8dddb;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #cde3e1;
-  --bs-table-hover-color: #000;
-  color: #000;
+  --bs-table-hover-color: #222260;
+  color: #222260;
   border-color: #c8dddb; }
 
 .table-secondary {
   --bs-table-bg: #e2ecf1;
   --bs-table-striped-bg: #d7e0e5;
-  --bs-table-striped-color: #000;
+  --bs-table-striped-color: #222260;
   --bs-table-active-bg: #cbd4d9;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #d1dadf;
-  --bs-table-hover-color: #000;
-  color: #000;
+  --bs-table-hover-color: #222260;
+  color: #222260;
   border-color: #cbd4d9; }
 
 .table-success {
   --bs-table-bg: #e1f9e0;
   --bs-table-striped-bg: #d6edd5;
-  --bs-table-striped-color: #000;
+  --bs-table-striped-color: #222260;
   --bs-table-active-bg: #cbe0ca;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #d0e6cf;
-  --bs-table-hover-color: #000;
-  color: #000;
+  --bs-table-hover-color: #222260;
+  color: #222260;
   border-color: #cbe0ca; }
 
 .table-info {
   --bs-table-bg: #f0e8f6;
   --bs-table-striped-bg: #e4dcea;
-  --bs-table-striped-color: #000;
+  --bs-table-striped-color: #222260;
   --bs-table-active-bg: #d8d1dd;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #ded7e4;
-  --bs-table-hover-color: #000;
-  color: #000;
+  --bs-table-hover-color: #222260;
+  color: #222260;
   border-color: #d8d1dd; }
 
 .table-warning {
   --bs-table-bg: #ffeddd;
   --bs-table-striped-bg: #f2e1d2;
-  --bs-table-striped-color: #000;
+  --bs-table-striped-color: #222260;
   --bs-table-active-bg: #e6d5c7;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #ecdbcc;
-  --bs-table-hover-color: #000;
-  color: #000;
+  --bs-table-hover-color: #222260;
+  color: #222260;
   border-color: #e6d5c7; }
 
 .table-danger {
   --bs-table-bg: #fdd5dc;
   --bs-table-striped-bg: #f0cad1;
-  --bs-table-striped-color: #000;
+  --bs-table-striped-color: #222260;
   --bs-table-active-bg: #e4c0c6;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #eac5cc;
-  --bs-table-hover-color: #000;
-  color: #000;
+  --bs-table-hover-color: #222260;
+  color: #222260;
   border-color: #e4c0c6; }
 
 .table-light {
   --bs-table-bg: #c8c8c8;
   --bs-table-striped-bg: #bebebe;
-  --bs-table-striped-color: #000;
+  --bs-table-striped-color: #222260;
   --bs-table-active-bg: #b4b4b4;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #b9b9b9;
-  --bs-table-hover-color: #000;
-  color: #000;
+  --bs-table-hover-color: #222260;
+  color: #222260;
   border-color: #b4b4b4; }
 
 .table-dark {
@@ -1624,9 +1624,9 @@ progress {
   --bs-table-striped-bg: #757575;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #7d7d7d;
-  --bs-table-active-color: #000;
+  --bs-table-active-color: #222260;
   --bs-table-hover-bg: #797979;
-  --bs-table-hover-color: #000;
+  --bs-table-hover-color: #222260;
   color: #fff;
   border-color: #7d7d7d; }
 
@@ -2149,7 +2149,7 @@ textarea.form-control {
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
   font-size: 0.76563rem;
-  color: #000;
+  color: #222260;
   background-color: rgba(104, 227, 101, 0.9);
   border-radius: 0.75rem; }
   @media (min-width: 1200px) {
@@ -2225,7 +2225,7 @@ textarea.form-control {
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
   font-size: 0.76563rem;
-  color: #000;
+  color: #222260;
   background-color: rgba(247, 43, 80, 0.9);
   border-radius: 0.75rem; }
   @media (min-width: 1200px) {
@@ -2315,22 +2315,22 @@ textarea.form-control {
     opacity: 0.65; }
 
 .btn-primary {
-  color: #000;
+  color: #222260;
   background-color: #5bcfc5;
   border-color: #5bcfc5; }
   .btn-primary:hover {
-    color: #000;
+    color: #222260;
     background-color: #74d6ce;
     border-color: #6bd4cb; }
   .btn-check:focus + .btn-primary, .btn-primary:focus {
-    color: #000;
+    color: #222260;
     background-color: #74d6ce;
     border-color: #6bd4cb;
     box-shadow: 0 0 0 0.25rem rgba(77, 176, 167, 0.5); }
   .btn-check:checked + .btn-primary,
   .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active,
   .show > .btn-primary.dropdown-toggle {
-    color: #000;
+    color: #222260;
     background-color: #7cd9d1;
     border-color: #6bd4cb; }
     .btn-check:checked + .btn-primary:focus,
@@ -2338,27 +2338,27 @@ textarea.form-control {
     .show > .btn-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(77, 176, 167, 0.5); }
   .btn-primary:disabled, .btn-primary.disabled {
-    color: #000;
+    color: #222260;
     background-color: #5bcfc5;
     border-color: #5bcfc5; }
 
 .btn-secondary {
-  color: #000;
+  color: #222260;
   background-color: #709fba;
   border-color: #709fba; }
   .btn-secondary:hover {
-    color: #000;
+    color: #222260;
     background-color: #85adc4;
     border-color: #7ea9c1; }
   .btn-check:focus + .btn-secondary, .btn-secondary:focus {
-    color: #000;
+    color: #222260;
     background-color: #85adc4;
     border-color: #7ea9c1;
     box-shadow: 0 0 0 0.25rem rgba(95, 135, 158, 0.5); }
   .btn-check:checked + .btn-secondary,
   .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active,
   .show > .btn-secondary.dropdown-toggle {
-    color: #000;
+    color: #222260;
     background-color: #8db2c8;
     border-color: #7ea9c1; }
     .btn-check:checked + .btn-secondary:focus,
@@ -2366,27 +2366,27 @@ textarea.form-control {
     .show > .btn-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(95, 135, 158, 0.5); }
   .btn-secondary:disabled, .btn-secondary.disabled {
-    color: #000;
+    color: #222260;
     background-color: #709fba;
     border-color: #709fba; }
 
 .btn-success {
-  color: #000;
+  color: #222260;
   background-color: #68e365;
   border-color: #68e365; }
   .btn-success:hover {
-    color: #000;
+    color: #222260;
     background-color: #7fe77c;
     border-color: #77e674; }
   .btn-check:focus + .btn-success, .btn-success:focus {
-    color: #000;
+    color: #222260;
     background-color: #7fe77c;
     border-color: #77e674;
     box-shadow: 0 0 0 0.25rem rgba(88, 193, 86, 0.5); }
   .btn-check:checked + .btn-success,
   .btn-check:active + .btn-success, .btn-success:active, .btn-success.active,
   .show > .btn-success.dropdown-toggle {
-    color: #000;
+    color: #222260;
     background-color: #86e984;
     border-color: #77e674; }
     .btn-check:checked + .btn-success:focus,
@@ -2394,27 +2394,27 @@ textarea.form-control {
     .show > .btn-success.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(88, 193, 86, 0.5); }
   .btn-success:disabled, .btn-success.disabled {
-    color: #000;
+    color: #222260;
     background-color: #68e365;
     border-color: #68e365; }
 
 .btn-info {
-  color: #000;
+  color: #222260;
   background-color: #b48dd3;
   border-color: #b48dd3; }
   .btn-info:hover {
-    color: #000;
+    color: #222260;
     background-color: #bf9eda;
     border-color: #bc98d7; }
   .btn-check:focus + .btn-info, .btn-info:focus {
-    color: #000;
+    color: #222260;
     background-color: #bf9eda;
     border-color: #bc98d7;
     box-shadow: 0 0 0 0.25rem rgba(153, 120, 179, 0.5); }
   .btn-check:checked + .btn-info,
   .btn-check:active + .btn-info, .btn-info:active, .btn-info.active,
   .show > .btn-info.dropdown-toggle {
-    color: #000;
+    color: #222260;
     background-color: #c3a4dc;
     border-color: #bc98d7; }
     .btn-check:checked + .btn-info:focus,
@@ -2422,27 +2422,27 @@ textarea.form-control {
     .show > .btn-info.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(153, 120, 179, 0.5); }
   .btn-info:disabled, .btn-info.disabled {
-    color: #000;
+    color: #222260;
     background-color: #b48dd3;
     border-color: #b48dd3; }
 
 .btn-warning {
-  color: #000;
+  color: #222260;
   background-color: #ffa755;
   border-color: #ffa755; }
   .btn-warning:hover {
-    color: #000;
+    color: #222260;
     background-color: #ffb46f;
     border-color: #ffb066; }
   .btn-check:focus + .btn-warning, .btn-warning:focus {
-    color: #000;
+    color: #222260;
     background-color: #ffb46f;
     border-color: #ffb066;
     box-shadow: 0 0 0 0.25rem rgba(217, 142, 72, 0.5); }
   .btn-check:checked + .btn-warning,
   .btn-check:active + .btn-warning, .btn-warning:active, .btn-warning.active,
   .show > .btn-warning.dropdown-toggle {
-    color: #000;
+    color: #222260;
     background-color: #ffb977;
     border-color: #ffb066; }
     .btn-check:checked + .btn-warning:focus,
@@ -2450,27 +2450,27 @@ textarea.form-control {
     .show > .btn-warning.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(217, 142, 72, 0.5); }
   .btn-warning:disabled, .btn-warning.disabled {
-    color: #000;
+    color: #222260;
     background-color: #ffa755;
     border-color: #ffa755; }
 
 .btn-danger {
-  color: #000;
+  color: #222260;
   background-color: #f72b50;
   border-color: #f72b50; }
   .btn-danger:hover {
-    color: #000;
+    color: #222260;
     background-color: #f84b6a;
     border-color: #f84062; }
   .btn-check:focus + .btn-danger, .btn-danger:focus {
-    color: #000;
+    color: #222260;
     background-color: #f84b6a;
     border-color: #f84062;
     box-shadow: 0 0 0 0.25rem rgba(210, 37, 68, 0.5); }
   .btn-check:checked + .btn-danger,
   .btn-check:active + .btn-danger, .btn-danger:active, .btn-danger.active,
   .show > .btn-danger.dropdown-toggle {
-    color: #000;
+    color: #222260;
     background-color: #f95573;
     border-color: #f84062; }
     .btn-check:checked + .btn-danger:focus,
@@ -2478,27 +2478,27 @@ textarea.form-control {
     .show > .btn-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(210, 37, 68, 0.5); }
   .btn-danger:disabled, .btn-danger.disabled {
-    color: #000;
+    color: #222260;
     background-color: #f72b50;
     border-color: #f72b50; }
 
 .btn-light {
-  color: #000;
+  color: #222260;
   background-color: #c8c8c8;
   border-color: #c8c8c8; }
   .btn-light:hover {
-    color: #000;
+    color: #222260;
     background-color: #d0d0d0;
     border-color: #cecece; }
   .btn-check:focus + .btn-light, .btn-light:focus {
-    color: #000;
+    color: #222260;
     background-color: #d0d0d0;
     border-color: #cecece;
     box-shadow: 0 0 0 0.25rem rgba(170, 170, 170, 0.5); }
   .btn-check:checked + .btn-light,
   .btn-check:active + .btn-light, .btn-light:active, .btn-light.active,
   .show > .btn-light.dropdown-toggle {
-    color: #000;
+    color: #222260;
     background-color: lightgray;
     border-color: #cecece; }
     .btn-check:checked + .btn-light:focus,
@@ -2506,7 +2506,7 @@ textarea.form-control {
     .show > .btn-light.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.25rem rgba(170, 170, 170, 0.5); }
   .btn-light:disabled, .btn-light.disabled {
-    color: #000;
+    color: #222260;
     background-color: #c8c8c8;
     border-color: #c8c8c8; }
 
@@ -2542,14 +2542,14 @@ textarea.form-control {
   color: #5bcfc5;
   border-color: #5bcfc5; }
   .btn-outline-primary:hover {
-    color: #000;
+    color: #222260;
     background-color: #5bcfc5;
     border-color: #5bcfc5; }
   .btn-check:focus + .btn-outline-primary, .btn-outline-primary:focus {
     box-shadow: 0 0 0 0.25rem rgba(91, 207, 197, 0.5); }
   .btn-check:checked + .btn-outline-primary,
   .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show {
-    color: #000;
+    color: #222260;
     background-color: #5bcfc5;
     border-color: #5bcfc5; }
     .btn-check:checked + .btn-outline-primary:focus,
@@ -2563,14 +2563,14 @@ textarea.form-control {
   color: #709fba;
   border-color: #709fba; }
   .btn-outline-secondary:hover {
-    color: #000;
+    color: #222260;
     background-color: #709fba;
     border-color: #709fba; }
   .btn-check:focus + .btn-outline-secondary, .btn-outline-secondary:focus {
     box-shadow: 0 0 0 0.25rem rgba(112, 159, 186, 0.5); }
   .btn-check:checked + .btn-outline-secondary,
   .btn-check:active + .btn-outline-secondary, .btn-outline-secondary:active, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show {
-    color: #000;
+    color: #222260;
     background-color: #709fba;
     border-color: #709fba; }
     .btn-check:checked + .btn-outline-secondary:focus,
@@ -2584,14 +2584,14 @@ textarea.form-control {
   color: #68e365;
   border-color: #68e365; }
   .btn-outline-success:hover {
-    color: #000;
+    color: #222260;
     background-color: #68e365;
     border-color: #68e365; }
   .btn-check:focus + .btn-outline-success, .btn-outline-success:focus {
     box-shadow: 0 0 0 0.25rem rgba(104, 227, 101, 0.5); }
   .btn-check:checked + .btn-outline-success,
   .btn-check:active + .btn-outline-success, .btn-outline-success:active, .btn-outline-success.active, .btn-outline-success.dropdown-toggle.show {
-    color: #000;
+    color: #222260;
     background-color: #68e365;
     border-color: #68e365; }
     .btn-check:checked + .btn-outline-success:focus,
@@ -2605,14 +2605,14 @@ textarea.form-control {
   color: #b48dd3;
   border-color: #b48dd3; }
   .btn-outline-info:hover {
-    color: #000;
+    color: #222260;
     background-color: #b48dd3;
     border-color: #b48dd3; }
   .btn-check:focus + .btn-outline-info, .btn-outline-info:focus {
     box-shadow: 0 0 0 0.25rem rgba(180, 141, 211, 0.5); }
   .btn-check:checked + .btn-outline-info,
   .btn-check:active + .btn-outline-info, .btn-outline-info:active, .btn-outline-info.active, .btn-outline-info.dropdown-toggle.show {
-    color: #000;
+    color: #222260;
     background-color: #b48dd3;
     border-color: #b48dd3; }
     .btn-check:checked + .btn-outline-info:focus,
@@ -2626,14 +2626,14 @@ textarea.form-control {
   color: #ffa755;
   border-color: #ffa755; }
   .btn-outline-warning:hover {
-    color: #000;
+    color: #222260;
     background-color: #ffa755;
     border-color: #ffa755; }
   .btn-check:focus + .btn-outline-warning, .btn-outline-warning:focus {
     box-shadow: 0 0 0 0.25rem rgba(255, 167, 85, 0.5); }
   .btn-check:checked + .btn-outline-warning,
   .btn-check:active + .btn-outline-warning, .btn-outline-warning:active, .btn-outline-warning.active, .btn-outline-warning.dropdown-toggle.show {
-    color: #000;
+    color: #222260;
     background-color: #ffa755;
     border-color: #ffa755; }
     .btn-check:checked + .btn-outline-warning:focus,
@@ -2647,14 +2647,14 @@ textarea.form-control {
   color: #f72b50;
   border-color: #f72b50; }
   .btn-outline-danger:hover {
-    color: #000;
+    color: #222260;
     background-color: #f72b50;
     border-color: #f72b50; }
   .btn-check:focus + .btn-outline-danger, .btn-outline-danger:focus {
     box-shadow: 0 0 0 0.25rem rgba(247, 43, 80, 0.5); }
   .btn-check:checked + .btn-outline-danger,
   .btn-check:active + .btn-outline-danger, .btn-outline-danger:active, .btn-outline-danger.active, .btn-outline-danger.dropdown-toggle.show {
-    color: #000;
+    color: #222260;
     background-color: #f72b50;
     border-color: #f72b50; }
     .btn-check:checked + .btn-outline-danger:focus,
@@ -2668,14 +2668,14 @@ textarea.form-control {
   color: #c8c8c8;
   border-color: #c8c8c8; }
   .btn-outline-light:hover {
-    color: #000;
+    color: #222260;
     background-color: #c8c8c8;
     border-color: #c8c8c8; }
   .btn-check:focus + .btn-outline-light, .btn-outline-light:focus {
     box-shadow: 0 0 0 0.25rem rgba(200, 200, 200, 0.5); }
   .btn-check:checked + .btn-outline-light,
   .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show {
-    color: #000;
+    color: #222260;
     background-color: #c8c8c8;
     border-color: #c8c8c8; }
     .btn-check:checked + .btn-outline-light:focus,
@@ -4265,13 +4265,13 @@ textarea.form-control {
   width: 1em;
   height: 1em;
   padding: 0.25em 0.25em;
-  color: #000;
+  color: #222260;
   background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
   border: 0;
   border-radius: 0.75rem;
   opacity: 0.5; }
   .btn-close:hover {
-    color: #000;
+    color: #222260;
     text-decoration: none;
     opacity: 0.75; }
   .btn-close:focus {
@@ -4386,7 +4386,7 @@ textarea.form-control {
   z-index: 1050;
   width: 100vw;
   height: 100vh;
-  background-color: #000; }
+  background-color: #222260; }
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
@@ -4593,7 +4593,7 @@ textarea.form-control {
     .bs-tooltip-top .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
       top: -1px;
       border-width: 0.4rem 0.4rem 0;
-      border-top-color: #000; }
+      border-top-color: #222260; }
 
 .bs-tooltip-end, .bs-tooltip-auto[data-popper-placement^="right"] {
   padding: 0 0.4rem; }
@@ -4604,7 +4604,7 @@ textarea.form-control {
     .bs-tooltip-end .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
       right: -1px;
       border-width: 0.4rem 0.4rem 0.4rem 0;
-      border-right-color: #000; }
+      border-right-color: #222260; }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[data-popper-placement^="bottom"] {
   padding: 0.4rem 0; }
@@ -4613,7 +4613,7 @@ textarea.form-control {
     .bs-tooltip-bottom .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
       bottom: -1px;
       border-width: 0 0.4rem 0.4rem;
-      border-bottom-color: #000; }
+      border-bottom-color: #222260; }
 
 .bs-tooltip-start, .bs-tooltip-auto[data-popper-placement^="left"] {
   padding: 0 0.4rem; }
@@ -4624,14 +4624,14 @@ textarea.form-control {
     .bs-tooltip-start .tooltip-arrow::before, .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
       left: -1px;
       border-width: 0.4rem 0 0.4rem 0.4rem;
-      border-left-color: #000; }
+      border-left-color: #222260; }
 
 .tooltip-inner {
   max-width: 200px;
   padding: 0.25rem 0.5rem;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #222260;
   border-radius: 0.75rem; }
 
 .popover {
@@ -4738,7 +4738,7 @@ textarea.form-control {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 0.875rem;
-  color: #000;
+  color: #222260;
   background-color: #f0f0f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top-left-radius: calc(0.3rem - 1px);
@@ -4922,10 +4922,10 @@ textarea.form-control {
   filter: invert(1) grayscale(100); }
 
 .carousel-dark .carousel-indicators [data-bs-target] {
-  background-color: #000; }
+  background-color: #222260; }
 
 .carousel-dark .carousel-caption {
-  color: #000; }
+  color: #222260; }
 
 @keyframes spinner-border {
   to {
@@ -4995,7 +4995,7 @@ textarea.form-control {
   z-index: 1040;
   width: 100vw;
   height: 100vh;
-  background-color: #000; }
+  background-color: #222260; }
   .offcanvas-backdrop.fade {
     opacity: 0; }
   .offcanvas-backdrop.show {
@@ -8763,7 +8763,7 @@ label {
   position: relative;
   display: inline-block;
   font-size: 40px;
-  color: #000;
+  color: #222260;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i)); }
@@ -8871,7 +8871,7 @@ label {
     margin-top: 15px;
     max-width: 140px;
     font-size: 38px;
-    color: #000; }
+    color: #222260; }
     [data-theme-version="dark"] .nav-header .brand-title {
       background-position: 0 120%; }
   @media only screen and (max-width: 767px) {
@@ -9731,7 +9731,7 @@ svg.pulse-svg {
             padding-left: 10px; } }
         .dlabnav .header-profile > a.nav-link .header-info span {
           font-size: 16px;
-          color: #000;
+          color: #222260;
           display: block;
           margin-bottom: 5px;
           font-weight: 600; }
@@ -10562,7 +10562,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #000;
+    color: #222260;
     background: #fff;
     margin: 0px 0px 0px 0px; }
   .sidebar-right .tab-content {
@@ -10875,7 +10875,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     height: 40px; }
   .chatbox .user_info span {
     font-size: 15px;
-    color: #000;
+    color: #222260;
     display: block;
     font-weight: 500;
     line-height: 1;
@@ -10913,7 +10913,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #f6f6f6;
     padding: 4px 1rem;
     font-weight: 700;
-    color: #000;
+    color: #222260;
     position: sticky;
     top: 0;
     z-index: 1; }
@@ -11113,7 +11113,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     margin-bottom: 20px; }
     .dlab-demo-panel .dlab-demo-header h4, .dlab-demo-panel .dlab-demo-header .h4 {
       margin-bottom: 0;
-      color: #000; }
+      color: #222260; }
   .dlab-demo-panel .dlab-demo-bx {
     height: 200px;
     overflow: hidden;
@@ -11339,7 +11339,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_2"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_2"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_2"] .dropdown-menu {
     background: #8540f5; }
@@ -11375,7 +11375,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"] .svg-title-path {
@@ -11393,7 +11393,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -11419,11 +11419,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -11438,14 +11438,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #5b0cdd;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -11453,7 +11453,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -11476,7 +11476,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #5b0cdd;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_2"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -11490,7 +11490,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_2"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_3"][data-theme-version="dark"],
 [data-sibebarbg="color_3"] {
@@ -11634,7 +11634,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_3"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_3"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_3"] .dropdown-menu {
     background: #82dbd3; }
@@ -11670,7 +11670,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"] .svg-title-path {
@@ -11688,7 +11688,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -11714,11 +11714,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -11733,14 +11733,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #47c9be;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -11748,7 +11748,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -11771,7 +11771,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #47c9be;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_3"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -11785,7 +11785,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_3"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_4"][data-theme-version="dark"],
 [data-sibebarbg="color_4"] {
@@ -11929,7 +11929,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_4"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_4"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_4"] .dropdown-menu {
     background: #6408d6; }
@@ -11965,7 +11965,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"] .svg-title-path {
@@ -11983,7 +11983,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -12009,11 +12009,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -12028,14 +12028,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #42058c;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -12043,7 +12043,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -12066,7 +12066,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #42058c;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_4"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -12080,7 +12080,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_4"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_5"][data-theme-version="dark"],
 [data-sibebarbg="color_5"] {
@@ -12224,7 +12224,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_5"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_5"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_5"] .dropdown-menu {
     background: #e4606d; }
@@ -12260,7 +12260,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"] .svg-title-path {
@@ -12278,7 +12278,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -12304,11 +12304,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -12323,14 +12323,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #d32535;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -12338,7 +12338,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -12361,7 +12361,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #d32535;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_5"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -12375,7 +12375,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_5"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_6"][data-theme-version="dark"],
 [data-sibebarbg="color_6"] {
@@ -12519,7 +12519,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_6"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_6"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_6"] .dropdown-menu {
     background: #fd9a47; }
@@ -12555,7 +12555,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"] .svg-title-path {
@@ -12573,7 +12573,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -12599,11 +12599,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -12618,14 +12618,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #f57102;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -12633,7 +12633,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -12656,7 +12656,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #f57102;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_6"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -12670,7 +12670,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_6"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_7"][data-theme-version="dark"],
 [data-sibebarbg="color_7"] {
@@ -12814,7 +12814,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_7"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_7"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_7"] .dropdown-menu {
     background: #ffce3a; }
@@ -12850,7 +12850,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"] .svg-title-path {
@@ -12868,7 +12868,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -12894,11 +12894,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -12913,14 +12913,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #edb100;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -12928,7 +12928,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -12951,7 +12951,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #edb100;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_7"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -12965,7 +12965,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_7"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_8"][data-theme-version="dark"],
 [data-sibebarbg="color_8"] {
@@ -13109,7 +13109,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_8"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_8"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_8"] .dropdown-menu {
     background: white; }
@@ -13145,7 +13145,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"] .svg-title-path {
@@ -13163,7 +13163,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -13189,11 +13189,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -13208,14 +13208,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #f2f2f2;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -13223,7 +13223,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -13246,7 +13246,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #f2f2f2;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_8"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -13260,7 +13260,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_8"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_9"][data-theme-version="dark"],
 [data-sibebarbg="color_9"] {
@@ -13404,7 +13404,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_9"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_9"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_9"] .dropdown-menu {
     background: #3ce0af; }
@@ -13440,7 +13440,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"] .svg-title-path {
@@ -13458,7 +13458,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -13484,11 +13484,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -13503,14 +13503,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #1cb386;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -13518,7 +13518,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -13541,7 +13541,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #1cb386;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_9"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -13555,7 +13555,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_9"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_10"][data-theme-version="dark"],
 [data-sibebarbg="color_10"] {
@@ -13699,7 +13699,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_10"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_10"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_10"] .dropdown-menu {
     background: #1fc8e3; }
@@ -13735,7 +13735,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"] .svg-title-path {
@@ -13753,7 +13753,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -13779,11 +13779,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -13798,14 +13798,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #148ea1;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -13813,7 +13813,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -13836,7 +13836,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #148ea1;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_10"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -13850,7 +13850,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_10"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_11"][data-theme-version="dark"],
 [data-sibebarbg="color_11"] {
@@ -13994,7 +13994,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_11"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_11"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_11"] .dropdown-menu {
     background: #aa7ea5; }
@@ -14030,7 +14030,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"] .svg-title-path {
@@ -14048,7 +14048,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -14074,11 +14074,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -14093,14 +14093,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #85577f;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -14108,7 +14108,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -14131,7 +14131,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #85577f;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_11"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -14145,7 +14145,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_11"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_12"][data-theme-version="dark"],
 [data-sibebarbg="color_12"] {
@@ -14289,7 +14289,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_12"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_12"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_12"] .dropdown-menu {
     background: #4b545c; }
@@ -14325,7 +14325,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"] .svg-title-path {
@@ -14343,7 +14343,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -14369,11 +14369,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -14388,14 +14388,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #292d32;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -14403,7 +14403,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -14426,7 +14426,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #292d32;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_12"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -14440,7 +14440,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_12"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_13"][data-theme-version="dark"],
 [data-sibebarbg="color_13"] {
@@ -14584,7 +14584,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_13"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_13"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_13"] .dropdown-menu {
     background: #444444; }
@@ -14620,7 +14620,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"] .svg-title-path {
@@ -14638,7 +14638,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -14664,11 +14664,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -14683,14 +14683,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #1d1d1d;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -14698,7 +14698,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -14721,7 +14721,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #1d1d1d;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_13"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -14735,7 +14735,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_13"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_14"][data-theme-version="dark"],
 [data-sibebarbg="color_14"] {
@@ -14879,7 +14879,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_14"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_14"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_14"] .dropdown-menu {
     background: #76a4f2; }
@@ -14915,7 +14915,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"] .svg-title-path {
@@ -14933,7 +14933,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -14959,11 +14959,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -14978,14 +14978,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #3176eb;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -14993,7 +14993,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -15016,7 +15016,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #3176eb;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_14"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -15030,7 +15030,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_14"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-sibebarbg="color_15"][data-theme-version="dark"],
 [data-sibebarbg="color_15"] {
@@ -15174,7 +15174,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     background: #000; }
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line,
   [data-sibebarbg="color_15"][data-sidebar-style="modern"] .nav-header .hamburger.is-active .line {
-    background-color: #000; }
+    background-color: #222260; }
   [data-sibebarbg="color_15"][data-theme-version="dark"] .dropdown-menu,
   [data-sibebarbg="color_15"] .dropdown-menu {
     background: #63d140; }
@@ -15210,7 +15210,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info span,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info small,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"] .dlabnav .header-profile > a.nav-link .header-info .small {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"] .svg-title-path, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"] .svg-title-path,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"] .svg-title-path,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"] .svg-title-path {
@@ -15228,7 +15228,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"] .dlabnav .metismenu li ul a.mm-active,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a:hover,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"] .dlabnav .metismenu li ul a.mm-active {
-    color: #000;
+    color: #222260;
     font-weight: 700; }
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"] .dlabnav .metismenu > li > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"] .dlabnav .metismenu > li > a,
@@ -15254,11 +15254,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"] .copyright, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"] .copyright,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"] .copyright,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"] .copyright {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu li > ul {
@@ -15273,14 +15273,14 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a {
     background: transparent;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="compact"][data-layout="vertical"] .dlabnav .metismenu > li:hover > a i {
       background: #439e26;
-      color: #000; }
+      color: #222260; }
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
@@ -15288,7 +15288,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li.mm-active > a {
-    color: #000; }
+    color: #222260; }
   [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu li > ul,
@@ -15311,7 +15311,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a,
   [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a {
     background: #439e26;
-    color: #000; }
+    color: #222260; }
     [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_7"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i, [data-sibebarbg="color_15"][data-theme-version="dark"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_7"][data-sidebar-style="modern"] .dlabnav .metismenu > li:hover > a i,
@@ -15325,7 +15325,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="overlay"] .dlabnav .metismenu > li:hover > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li.mm-active > a i,
     [data-sibebarbg="color_15"][data-sibebarbg="color_8"][data-sidebar-style="icon-hover"] .dlabnav .metismenu > li:hover > a i {
-      color: #000; }
+      color: #222260; }
 
 [data-headerbg="color_2"] {
   --headerbg: #6610f2; }
@@ -15914,7 +15914,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 [data-theme-version="dark"] .btn-light:active,
 [data-theme-version="dark"] .btn-light:focus,
 [data-theme-version="dark"] .btn-light:hover {
-  color: #000; }
+  color: #222260; }
 
 [data-theme-version="dark"] .form-control {
   background-color: #212130;
@@ -16394,11 +16394,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 [data-theme-version="dark"] .sidebar-right .nav-tabs {
   border-color: #f5f5f5; }
   [data-theme-version="dark"] .sidebar-right .nav-tabs .nav-item .nav-link {
-    color: #000; }
+    color: #222260; }
 
 [data-theme-version="dark"] .sidebar-right .form-control {
   background: #fff;
-  color: #000;
+  color: #222260;
   border-color: #f5f5f5; }
 
 [data-theme-version="dark"] .sidebar-right .default-select .list {
@@ -17603,7 +17603,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     border: 0;
     margin-left: 0.625rem;
     background: #ddd;
-    color: #000; }
+    color: #222260; }
 
 .amChartsInputField {
   border: 0;
@@ -17615,7 +17615,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 .amcharts-data-set-select {
   border: 0;
   background: #ddd;
-  color: #000; }
+  color: #222260; }
 
 .amcharts-period-input,
 .amcharts-period-input-selected {
@@ -17717,7 +17717,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   .form-control.solid {
     background: #f6f6f6;
     border-color: #ececec;
-    color: #000; }
+    color: #222260; }
     .form-control.solid[type="file"] {
       padding: 6px 10px; }
 
@@ -17938,7 +17938,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   padding-left: 3.125rem;
   line-height: 1.25;
   display: inline-block;
-  color: #000;
+  color: #222260;
   font-weight: 600; }
   .toggle-switch .form-check-input {
     border: 0;
@@ -20735,10 +20735,10 @@ button {
 .btn-snapchat {
   background: #fffc00;
   border-color: #fffc00;
-  color: #000; }
+  color: #222260; }
   .btn-snapchat:active, .btn-snapchat:focus, .btn-snapchat:hover {
     background: #ccca00;
-    color: #000;
+    color: #222260;
     border-color: #ccca00; }
 
 .btn-whatsapp {
@@ -20859,7 +20859,7 @@ button {
   .card-title {
     font-size: 20px;
     font-weight: 500;
-    color: #000;
+    color: #222260;
     text-transform: capitalize; }
     .card-title--large {
       font-size: 1.5rem; }
@@ -21220,7 +21220,7 @@ button {
 
 .label-light {
   background: #c8c8c8;
-  color: #000; }
+  color: #222260; }
 
 .label-dark {
   background: #6e6e6e;
@@ -22793,7 +22793,7 @@ code {
     border: none;
     font-weight: 500; }
   .table.bg-primary-hover td {
-    color: #000; }
+    color: #222260; }
   .table.bg-primary-hover th {
     color: #6C6C6C; }
   .table.bg-primary-hover tr:hover td, .table.bg-primary-hover tr:hover th {
@@ -22803,7 +22803,7 @@ code {
     border: none;
     font-weight: 500; }
   .table.bg-secondary-hover td {
-    color: #000; }
+    color: #222260; }
   .table.bg-secondary-hover th {
     color: #6C6C6C; }
   .table.bg-secondary-hover tr:hover td, .table.bg-secondary-hover tr:hover th {
@@ -22813,7 +22813,7 @@ code {
     border: none;
     font-weight: 500; }
   .table.bg-info-hover td {
-    color: #000; }
+    color: #222260; }
   .table.bg-info-hover th {
     color: #6C6C6C; }
   .table.bg-info-hover tr:hover td, .table.bg-info-hover tr:hover th {
@@ -22823,7 +22823,7 @@ code {
     border: none;
     font-weight: 500; }
   .table.bg-warning-hover td {
-    color: #000; }
+    color: #222260; }
   .table.bg-warning-hover th {
     color: #6C6C6C; }
   .table.bg-warning-hover tr:hover td, .table.bg-warning-hover tr:hover th {
@@ -22836,7 +22836,7 @@ code {
   .table thead th {
     border-bottom: 1px solid #f5f5f5;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 16px;
     white-space: nowrap;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -22999,7 +22999,7 @@ table.dataTable tbody tr, table.dataTable tbody td {
   background: transparent !important; }
 
 table.dataTable thead th {
-  color: #000;
+  color: #222260;
   white-space: nowrap;
   font-size: 18px;
   text-transform: capitalize;
@@ -23272,7 +23272,10 @@ table.dataTable.display tbody td {
 .authincation-content {
   background: #fff;
   box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
-  border-radius: 5px; }
+  border-radius: 5px;
+    position: relative;
+    z-index: 999;
+}
   [data-theme-version="dark"] .authincation-content {
     background: #212130;
     box-shadow: none; }
@@ -23669,7 +23672,7 @@ table.dataTable.display tbody td {
     font-size: 40px;
     line-height: 1.2;
     font-weight: 600;
-    color: #000; }
+    color: #222260; }
     @media only screen and (max-width: 1400px) {
       .doctor-info-details .media-body h2, .doctor-info-details .media-body .h2 {
         font-size: 28px; } }
@@ -24073,21 +24076,24 @@ table.dataTable.display tbody td {
   overflow: hidden;
   position: relative; }
   .invoice-card-row .invoice-card .icon {
-    height: 60px;
-    width: 60px;
-    min-width: 60px;
+    height: 100px;
+    width: 100px;
+    min-width: 70px;
     line-height: 54px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.4);
     text-align: center; }
-    @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-      .invoice-card-row .invoice-card .icon {
-        height: 50px;
-        width: 50px;
-        min-width: 50px;
-        line-height: 45px; }
-        .invoice-card-row .invoice-card .icon svg {
-          transform: scale(0.8); } }
+
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
   .invoice-card-row .invoice-card .card-body {
     padding: 35px 30px 45px 30px; }
     @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -24163,7 +24169,7 @@ table.dataTable.display tbody td {
   .card-list li {
     display: flex;
     align-items: center;
-    color: #000;
+    color: #222260;
     margin-bottom: 15px;
     font-weight: 600; }
     .card-list li span {
@@ -24194,7 +24200,7 @@ table.dataTable.display tbody td {
     position: relative;
     font-weight: 600;
     background: #fff;
-    color: #000;
+    color: #222260;
     border-radius: 1.25rem;
     transform: rotate(-180deg);
     font-size: 17px;
@@ -24445,11 +24451,11 @@ table.dataTable.display tbody td {
 
 .amount-input {
   font-size: 30px;
-  color: #000;
+  color: #222260;
   border: 0;
   text-align: center; }
   .amount-input:hover, .amount-input:focus {
-    color: #000; }
+    color: #222260; }
 
 .ic-card {
   border-radius: 1.75rem;
@@ -24553,11 +24559,11 @@ table.dataTable.display tbody td {
     background: transparent;
     border-bottom: 0; }
     .accordion.style-1 .accordion-header.collapsed > span {
-      color: #000; }
+      color: #222260; }
     .accordion.style-1 .accordion-header.collapsed .user-info {
-      color: #000; }
+      color: #222260; }
       .accordion.style-1 .accordion-header.collapsed .user-info a {
-        color: #000; }
+        color: #222260; }
     .accordion.style-1 .accordion-header.collapsed .accordion-header-indicator:before {
       content: "\f0da";
       color: #d3d6e4; }
@@ -24646,7 +24652,7 @@ table.dataTable.display tbody td {
 
 .description {
   font-size: 1rem;
-  color: #000;
+  color: #222260;
   font-weight: 600; }
 
 .specifics-list {
@@ -24969,7 +24975,7 @@ table.dataTable.display tbody td {
   font-weight: 600;
   margin-bottom: 10px; }
   .new-arrival-content h4 a, .new-arrival-content .h4 a {
-    color: #000; }
+    color: #222260; }
 
 .new-arrival-content .price {
   font-weight: 600;
@@ -27285,7 +27291,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 [data-theme-version="dark"] .btn-light:active,
 [data-theme-version="dark"] .btn-light:focus,
 [data-theme-version="dark"] .btn-light:hover {
-  color: #000; }
+  color: #222260; }
 
 [data-theme-version="dark"] .form-control {
   background-color: #212130;
@@ -27765,11 +27771,11 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 [data-theme-version="dark"] .sidebar-right .nav-tabs {
   border-color: #f5f5f5; }
   [data-theme-version="dark"] .sidebar-right .nav-tabs .nav-item .nav-link {
-    color: #000; }
+    color: #222260; }
 
 [data-theme-version="dark"] .sidebar-right .form-control {
   background: #fff;
-  color: #000;
+  color: #222260;
   border-color: #f5f5f5; }
 
 [data-theme-version="dark"] .sidebar-right .default-select .list {

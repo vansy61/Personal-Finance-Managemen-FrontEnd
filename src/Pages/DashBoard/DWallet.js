@@ -57,7 +57,7 @@ function DWallet() {
               <div className="col-md-6">
                 <h4 className="card-title">Tổng quan ví tiền</h4>
                 <span>
-                        Tiền đi có nhớ ví không? Ví thì mòn mỏi trông mong tiền về.
+                        Tiền không phải là tất cả, nhưng nó là một phần quan trọng trong cuộc sống của chúng ta.
                       </span>
                 <ul className="card-list mt-4">
                   <li>
