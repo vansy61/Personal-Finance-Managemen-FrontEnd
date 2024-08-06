@@ -6,13 +6,14 @@ import Transaction from "./Pages/Transaction/Transaction";
 import Budget from "./Pages/Bubget/Budget";
 import Error404 from "./Pages/Error/404";
 import Login from "./Pages/Authen/Login";
+import Signup from "./Pages/Authen/Signup";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-
+        <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<MainLayout />} >
           <Route index element={<Dashboard />} />
           <Route path="/wallets" element={<Wallet />} />

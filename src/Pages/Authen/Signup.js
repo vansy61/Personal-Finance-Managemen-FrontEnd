@@ -3,7 +3,7 @@ import {useMemo} from "react";
 import Orb from "../../Components/Orb/Orb";
 import {Link} from "react-router-dom";
 
-function Login() {
+function Signup() {
   const orbMemo = useMemo(() => {
     return <Orb />
   },[])
@@ -41,8 +41,18 @@ function Login() {
                         </svg>
                       </a>
                     </div>
-                    <h3 className="text-center mb-4 mt-2">Đăng Nhập</h3>
+                    <h3 className="text-center mb-4 mt-2">Đăng Ký</h3>
                     <form action="index.html">
+                    <div className="mb-3">
+                        <label className="mb-1">
+                          <strong>Tên Người Dùng</strong>
+                        </label>
+                        <input
+                          type="password"
+                          className="form-control"
+                          placeholder="Nhập tên người dùng"
+                        />
+                      </div>
                       <div className="mb-3">
                         <label className="mb-1">
                           <strong>Email</strong>
@@ -63,22 +73,27 @@ function Login() {
                           placeholder="Nhập mật khẩu của bạn"
                         />
                       </div>
-                      <div className="row d-flex justify-content-between mt-4 mb-2">
-                        <div className="mb-3">
-                          <Link to={"/forgot-password"}>Quên mật khẩu ?</Link>
-                        </div>
+                      <div className="mb-3">
+                        <label className="mb-1">
+                          <strong>Nhập Lại Mật Khẩu</strong>
+                        </label>
+                        <input
+                          type="password"
+                          className="form-control"
+                          placeholder="Nhập mật khẩu của bạn"
+                        />
                       </div>
                       <div className="text-center">
                         <button type="submit" className="btn btn-primary btn-block">
-                          Đăng Nhập
+                          Đăng Ký
                         </button>
                       </div>
                     </form>
                     <div className="new-account mt-3">
                       <p>
-                        Chưa có tài khoản ?{" "}
-                        <Link to={"/signup"} className="text-primary">
-                          Đăng ký
+                        Đã có tài khoản ?{" "}
+                        <Link to={"/login"} className="text-primary">
+                          Đăng nhập
                         </Link>
                       </p>
                     </div>
@@ -93,4 +108,4 @@ function Login() {
   )
 }
 
-export default Login;
+export default Signup;
