@@ -15,12 +15,14 @@ import {ToastContainer} from "react-toastify";
 import {Provider} from "react-redux";
 import store from './Redux/store';
 import ProtectedRoute from "./Components/ProtectedRoute";
+import Upgrade from "./Pages/Upgrade/Upgrade";
 
 function App() {
   return (
     <Provider store={store}>
     <BrowserRouter>
       <Routes>
+        <Route path="/upgrade" element={<Upgrade />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
