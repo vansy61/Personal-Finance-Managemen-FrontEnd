@@ -35,7 +35,6 @@ function Login() {
     onSubmit: async (values, { setSubmitting }) => {
       try {
         const res = await AuthApi.login(values);
-        localStorage.setItem('token', res.data.accessToken);
         dispatch(setToken(res.data.accessToken) );
         navigate('/');
         Helper.toastSuccess('Đăng nhập thành công!');

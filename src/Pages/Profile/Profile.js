@@ -10,6 +10,8 @@ import ProfileChangePassword from "../../Components/Profile/ProfileChangePasswor
 import ProfileDelete from "../../Components/Profile/ProfileDelete";
 import ProfileAvatar from "../../Components/Profile/ProfileAvatar";
 import ProfilePlan from "../../Components/Profile/ProfilePlan";
+import {useDispatch} from "react-redux";
+import {fetchUser} from "../../Redux/auth/authSlice";
 
 const validationSchema = Yup.object({
   username: Yup.string().required("Họ và tên phải nhập!"),
@@ -20,6 +22,7 @@ const validationSchema = Yup.object({
 });
 
 function Profile() {
+  const dispatch = useDispatch();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -49,6 +52,7 @@ function Profile() {
       try {
         await UserApi.updateCurrentUser(values);
         Helper.toastSuccess('Cập nhật thông tin thành công!');
+        await dispatch(fetchUser());
       } catch (error) {
         Helper.toastError('Cập nhật thông tin thất bại!');
       } finally {
