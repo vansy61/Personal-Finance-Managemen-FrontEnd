@@ -8,6 +8,8 @@ import Budget from "./Pages/Bubget/Budget";
 import Error404 from "./Pages/Error/404";
 import Login from "./Pages/Authen/Login";
 import Signup from "./Pages/Authen/Signup";
+import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
+import ResetPassword from "./Pages/ForgotPassword/ResetPassword";
 import Profile from "./Pages/Profile/Profile";
 import {ToastContainer} from "react-toastify";
 
@@ -17,6 +19,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/" element={<MainLayout />} >
           <Route index element={<Dashboard />} />
           <Route path="/wallets" element={<Wallet />} />
