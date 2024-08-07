@@ -1691,7 +1691,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
+  font-size: 0.975rem;
   font-weight: 400;
   line-height: 1.5;
   color: #969ba0;
@@ -17710,7 +17710,6 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       height: 2.5rem; } }
   .form-control:hover, .form-control:focus, .form-control.active {
     box-shadow: none;
-    background: #fff;
     color: #6e6e6e; }
   .form-control:focus {
     border-color: var(--primary); }
@@ -17858,9 +17857,6 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 .custom_file_input .form-file-label::after {
   height: 100%; }
 
-.form-control:disabled, .form-control[readonly] {
-  background: #fff;
-  opacity: 1; }
 
 .form-file {
   border: 0.0625rem solid #f5f5f5;
@@ -21392,7 +21388,7 @@ code {
   border-radius: 1.75rem; }
 
 .modal-backdrop {
-  z-index: 10 !important; }
+  z-index: 1050 !important; }
 
 .pagination .page-item .page-link:hover {
   background: var(--primary);

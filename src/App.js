@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainLayout from "./Layout/MainLayout";
 import Dashboard from "./Pages/DashBoard/Dashboard";
@@ -7,6 +8,8 @@ import Budget from "./Pages/Bubget/Budget";
 import Error404 from "./Pages/Error/404";
 import Login from "./Pages/Authen/Login";
 import Signup from "./Pages/Authen/Signup";
+import Profile from "./Pages/Profile/Profile";
+import {ToastContainer} from "react-toastify";
 
 function App() {
   return (
@@ -19,9 +22,11 @@ function App() {
           <Route path="/wallets" element={<Wallet />} />
           <Route path="/transactions" element={<Transaction />} />
           <Route path="/budgets" element={<Budget />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
 
   );
