@@ -18,18 +18,16 @@ function ProfileDelete() {
       </Button>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Thay đổi mật khẩu</Modal.Title>
-        </Modal.Header>
         <Modal.Body>
-          Tính năng này đang trong quá trình phát triển.
+          <h4>Bạn có chắc chắn muốn xóa tài khoản không?</h4>
+          <p>Tất cả dữ liệu liên quan sẽ bị xóa, không thể khôi phục lại!</p>
         </Modal.Body>
         <Modal.Footer>
           <Button className="btn-sm" variant="secondary" onClick={handleClose}>
             Hủy
           </Button>
           <Button className="btn-sm" variant="success" onClick={handleClose}>
-            Lưu
+            Xác Nhận Xóa
           </Button>
         </Modal.Footer>
       </Modal>

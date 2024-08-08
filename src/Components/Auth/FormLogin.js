@@ -21,7 +21,7 @@ function FormLogin({formik}) {
           <div className="mb-3">
             <label>Mật khẩu</label>
             <input
-              className="form-control disabled"
+              className="form-control"
               id="password"
               name="password"
               type="password"
