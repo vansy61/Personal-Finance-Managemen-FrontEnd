@@ -43,7 +43,7 @@ function Wallet() {
             <>
               {
                 wallets.length == 0 ?
-                  <div className="w-50 mx-auto pb-5">
+                  <div className="w-25 mx-auto pb-5">
                     <Lottie animationData={AniEmpty}
                     /> 
                     </div> :
