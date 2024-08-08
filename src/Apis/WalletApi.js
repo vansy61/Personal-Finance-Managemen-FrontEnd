@@ -16,6 +16,10 @@ class WalletApi {
   static async updateWallet(walletId, data) {
     return axiosInstance.put('/api/v1/wallets/' + walletId, data)
   }
+
+  static async deleteWallet(walletId) {
+    return axiosInstance.delete('/api/v1/wallets/' + walletId);
+  }
 }
 
 export default WalletApi;

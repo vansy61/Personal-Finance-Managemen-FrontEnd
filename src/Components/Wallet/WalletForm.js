@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-function WalletForm({formik, submitText = "Tạo mới"}) {
+function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
   const currencyOptions = ["VND", "USD"].map(el => {
     return (
       <option key={el} value={el}>
@@ -97,10 +97,16 @@ function WalletForm({formik, submitText = "Tạo mới"}) {
       </div>
 
 
-      <div className="text-end">
-        <Link to={"/wallets"} className="btn btn-secondary btn-sm">Hủy</Link>
-        <button type="submit" className="btn btn-success mx-2 px-4 btn-sm" disabled={formik.isSubmitting}>{submitText}
-        </button>
+      <div className="d-flex align-items-center justify-content-between">
+        <div>
+          {deleteBtn}
+        </div>
+
+        <div>
+          <Link to={"/wallets"} className="btn btn-secondary btn-sm">Hủy</Link>
+          <button type="submit" className="btn btn-success mx-2 px-4 btn-sm" disabled={formik.isSubmitting}>{submitText}
+          </button>
+        </div>
 
       </div>
     </form>
