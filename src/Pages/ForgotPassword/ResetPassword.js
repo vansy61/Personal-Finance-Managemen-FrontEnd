@@ -37,7 +37,7 @@ function ResetPassword() {
       Helper.toastSuccess('Mật khẩu đã được đặt lại thành công.');
       navigate('/login');
     } catch (error) {
-      Helper.toastError('Đã xảy ra lỗi. Vui lòng thử lại.');
+      Helper.parseError(error);
     }
   };
   
