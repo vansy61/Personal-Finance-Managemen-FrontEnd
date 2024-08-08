@@ -16,6 +16,8 @@ import {Provider} from "react-redux";
 import store from './Redux/store';
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Upgrade from "./Pages/Upgrade/Upgrade";
+import ConfirmEmail from "./Pages/Authen/ConfirmEmail";
+import VerifyAccount from "./Pages/Authen/VerifyAccount";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/upgrade" element={<Upgrade />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/comfirm-email" element={<ConfirmEmail />} />
+        <Route path="/verify-account" element={<VerifyAccount />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route element={<ProtectedRoute />}>
