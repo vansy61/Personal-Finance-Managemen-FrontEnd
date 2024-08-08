@@ -39,7 +39,7 @@ function Login() {
         navigate('/');
         Helper.toastSuccess('Đăng nhập thành công!');
       } catch (error) {
-        Helper.toastError('Đăng nhập thất bại!');
+        Helper.parseError(error);
       }
     },
     validateOnMount: false

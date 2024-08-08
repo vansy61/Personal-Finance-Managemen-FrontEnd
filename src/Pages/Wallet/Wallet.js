@@ -3,48 +3,28 @@ import GradientLineChart from "../../Components/Chart/GradientLineChart";
 import WalletItem from "./WalletItem";
 import {useEffect, useState} from "react";
 import UserApi from "../../Apis/UserApi";
+import WalletApi from "../../Apis/WalletApi";
+import Skeleton from "react-loading-skeleton";
+import ProfileForm from "../../Components/Profile/ProfileForm";
 
 function Wallet() {
-  // const [wallets, setWallets] = useState(null);
-  // const [loading, setLoading] = useState(true);
-  //
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     try {
-  //       const response = await UserApi.getCurrentUser();
-  //       setUser(response.data);
-  //     } catch (error) {
-  //       console.error('Error', error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //
-  //   fetchUser();
-  // }, []);
-  const wallets = [
-    {
-      id: 1,
-      amount: '65.560.100 đ',
-      name: 'Ví tiền mặt',
-      icon: 'icon_50',
-      chart: [31, 40, 28, 51, 42, 109, 100]
-    },
-    {
-      id: 2,
-      amount: '106.099.000 đ',
-      name: 'Tiết kiệm',
-      icon: 'icon_0',
-      chart: [86, 114, 106, 106, 129, 103, 154]
-    },
-    {
-      id: 3,
-      amount: '98.499.000 đ',
-      name: 'Tk Vietcombank',
-      icon: 'icon_60',
-      chart: [55, 71, 131, 133, 150, 120, 110]
-    }
-  ]
+  const [wallets, setWallets] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchWallets = async () => {
+      try {
+        const response = await WalletApi.getAll();
+        setWallets(response.data);
+      } catch (error) {
+        console.error('Error', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchWallets();
+  }, []);
   return (
     <div>
       <div className="text-end">
@@ -55,7 +35,14 @@ function Wallet() {
       </div>
       <div className="row invoice-card-row mt-4">
         {
-          wallets.map((w, index) => <WalletItem key={w.id} wallet={w} index={index}/>)
+          loading ? (
+            <Skeleton count={2} height={200}/>
+          ) : (
+            <>
+              {
+                wallets.map((w, index) => <WalletItem key={w.id} wallet={w} index={index}/>)
+              }
+            </>)
         }
       </div>
     </div>

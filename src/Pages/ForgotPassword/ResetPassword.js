@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Footer from "../../Components/Footer";
 import { useMemo } from "react";
 import Orb from "../../Components/Orb/Orb";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation,useNavigate } from "react-router-dom";
 import axios from 'axios';
+import Helper from '../../utils/helpers';
 
 function ResetPassword() {
   const [password, setPassword] = useState('');
@@ -11,6 +12,8 @@ function ResetPassword() {
   const [message, setMessage] = useState('');
   const query = new URLSearchParams(useLocation().search);
   const token = query.get('token');
+  const navigate = useNavigate();
+
   
   const orbMemo = useMemo(() => {
     return <Orb />;
@@ -19,7 +22,7 @@ function ResetPassword() {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setMessage('Mật khẩu và mật khẩu xác nhận không khớp.');
+      Helper.toastError('Mật khẩu và mật khẩu xác nhận không khớp.');
       return;
     }
     try {
@@ -31,9 +34,10 @@ function ResetPassword() {
           'Content-Type': 'application/json',
         }
       });
-      setMessage(response.data);
+      Helper.toastSuccess('Mật khẩu đã được đặt lại thành công.');
+      navigate('/login');
     } catch (error) {
-      setMessage('Đã xảy ra lỗi. Vui lòng thử lại.');
+      Helper.toastError('Đã xảy ra lỗi. Vui lòng thử lại.');
     }
   };
   
@@ -83,7 +87,7 @@ function ResetPassword() {
                         />
                       </div>
                       <div className="text-center">
-                        <button type="submit" className="btn btn-primary btn-block">
+                        <button type="submit" className="btn btn-primary btn-block" >
                           Đặt lại mật khẩu
                         </button>
                       </div>

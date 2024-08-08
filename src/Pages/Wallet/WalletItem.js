@@ -18,11 +18,11 @@ function WalletItem({ wallet, index}) {
           </div>
           <div>
             <h2 className="text-white invoice-num">{wallet.amount}</h2>
-            <span className="text-white fs-18">{wallet.name}</span>
+            <span className="text-white fs-18">{wallet.walletName}</span>
           </div>
         </div>
         <div>
-          <GradientLineChart data={wallet.chart} color={walletColors[index]}/>
+          <GradientLineChart data={[31, 40, 28, 51, 42, 109, 100]} color={walletColors[index]}/>
         </div>
       </Link>
     </div>

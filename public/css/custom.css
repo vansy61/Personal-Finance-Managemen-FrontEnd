@@ -91,3 +91,24 @@
 .login-page {
     height: 100vh;
 }
+
+.icon-item {
+    padding: 5px;
+    width: 70px;
+}
+.box-icon {
+    height: 400px;
+    overflow: auto;
+}
+
+.box-icon label {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.box-icon input[type="radio"]:checked ~ label {
+    border-color: #5ccfc6;
+}
