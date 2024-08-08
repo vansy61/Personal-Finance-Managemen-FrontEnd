@@ -1,11 +1,13 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import GradientLineChart from "../../Components/Chart/GradientLineChart";
 import WalletItem from "./WalletItem";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import UserApi from "../../Apis/UserApi";
 import WalletApi from "../../Apis/WalletApi";
 import Skeleton from "react-loading-skeleton";
 import ProfileForm from "../../Components/Profile/ProfileForm";
+import Lottie from "lottie-react";
+import AniEmpty from "../../LottieData/empty.json";
 
 function Wallet() {
   const [wallets, setWallets] = useState(null);
@@ -36,13 +38,24 @@ function Wallet() {
       <div className="row invoice-card-row mt-4">
         {
           loading ? (
-            <Skeleton count={2} height={200}/>
+            <Skeleton count={2} height={200} />
           ) : (
             <>
               {
-                wallets.map((w, index) => <WalletItem key={w.id} wallet={w} index={index}/>)
+                wallets.length == 0 ?
+                  <div className="w-50 mx-auto pb-5">
+                    <Lottie animationData={AniEmpty}
+                    /> 
+                    </div> :
+                  <>
+                    {
+                      wallets.map((w, index) => <WalletItem key={w.id} wallet={w} index={index} />)
+                    }
+                  </>
+
               }
-            </>)
+            </>
+          )
         }
       </div>
     </div>
