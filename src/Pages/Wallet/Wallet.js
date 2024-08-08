@@ -5,46 +5,46 @@ import {useEffect, useState} from "react";
 import UserApi from "../../Apis/UserApi";
 
 function Wallet() {
-  const [wallets, setWallets] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await UserApi.getCurrentUser();
-        setUser(response.data);
-      } catch (error) {
-        console.error('Error', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUser();
-  }, []);
-  // const wallets = [
-  //   {
-  //     id: 1,
-  //     amount: '65.560.100 đ',
-  //     name: 'Ví tiền mặt',
-  //     icon: 'icon_50',
-  //     chart: [31, 40, 28, 51, 42, 109, 100]
-  //   },
-  //   {
-  //     id: 2,
-  //     amount: '106.099.000 đ',
-  //     name: 'Tiết kiệm',
-  //     icon: 'icon_0',
-  //     chart: [86, 114, 106, 106, 129, 103, 154]
-  //   },
-  //   {
-  //     id: 3,
-  //     amount: '98.499.000 đ',
-  //     name: 'Tk Vietcombank',
-  //     icon: 'icon_60',
-  //     chart: [55, 71, 131, 133, 150, 120, 110]
-  //   }
-  // ]
+  // const [wallets, setWallets] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  //
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     try {
+  //       const response = await UserApi.getCurrentUser();
+  //       setUser(response.data);
+  //     } catch (error) {
+  //       console.error('Error', error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //
+  //   fetchUser();
+  // }, []);
+  const wallets = [
+    {
+      id: 1,
+      amount: '65.560.100 đ',
+      name: 'Ví tiền mặt',
+      icon: 'icon_50',
+      chart: [31, 40, 28, 51, 42, 109, 100]
+    },
+    {
+      id: 2,
+      amount: '106.099.000 đ',
+      name: 'Tiết kiệm',
+      icon: 'icon_0',
+      chart: [86, 114, 106, 106, 129, 103, 154]
+    },
+    {
+      id: 3,
+      amount: '98.499.000 đ',
+      name: 'Tk Vietcombank',
+      icon: 'icon_60',
+      chart: [55, 71, 131, 133, 150, 120, 110]
+    }
+  ]
   return (
     <div>
       <div className="text-end">
