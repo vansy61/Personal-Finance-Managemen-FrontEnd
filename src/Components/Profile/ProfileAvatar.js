@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import UserApi from "../../Apis/UserApi";
 import Helper from "../../utils/helpers";
 import Skeleton from "react-loading-skeleton";

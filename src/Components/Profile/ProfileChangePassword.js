@@ -35,7 +35,7 @@ function ProfileChangePassword() {
         setShow(false);
         formik.resetForm();
       } catch (error) {
-        Helper.toastError(error.response.data?.message);
+        Helper.showApiError(error.response.data);
       } finally {
         setSubmitting(false);
       }

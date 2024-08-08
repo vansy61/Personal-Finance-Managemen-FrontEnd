@@ -49,6 +49,20 @@ class Helper {
   static imageHostUrl(imagePath) {
     return "http://localhost:8080/images/" + imagePath;
   }
+
+  static showApiError(data) {
+
+    let message = "";
+    for (const key in data) {
+      if (data.hasOwnProperty(key)) {
+        message += `${key}: ${data[key]}, `;
+      }
+    }
+
+
+    Helper.toastError(message);
+
+  }
 }
 
 export default Helper;
