@@ -6,7 +6,7 @@ import WalletApi from "../../Apis/WalletApi";
 import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Skeleton from "react-loading-skeleton";
-import ProfileForm from "../../Components/Profile/ProfileForm";
+import WalletDelete from "../../Components/Wallet/WalletDelete";
 
 const validationSchema = Yup.object({
   amount: Yup.number().min(0, "Số tiền hiện tại phải lớn hơn 0"),
@@ -37,6 +37,16 @@ function WalletShow() {
 
     fetchWallet();
   }, []);
+
+  const handleDelete = async () => {
+    try {
+      await WalletApi.deleteWallet(walletId);
+      Helper.toastSuccess('Xóa ví thành công!');
+      navigate("/wallets");
+    } catch (error) {
+      Helper.parseError(error)
+    }
+  }
 
   const formik = useFormik({
     initialValues: wallet ? {
@@ -80,7 +90,7 @@ function WalletShow() {
             loading ? (
               <Skeleton count={2} height={200}/>
             ) : (
-              <WalletForm formik={formik} submitText={"Cập nhật"}/>
+              <WalletForm formik={formik} submitText={"Cập nhật"} deleteBtn={<WalletDelete handleDelete={handleDelete}/>}/>
             )
           }
         </div>
