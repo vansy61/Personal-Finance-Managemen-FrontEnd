@@ -63,6 +63,16 @@ class Helper {
     Helper.toastError(message);
 
   }
+
+  static parseError(error) {
+    console.log(error);
+    if(error.code == "ERR_NETWORK") {
+      Helper.toastError("Lỗi mạng hoặc server không hoạt động!");
+    }
+    if(error.response && error.response.data && error.response.data.message) {
+      Helper.toastError(error.response.data.message);
+    }
+  }
 }
 
 export default Helper;
