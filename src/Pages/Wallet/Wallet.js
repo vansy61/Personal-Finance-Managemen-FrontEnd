@@ -38,11 +38,11 @@ function Wallet() {
           loading ? (
             <Skeleton count={2} height={200}/>
           ) : (
-            <div>
+            <>
               {
                 wallets.map((w, index) => <WalletItem key={w.id} wallet={w} index={index}/>)
               }
-            </div>)
+            </>)
         }
       </div>
     </div>

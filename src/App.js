@@ -18,6 +18,9 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import Upgrade from "./Pages/Upgrade/Upgrade";
 import ConfirmEmail from "./Pages/Authen/ConfirmEmail";
 import VerifyAccount from "./Pages/Authen/VerifyAccount";
+import WalletItem from "./Pages/Wallet/WalletItem";
+import WalletNew from "./Pages/Wallet/WalletNew";
+import WalletShow from "./Pages/Wallet/WalletShow";
 
 function App() {
   return (
@@ -35,6 +38,8 @@ function App() {
           <Route path="/" element={<MainLayout />} >
             <Route index element={<Dashboard />} />
             <Route path="/wallets" element={<Wallet />} />
+            <Route path="/wallets/new" element={<WalletNew />} />
+            <Route path="/wallets/:walletId" element={<WalletShow />} />
             <Route path="/transactions" element={<Transaction />} />
             <Route path="/budgets" element={<Budget />} />
             <Route path="/profile" element={<Profile />} />
