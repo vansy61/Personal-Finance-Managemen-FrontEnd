@@ -10,7 +10,7 @@ import Lottie from "lottie-react";
 import AniEmpty from "../../LottieData/empty.json";
 
 function Wallet() {
-  const [wallets, setWallets] = useState(null);
+  const [wallets, setWallets] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
