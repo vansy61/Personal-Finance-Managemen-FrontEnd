@@ -72,7 +72,7 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
             <div className="mb-3">
               <label>Icon ví</label>
               <div className="d-flex flex-wrap box-icon">
-                {Array.from({length: 141}, (_, i) => `icon_${i}`).map((option) => (
+                {Array.from({length: 142}, (_, i) => `icon_${i}`).map((option) => (
                   <div key={option} className="icon-item">
                     <input
                       type="radio"

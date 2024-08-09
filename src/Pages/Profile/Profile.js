@@ -54,6 +54,7 @@ function Profile() {
         Helper.toastSuccess('Cập nhật thông tin thành công!');
         await dispatch(fetchUser());
       } catch (error) {
+        console.log(error);
         Helper.toastError('Cập nhật thông tin thất bại!');
       } finally {
         setSubmitting(false);
