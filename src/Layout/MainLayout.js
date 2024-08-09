@@ -4,6 +4,7 @@ import Orb from "../Components/Orb/Orb";
 import {useMemo} from "react";
 import Nav from "../Components/Nav/Nav";
 import Footer from "../Components/Footer";
+import TransactionActionModal from "../Components/TransactionAction/TransactionActionModal";
 
 export default function MainLayout() {
   const orbMemo = useMemo(() => {
@@ -23,7 +24,6 @@ export default function MainLayout() {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   )
