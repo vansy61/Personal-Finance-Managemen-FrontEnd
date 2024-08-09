@@ -68,9 +68,19 @@ class Helper {
     console.log(error);
     if(error.code == "ERR_NETWORK") {
       Helper.toastError("Lỗi mạng hoặc server không hoạt động!");
+      return;
     }
     if(error.response && error.response.data && error.response.data.message) {
       Helper.toastError(error.response.data.message);
+      return;
+    }
+    if (error.response.data) {
+      let mes = "";
+      for (const [key, value] of Object.entries(error.response.data)) {
+        mes += `${value}.`;
+       
+      }
+      Helper.toastError(mes)
     }
   }
 }
