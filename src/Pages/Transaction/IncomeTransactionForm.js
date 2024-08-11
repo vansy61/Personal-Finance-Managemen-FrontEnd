@@ -36,6 +36,7 @@ const customStyles = {
 function IncomeTransactionForm({formik,closeModal}) {
   const [selectedOption, setSelectedOption] = useState(null);
 
+
   const categories = [
     { id: 1, categoryName: 'Tiền Thuê Nhà', icon: 'icon_4' },
     { id: 2, categoryName: 'Tiền Abc', icon: 'icon_5' },
