@@ -10,13 +10,14 @@ import Lottie from "lottie-react";
 import AniEmpty from "../../LottieData/empty.json";
 
 function Wallet() {
-  const [wallets, setWallets] = useState(null);
+  const [wallets, setWallets] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchWallets = async () => {
       try {
         const response = await WalletApi.getAll();
+        console.log(response)
         setWallets(response.data);
       } catch (error) {
         console.error('Error', error);

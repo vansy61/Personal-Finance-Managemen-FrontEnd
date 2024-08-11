@@ -21,6 +21,7 @@ import VerifyAccount from "./Pages/Authen/VerifyAccount";
 import WalletItem from "./Pages/Wallet/WalletItem";
 import WalletNew from "./Pages/Wallet/WalletNew";
 import WalletShow from "./Pages/Wallet/WalletShow";
+import Category from "./Pages/Category/Category";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path="/transactions" element={<Transaction />} />
             <Route path="/budgets" element={<Budget />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/categories" element={<Category />} />
           </Route>
         </Route>
         <Route path="*" element={<Error404 />} />

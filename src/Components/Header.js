@@ -2,7 +2,7 @@ import {useLocation} from "react-router-dom";
 import Logout from "./Auth/Logout";
 import {useSelector} from "react-redux";
 import Helper from "../utils/helpers";
-import TransactionActionModal from "./TransactionAction/TransactionActionModal";
+import TransactionActionModal from "../Pages/Transaction/TransactionActionModal";
 
 export default function Header() {
   const location = useLocation();
