@@ -3,7 +3,7 @@ import {useState} from "react";
 import {Collapse} from "react-bootstrap";
 import CategoryDelete from "./CategoryDelete";
 
-function CategoryItem({category}) {
+function CategoryItem({category, handleReload}) {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-white shadow-sm p-3 rounded-3  mb-2">
@@ -37,7 +37,7 @@ function CategoryItem({category}) {
             <span className="me-2">Sửa</span>
             <i className="fa-solid fa-pen-to-square"></i>
           </button>
-          <CategoryDelete category={category} />
+          <CategoryDelete category={category} handleReload={handleReload}/>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ function CategoryItem({category}) {
         <div className="mt-4">
           {
             category.subCategories.length > 0 ?
-            category.subCategories.map((subcategory, index) => <SubCategoryItem key={subcategory.id} category={subcategory}/>) :
+            category.subCategories.map((subcategory, index) => <SubCategoryItem key={subcategory.id} category={subcategory} handleReload={handleReload}/>) :
               <div className="text-center">Không có mục con</div>
           }
 

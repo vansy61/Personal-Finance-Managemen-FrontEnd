@@ -8,6 +8,7 @@ function Category() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!loading) return;
     const fetchCategories = async () => {
       try {
         const response = await CategoryApi.getAll();
@@ -21,7 +22,11 @@ function Category() {
     };
 
     fetchCategories();
-  }, [])
+  }, [loading])
+
+  const reloadData = () => {
+    setLoading(true);
+  }
 
   return (
     <div>
@@ -30,7 +35,7 @@ function Category() {
           {
             loading ?
               <Skeleton count={4} height={80} />
-              : categories.map((c, index) => <CategoryItem key={c.id} category={c}/>)
+              : categories.map((c, index) => <CategoryItem key={c.id} category={c} handleReload={reloadData}/>)
           }
         </div>
       </div>

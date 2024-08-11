@@ -1,10 +1,8 @@
 import {useState} from "react";
 import {Button, Modal} from "react-bootstrap";
-import WalletApi from "../../Apis/WalletApi";
 import Helper from "../../utils/helpers";
 import CategoryApi from "../../Apis/CategoryApi";
-import {useNavigate} from "react-router-dom";
-function CategoryDelete({category}) {
+function CategoryDelete({category, handleReload}) {
 
   const [show, setShow] = useState(false);
 
@@ -15,7 +13,7 @@ function CategoryDelete({category}) {
     try {
       await CategoryApi.deleteCategory(category.id);
       Helper.toastSuccess('Xóa phân loại thành công!');
-      window.location.reload();
+      handleReload();
     } catch (error) {
       Helper.parseError(error)
     }

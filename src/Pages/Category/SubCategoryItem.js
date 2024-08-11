@@ -1,6 +1,6 @@
 import CategoryDelete from "./CategoryDelete";
 
-function SubCategoryItem({category}) {
+function SubCategoryItem({category, handleReload}) {
   return (
     <div className="bg-white shadow-sm p-3 rounded-3  mb-2 ms-4">
     <div className="d-flex align-items-center">
@@ -29,7 +29,7 @@ function SubCategoryItem({category}) {
           <span className="me-2">Sửa</span>
           <i className="fa-solid fa-pen-to-square"></i>
         </button>
-        <CategoryDelete category={category} />
+        <CategoryDelete category={category} handleReload={handleReload}/>
       </div>
     </div>
     </div>
