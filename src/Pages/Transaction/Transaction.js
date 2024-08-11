@@ -1,4 +1,4 @@
-import TransactionActionModal from "../../Components/TransactionAction/TransactionActionModal";
+import TransactionActionModal from "./TransactionActionModal";
 import {useEffect, useState} from "react";
 import TransactionApi from "../../Apis/TransactionApi";
 import TransactionItem from "./TransactionItem";

@@ -1,5 +1,5 @@
 import {Button, Modal} from "react-bootstrap";
-import ProfileUpdatePasswordForm from "../Profile/ProfileUpdatePasswordForm";
+import ProfileUpdatePasswordForm from "../../Components/Profile/ProfileUpdatePasswordForm";
 import {useState} from "react";
 import TransactionActionContent from "./TransactionActionContent";
 
