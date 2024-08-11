@@ -51,7 +51,7 @@ function Transaction() {
             <div className="row">
                 <div className="col-12">
                     {
-                        transactions.length == 0 ? <div></div> : (
+                        transactions.length == 0 ? <></> : (
                             <>{
                                 transactions.map((transaction, i) =>
                                     <TransactionItem key={transaction.id} transaction={transaction} i={i}/>)
