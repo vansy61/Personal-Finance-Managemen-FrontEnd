@@ -2,7 +2,7 @@ function TransactionItem({transaction, i}) {
     return (
         <div className="transaction-item bg-white shadow-sm p-3 rounded-3 d-flex align-items-center mb-2">
             <div className="border-end pe-3">
-                <span className="badge light badge-danger">{transaction.categoryType == 1? "Thu":"Chi"}</span>
+                <span className="badge light badge-danger">{transaction.category.categoryType == 1? "Thu":"Chi"}</span>
             </div>
             <div className="border-end px-3">
                 <div className="d-flex align-items-center">
@@ -10,14 +10,14 @@ function TransactionItem({transaction, i}) {
                         <img src="/images/icons/icon_5.png" className="img-fluid" style={{width: "50px"}}/>
                     </div>
                     <div className="ms-3">
-                        <h5 className="mb-0">{transaction.categoryName}</h5>
+                        <h5 className="mb-0">{transaction.category.categoryName}</h5>
                         <p className="mb-0"><small>{transaction.datetime}</small></p>
                     </div>
                 </div>
             </div>
             <div className="border-end px-3">
                 <i className="fa-solid fa-wallet"></i>
-                <span className="ms-2 fs-14">{transaction.walletName}</span>
+                <span className="ms-2 fs-14">{transaction.wallet.walletName}</span>
             </div>
 
             <div className="border-end px-3">
