@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Skeleton from "react-loading-skeleton";
 import CategoryItem from "./CategoryItem";
 import CategoryApi from "../../Apis/CategoryApi";
+import {Link} from "react-router-dom";
 
 function Category() {
   const [categories, setCategories] = useState(null);
@@ -30,11 +31,18 @@ function Category() {
 
   return (
     <div>
+
+      <div className="text-end mb-3">
+        <Link to={'/categories/new'} className="btn btn-primary btn-sm">
+          <span className="me-2">Tạo phan loại mới</span>
+          <i className="fa-solid fa-plus"></i>
+        </Link>
+      </div>
       <div className="row">
         <div className="col-12">
           {
             loading ?
-              <Skeleton count={4} height={80} />
+              <Skeleton count={4} height={80}/>
               : categories.map((c, index) => <CategoryItem key={c.id} category={c} handleReload={reloadData}/>)
           }
         </div>

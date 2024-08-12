@@ -18,10 +18,11 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import Upgrade from "./Pages/Upgrade/Upgrade";
 import ConfirmEmail from "./Pages/Authen/ConfirmEmail";
 import VerifyAccount from "./Pages/Authen/VerifyAccount";
-import WalletItem from "./Pages/Wallet/WalletItem";
 import WalletNew from "./Pages/Wallet/WalletNew";
 import WalletShow from "./Pages/Wallet/WalletShow";
 import Category from "./Pages/Category/Category";
+import CategoryNew from "./Pages/Category/CategoryNew";
+import './translate/i18n';
 import TransactionDelete from "./Components/TransactionDelete/TransactionDelete";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             <Route path="/budgets" element={<Budget />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/categories" element={<Category />} />
+            <Route path="/categories/new" element={<CategoryNew />} />
           </Route>
         </Route>
         <Route path="*" element={<Error404 />} />
