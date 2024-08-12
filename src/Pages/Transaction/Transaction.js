@@ -9,26 +9,45 @@ import Skeleton from "react-loading-skeleton";
 
 function Transaction() {
     const [transactions, setTransactions] = useState([]);
+    const [listTransaction, setListTransaction] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [isActive,setIsActive] = useState(2)
+    const fetchTransaction = async () => {
+        try {
+
+            const response = await TransactionApi.getAll();
+            if (response.data == null) {
+
+                setTransactions([])
+            } else {
+                setTransactions(response.data);
+                setListTransaction(response.data)
+            }
+
+        } catch (error) {
+            console.error('Error', error)
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const getIncomesTransaction = ()=>{
+        const incomesransactions = transactions.filter((tr)=> tr.categoryType == 1);
+        setListTransaction(incomesransactions);
+        setIsActive(1)
+    }
+    const getOutcomesTransaction = ()=>{
+        const outTransactions = transactions.filter((tr)=> tr.categoryType == 0);
+        setListTransaction(outTransactions)
+        setIsActive(0)
+    }
+    const getAll = ()=>{
+        setListTransaction(transactions);
+        setIsActive(2)
+    }
 
     useEffect(() => {
-        const fetchTransaction = async () => {
-            try {
 
-                const response = await TransactionApi.getAll();
-                if (response.data == null) {
-
-                    setTransactions([])
-                } else {
-                    setTransactions(response.data);
-                }
-
-            } catch (error) {
-                console.error('Error', error)
-            } finally {
-                setLoading(false);
-            }
-        };
         fetchTransaction();
     }, []);
 
@@ -39,13 +58,13 @@ function Transaction() {
                     <div className="card-tabs style-1 mt-3 mt-sm-0">
                         <ul className="nav nav-tabs" role="tablist">
                             <li className="nav-item">
-                                <a className="nav-link active" href="javascript:void(0);">Tất cả</a>
+                                <button className={isActive ==2 ? "nav-link active" : "nav-link"} onClick={getAll}>Tất cả</button>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="javascript:void(0);">Thu</a>
+                                <button className={isActive ==1 ? "nav-link active" : "nav-link"} onClick={getIncomesTransaction}>Thu</button>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="javascript:void(0);">Chi</a>
+                                <button className={isActive ==0 ? "nav-link active" : "nav-link"} onClick={getOutcomesTransaction}>Chi</button>
                             </li>
                         </ul>
                     </div>
@@ -59,13 +78,13 @@ function Transaction() {
                             <Skeleton count={2} height={200}/>
                         ) : (
                             <>{
-                                transactions.length == 0 ?
+                                listTransaction.length == 0 ?
                                     (<div className="w-25 mx-auto pb-5">
                                         <Lottie animationData={AniEmpty}
                                         />
                                     </div> ): (
                                         <>{
-                                            transactions.map((transaction, i) =>
+                                            listTransaction.map((transaction, i) =>
                                                 (<TransactionItem key={transaction.id}
                                                                   transaction={transaction}
                                                                   deleteBtn={<TransactionDelete
