@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import WalletDelete from "../../Components/Wallet/WalletDelete";
 import ShareWalletForms from "../../Components/Wallet/ShareWalletForm";
+import { useSelector } from "react-redux";
 
 const validationSchema = Yup.object({
   amount: Yup.number().min(0, "Số tiền hiện tại phải lớn hơn 0"),
@@ -18,17 +19,33 @@ const validationSchema = Yup.object({
 });
 
 function WalletShow() {
+  const user = useSelector((state) => state.auth.user);
   const { walletId } = useParams();
   const navigate = useNavigate();
   const [wallet, setWallet] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isOwner, setIsOwner] = useState(false);
 
   useEffect(() => {
     const fetchWallet = async () => {
       try {
         const response = await WalletApi.getWalletById(walletId);
-        console.log(response.data);
+        console.log('Wallet Data:', response.data);
+
         setWallet(response.data);
+
+        const currentUserId = user.id;
+        console.log('Current User ID:', currentUserId);
+
+        const userRole = response.data.walletRoles.find(role => role.userId == currentUserId);
+        console.log('User Role:', userRole);
+
+        if (userRole && userRole.role === "OWNER") {
+          setIsOwner(true);
+        } else {
+          setIsOwner(false);
+        }
+
       } catch (error) {
         navigate("/wallets");
       } finally {
@@ -37,7 +54,7 @@ function WalletShow() {
     };
 
     fetchWallet();
-  }, [walletId, navigate]);
+  }, [walletId, navigate, user.id]);
 
   const handleDelete = async () => {
     try {
@@ -45,9 +62,9 @@ function WalletShow() {
       Helper.toastSuccess('Xóa ví thành công!');
       navigate("/wallets");
     } catch (error) {
-      Helper.parseError(error)
+      Helper.parseError(error);
     }
-  }
+  };
 
   const formik = useFormik({
     initialValues: wallet ? {
@@ -78,6 +95,10 @@ function WalletShow() {
     },
     validateOnMount: false
   });
+
+  const isEditMode = !!wallet;
+  const isDisabled = !isOwner && isEditMode;
+
   return (
     <>
       <div className="card">
@@ -86,17 +107,26 @@ function WalletShow() {
             loading ? (
               <Skeleton count={2} height={200} />
             ) : (
-              <WalletForm formik={formik} submitText={"Cập nhật"} deleteBtn={<WalletDelete handleDelete={handleDelete} />} />
+              <WalletForm
+                formik={formik}
+                submitText={isEditMode ? "Cập nhật" : "Tạo mới"}
+                deleteBtn={isOwner && isEditMode ? (
+                  <WalletDelete handleDelete={handleDelete} />
+                ) : null}
+                isDisabled={isDisabled}
+              />
             )
           }
         </div>
       </div>
-      <div className="card mb-4">
-        <div className="card-body d-flex justify-content-between align-items-center">
-          <span>Danh sách shared của ví</span>
-          <ShareWalletForms walletId={walletId} /> {}
+      {isOwner && (
+        <div className="card mb-4">
+          <div className="card-body d-flex justify-content-between align-items-center">
+            <span>Danh sách shared của ví</span>
+            <ShareWalletForms walletId={walletId} />
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
