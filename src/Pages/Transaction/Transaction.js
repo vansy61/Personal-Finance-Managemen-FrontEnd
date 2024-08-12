@@ -11,9 +11,9 @@ function Transaction() {
             try {
 
                 const response = await TransactionApi.getAll();
-                console.log(response.data);
+
                 if (response.data == null) {
-                    console.log(123445)
+
                     setTransactions([])
                 }else{
                     setTransactions(response.data);
