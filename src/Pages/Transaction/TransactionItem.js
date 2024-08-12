@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 function TransactionItem({transaction, deleteBtn}) {
-    const urlImage = "/images/icons/" + transaction.icon;
+    const urlImage = "/images/icons/" + transaction.icon + ".png";
 
     return (
         <div className="transaction-item bg-white shadow-sm p-3 rounded-3 d-flex align-items-center mb-2">
