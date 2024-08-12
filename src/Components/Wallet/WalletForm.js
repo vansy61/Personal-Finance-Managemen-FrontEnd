@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 
-function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
-
+function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>, isReadOnly = false}) {
 
   const currencyOptions = ["VND", "USD"].map(el => {
     return (
@@ -10,6 +9,7 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
       </option>
     );
   });
+
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="row">
@@ -23,6 +23,7 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
               type="text"
               onChange={formik.handleChange}
               value={formik.values.walletName}
+              disabled={isReadOnly}
             />
             {formik.touched.walletName && formik.errors.walletName ?
               <div className="text-danger">{formik.errors.walletName}</div> : null}
@@ -36,6 +37,7 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
               type="number"
               onChange={formik.handleChange}
               value={formik.values.amount}
+              disabled={isReadOnly}
             />
             {formik.touched.amount && formik.errors.amount ?
               <div className="text-danger">{formik.errors.amount}</div> : null}
@@ -48,6 +50,7 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
               onChange={formik.handleChange}
               value={formik.values.currency}
               className="form-select"
+              disabled={isReadOnly}
             >
               <option value="">Chọn một loại tiền tệ</option>
               {currencyOptions}
@@ -64,6 +67,7 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
               type="text"
               onChange={formik.handleChange}
               value={formik.values.walletDescription}
+              disabled={isReadOnly}
             />
             {formik.touched.walletDescription && formik.errors.walletDescription ?
               <div className="text-danger">{formik.errors.walletDescription}</div> : null}
@@ -84,6 +88,7 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
                       onChange={formik.handleChange}
                       checked={formik.values.icon === option}
                       className="d-none"
+                      disabled={isReadOnly}
                     />
                     <label htmlFor={option}>
                       <img src={"/images/icons/" + option + ".png"} className="img-fluid" />
@@ -98,7 +103,6 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
         </div>
       </div>
 
-
       <div className="d-flex align-items-center justify-content-between">
         <div>
           {deleteBtn}
@@ -106,13 +110,11 @@ function WalletForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
 
         <div>
           <Link to={"/wallets"} className="btn btn-secondary btn-sm">Hủy</Link>
-          <button type="submit" className="btn btn-success mx-2 px-4 btn-sm" disabled={formik.isSubmitting}>{submitText}
-          </button>
+          <button type="submit" className="btn btn-primary btn-sm ms-2" disabled={isReadOnly}>{submitText}</button>
         </div>
-
       </div>
     </form>
-  )
+  );
 }
 
 export default WalletForm;
