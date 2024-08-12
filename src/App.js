@@ -22,6 +22,7 @@ import WalletItem from "./Pages/Wallet/WalletItem";
 import WalletNew from "./Pages/Wallet/WalletNew";
 import WalletShow from "./Pages/Wallet/WalletShow";
 import Category from "./Pages/Category/Category";
+import TransactionDelete from "./Components/TransactionDelete/TransactionDelete";
 
 function App() {
   return (

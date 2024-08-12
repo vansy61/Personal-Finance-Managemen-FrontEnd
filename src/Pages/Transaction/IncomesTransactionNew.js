@@ -1,9 +1,9 @@
-import {useNavigate} from "react-router-dom";
 import * as Yup from "yup";
 import {useFormik} from "formik";
 import Helper from "../../utils/helpers";
 import IncomeTransactionForm from "./IncomeTransactionForm";
 import TransactionApi from "../../Apis/TransactionApi";
+import {useNavigate} from "react-router-dom";
 
 const validationSchema = Yup.object({
     amount: Yup.number().min(0, "Số tiền phải lớn hơn 0"),
@@ -14,7 +14,7 @@ const validationSchema = Yup.object({
 })
 
 function IncomesTransactionNew({closeModal}) {
-    const navigate = useNavigate();
+const navigate = useNavigate();
 
     const formik = useFormik({
             initialValues: {
@@ -28,7 +28,12 @@ function IncomesTransactionNew({closeModal}) {
             onSubmit: async (values, {setSubmitting}) => {
                 try {
                     await TransactionApi.createTransaction(values)
+                    closeModal();
+                    Helper.toastSuccess("Tạo giao dịch mới thành công")
+                    // window.location.reload();
+                    navigate("/transactions")
                 } catch (error) {
+                    console.log(error)
                     Helper.toastError("Tạo giao dịch thất bại")
                 } finally {
                     setSubmitting(false);
