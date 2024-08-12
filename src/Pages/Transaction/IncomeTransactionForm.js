@@ -36,7 +36,8 @@ const customStyles = {
 
 
 function IncomeTransactionForm({formik,closeModal}) {
-    const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
+  const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
     const [wallets, setWallets] = useState([]);
     console.log(formik)
@@ -69,6 +70,17 @@ function IncomeTransactionForm({formik,closeModal}) {
         getAllCategoryByUserId();
         getAllWalletByUserId();
     }, []);
+
+    const handleSelectCategoryChange = (selectedOption) => {
+      setSelectedOptionCategory(selectedOption);
+      formik.setFieldValue('categoryId', selectedOption? selectedOption.id : '');
+    };
+
+  const handleSelectWalletChange = (selectedOption) => {
+    setSelectedOptionWallet(selectedOption);
+    formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
+  };
+
     return (
         <div>
             <form onSubmit={formik.handleSubmit}>
@@ -114,9 +126,9 @@ function IncomeTransactionForm({formik,closeModal}) {
                             <Select
 
                                 defaultValue={0}
-                                onChange={formik.handleChange}
+                                onChange={handleSelectCategoryChange}
                                 name="categoryId"
-                                value={selectedOption}
+                                value={selectedOptionCategory}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.categoryName}
                                 options={categories}
@@ -131,9 +143,9 @@ function IncomeTransactionForm({formik,closeModal}) {
                             <label>Ví tiền</label>
                             <Select
                                 defaultValue={0}
-                                onChange={formik.handleChange}
+                                onChange={handleSelectWalletChange}
                                 name="walletId"
-                                value={selectedOption}
+                                value={selectedOptionWallet}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
                                 options={wallets}
