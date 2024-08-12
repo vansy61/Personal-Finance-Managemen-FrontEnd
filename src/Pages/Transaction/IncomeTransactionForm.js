@@ -130,7 +130,6 @@ function IncomeTransactionForm({formik,closeModal}) {
                         <div className="mb-3">
                             <label>Ví tiền</label>
                             <Select
-
                                 defaultValue={0}
                                 onChange={formik.handleChange}
                                 name="walletId"
