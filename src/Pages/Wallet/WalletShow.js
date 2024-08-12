@@ -7,7 +7,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import WalletDelete from "../../Components/Wallet/WalletDelete";
-import ShareWalletForms from "../../Components/Wallet/ShareWalletForm";
 import { useSelector } from "react-redux";
 
 const validationSchema = Yup.object({
@@ -54,9 +53,10 @@ function WalletShow() {
     };
 
     fetchWallet();
-  }, [walletId, navigate, user.id]);
+  }, [walletId, navigate]);
 
   const handleDelete = async () => {
+
     try {
       await WalletApi.deleteWallet(walletId);
       Helper.toastSuccess('Xóa ví thành công!');
@@ -64,7 +64,11 @@ function WalletShow() {
     } catch (error) {
       Helper.parseError(error);
     }
+
   };
+
+  // Lọc ra những người dùng khác (không phải người tạo ví)
+  const sharedUsers = wallet ? wallet.walletRoles.filter(role => role.userId !== user.id) : [];
 
   const formik = useFormik({
     initialValues: wallet ? {
@@ -96,9 +100,6 @@ function WalletShow() {
     validateOnMount: false
   });
 
-  const isEditMode = !!wallet;
-  const isDisabled = !isOwner && isEditMode;
-
   return (
     <>
       <div className="card">
@@ -109,21 +110,34 @@ function WalletShow() {
             ) : (
               <WalletForm
                 formik={formik}
-                submitText={isEditMode ? "Cập nhật" : "Tạo mới"}
-                deleteBtn={isOwner && isEditMode ? (
-                  <WalletDelete handleDelete={handleDelete} />
-                ) : null}
-                isDisabled={isDisabled}
+                submitText={"Cập nhật"}
+                deleteBtn={isOwner ? <WalletDelete handleDelete={handleDelete} /> : null}
+                isReadOnly={!isOwner}
               />
             )
           }
         </div>
       </div>
-      {isOwner && (
+      {isOwner && ( // Chỉ hiển thị khi người dùng là OWNER
         <div className="card mb-4">
-          <div className="card-body d-flex justify-content-between align-items-center">
-            <span>Danh sách shared của ví</span>
-            <ShareWalletForms walletId={walletId} />
+          <div className="card-body">
+            <h5>Danh sách shared của ví</h5>
+            {sharedUsers.length > 0 ? (
+              <ul className="list-group">
+                {sharedUsers.map(user => (
+                  <li key={user.id} className="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <div><strong>UserName:</strong> {user.userName}</div>
+                      <div><strong>Email:</strong> {user.userEmail}</div>
+                      <div><strong>Vai trò:</strong> {user.role}</div>
+                    </div>
+                    <button className="btn btn-danger btn-sm">Xóa liên kết</button>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>Không có người dùng nào được chia sẻ.</p>
+            )}
           </div>
         </div>
       )}
