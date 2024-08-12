@@ -17,7 +17,7 @@ function Wallet() {
     const fetchWallets = async () => {
       try {
         const response = await WalletApi.getAll();
-        console.log(response)
+
         setWallets(response.data);
       } catch (error) {
         console.error('Error', error);

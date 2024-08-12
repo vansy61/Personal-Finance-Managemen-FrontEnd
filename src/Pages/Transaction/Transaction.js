@@ -2,20 +2,24 @@ import TransactionActionModal from "./TransactionActionModal";
 import {useEffect, useState} from "react";
 import TransactionApi from "../../Apis/TransactionApi";
 import TransactionItem from "./TransactionItem";
+import TransactionDelete from "../../Components/TransactionDelete/TransactionDelete";
+import Lottie from "lottie-react";
+import AniEmpty from "../../LottieData/empty.json";
+import Skeleton from "react-loading-skeleton";
 
 function Transaction() {
     const [transactions, setTransactions] = useState([]);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const fetchTransaction = async () => {
             try {
 
                 const response = await TransactionApi.getAll();
-
                 if (response.data == null) {
 
                     setTransactions([])
-                }else{
+                } else {
                     setTransactions(response.data);
                 }
 
@@ -51,17 +55,31 @@ function Transaction() {
             <div className="row">
                 <div className="col-12">
                     {
-                        transactions.length == 0 ? <></> : (
+                        loading ? (
+                            <Skeleton count={2} height={200}/>
+                        ) : (
                             <>{
-                                transactions.map((transaction, i) =>
-                                    <TransactionItem key={transaction.id} transaction={transaction} i={i}/>)
+                                transactions.length == 0 ?
+                                    (<div className="w-25 mx-auto pb-5">
+                                        <Lottie animationData={AniEmpty}
+                                        />
+                                    </div> ): (
+                                        <>{
+                                            transactions.map((transaction, i) =>
+                                                (<TransactionItem key={transaction.id}
+                                                                  transaction={transaction}
+                                                                  deleteBtn={<TransactionDelete
+                                                                      transactionId={transaction.id}
+                                                                      handleShow={true}/>}
+                                                />))
+                                        }</>)
                             }
-                            </>)}
-
+                            < />
+                        )
+                    }
                 </div>
             </div>
         </div>
     )
 }
-
-export default Transaction
+    export default Transaction;
