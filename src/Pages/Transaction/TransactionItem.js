@@ -1,4 +1,4 @@
-function TransactionItem({transaction, i}) {
+function TransactionItem({transaction},{i}) {
     return (
         <div className="transaction-item bg-white shadow-sm p-3 rounded-3 d-flex align-items-center mb-2">
             <div className="border-end pe-3">
