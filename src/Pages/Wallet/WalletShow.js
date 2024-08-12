@@ -1,12 +1,13 @@
 import * as Yup from "yup";
-import {useFormik} from "formik";
+import { useFormik } from "formik";
 import Helper from "../../utils/helpers";
 import WalletForm from "../../Components/Wallet/WalletForm";
 import WalletApi from "../../Apis/WalletApi";
-import {useNavigate, useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import WalletDelete from "../../Components/Wallet/WalletDelete";
+import ShareWalletForms from "../../Components/Wallet/ShareWalletForm";
 
 const validationSchema = Yup.object({
   amount: Yup.number().min(0, "Số tiền hiện tại phải lớn hơn 0"),
@@ -17,7 +18,7 @@ const validationSchema = Yup.object({
 });
 
 function WalletShow() {
-  const {walletId} = useParams();
+  const { walletId } = useParams();
   const navigate = useNavigate();
   const [wallet, setWallet] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -36,7 +37,7 @@ function WalletShow() {
     };
 
     fetchWallet();
-  }, []);
+  }, [walletId, navigate]);
 
   const handleDelete = async () => {
     try {
@@ -79,20 +80,21 @@ function WalletShow() {
   });
   return (
     <>
-      <div className="card mb-4">
-        <div className="card-body">
-          Danh sách shared của ví
-        </div>
-      </div>
       <div className="card">
         <div className="card-body">
           {
             loading ? (
-              <Skeleton count={2} height={200}/>
+              <Skeleton count={2} height={200} />
             ) : (
-              <WalletForm formik={formik} submitText={"Cập nhật"} deleteBtn={<WalletDelete handleDelete={handleDelete}/>}/>
+              <WalletForm formik={formik} submitText={"Cập nhật"} deleteBtn={<WalletDelete handleDelete={handleDelete} />} />
             )
           }
+        </div>
+      </div>
+      <div className="card mb-4">
+        <div className="card-body d-flex justify-content-between align-items-center">
+          <span>Danh sách shared của ví</span>
+          <ShareWalletForms walletId={walletId} /> {}
         </div>
       </div>
     </>
