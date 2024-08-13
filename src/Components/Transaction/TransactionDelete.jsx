@@ -14,7 +14,7 @@ function TransactionDelete({transactionId}) {
             await TransactionApi.deleteTransaction(transactionId)
             handleClose()
             Helper.toastSuccess("Xoá thành công")
-            // window.location.reload();
+            window.location.reload();
             navigate("/transactions")
         } catch (error) {
             Helper.toastError("Xoá thất bại")

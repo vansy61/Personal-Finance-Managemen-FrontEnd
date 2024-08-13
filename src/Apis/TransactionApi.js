@@ -13,7 +13,7 @@ class TransactionApi{
     }
 
     static async updateTransaction(transactionId, data){
-        return axiosInstance.put(url + transactionId,data);
+        return axiosInstance.post(url + '/' + transactionId,data);
     }
     static async deleteTransaction(transactionId){
         return axiosInstance.delete(url + '/' + transactionId);

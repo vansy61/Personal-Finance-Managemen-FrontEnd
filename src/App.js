@@ -23,7 +23,7 @@ import WalletShow from "./Pages/Wallet/WalletShow";
 import Category from "./Pages/Category/Category";
 import CategoryNew from "./Pages/Category/CategoryNew";
 import './translate/i18n';
-import TransactionDelete from "./Components/TransactionDelete/TransactionDelete";
+import TransactionDelete from "./Components/Transaction/TransactionDelete";
 
 function App() {
   return (
