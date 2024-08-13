@@ -108,7 +108,6 @@ function TransactionEditModal({transactionId}){
             validationSchema,
             onSubmit: async (values, {setSubmitting}) => {
                 try {
-                    console.log(values)
                     await TransactionApi.updateTransaction(transactionId,values)
 
                     Helper.toastSuccess("Cập nhật giao dịch mới thành công")

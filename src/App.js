@@ -23,7 +23,9 @@ import WalletShow from "./Pages/Wallet/WalletShow";
 import Category from "./Pages/Category/Category";
 import CategoryNew from "./Pages/Category/CategoryNew";
 import './translate/i18n';
-import TransactionDelete from "./Components/Transaction/TransactionDelete";
+
+import CategoryShow from "./Pages/Category/CategoryShow";
+
 
 function App() {
   return (
@@ -48,6 +50,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/categories" element={<Category />} />
             <Route path="/categories/new" element={<CategoryNew />} />
+            <Route path="/categories/:categoryId" element={<CategoryShow />} />
           </Route>
         </Route>
         <Route path="*" element={<Error404 />} />
