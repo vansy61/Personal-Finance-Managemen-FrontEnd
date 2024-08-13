@@ -15,6 +15,21 @@ function CategoryForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
       <div className="row">
         <div className="col-6">
           <div className="mb-3">
+            <label>Loại phân loại</label>
+            <select
+              name="categoryType"
+              id="categoryType"
+              onChange={formik.handleChange}
+              value={formik.values.categoryType}
+              className="form-select"
+            >
+              <option value="">Chọn một loại phân loại</option>
+              {categoryTypeOptions}
+            </select>
+            {formik.touched.categoryType && formik.errors.categoryType ?
+              <div className="text-danger">{formik.errors.categoryType}</div> : null}
+          </div>
+          <div className="mb-3">
             <label>Tên phân loại</label>
             <input
               className="form-control"
@@ -40,21 +55,7 @@ function CategoryForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
             {formik.touched.note && formik.errors.note ?
               <div className="text-danger">{formik.errors.note}</div> : null}
           </div>
-          <div className="mb-3">
-            <label>Loại phân loại</label>
-            <select
-              name="categoryType"
-              id="categoryType"
-              onChange={formik.handleChange}
-              value={formik.values.categoryType}
-              className="form-select"
-            >
-              <option value="">Chọn một loại phân loại</option>
-              {categoryTypeOptions}
-            </select>
-            {formik.touched.categoryType && formik.errors.categoryType ?
-              <div className="text-danger">{formik.errors.categoryType}</div> : null}
-          </div>
+
         </div>
         <div className="col-6">
           <div className="mb-3">

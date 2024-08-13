@@ -5,6 +5,7 @@ import WalletForm from "../../Components/Wallet/WalletForm";
 import WalletApi from "../../Apis/WalletApi";
 import {useNavigate} from "react-router-dom";
 import CategoryForm from "./CategoryForm";
+import CategoryApi from "../../Apis/CategoryApi";
 
 const validationSchema = Yup.object({
   categoryName: Yup.string().required("Vui lòng nhập tên ph loai!"),
@@ -27,11 +28,11 @@ function CategoryNew() {
     validationSchema,
     onSubmit: async (values, { setSubmitting }) => {
       try {
-        await WalletApi.createWallet(values);
-        Helper.toastSuccess('Tạo ví thành công!');
-        navigate("/wallets");
+        await CategoryApi.createCategory(values);
+        Helper.toastSuccess('Tạo phn loại thành công!');
+        navigate("/categories");
       } catch (error) {
-        Helper.toastError('Tạo ví thất bại!');
+        Helper.toastError('Tạo phn loại thất bại!');
       } finally {
         setSubmitting(false);
       }
