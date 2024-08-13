@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-function TransactionItem({transaction, deleteBtn}) {
+function TransactionItem({transaction, deleteBtn, editBtn}) {
     const urlImage = "/images/icons/" + transaction.icon + ".png";
 
     return (
@@ -32,13 +32,16 @@ function TransactionItem({transaction, deleteBtn}) {
                 <span className="ms-2 fs-14">{transaction.note}</span>
             </div>
             <div className="flex-grow-1 ps-3 text-end">
-                <Link to={"/"}>
-                    <button type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-2">
-                        <span className="me-2">Sửa</span>
-                        <i className="fa-solid fa-pen-to-square"></i>
-                    </button>
-                </Link>
-                {deleteBtn}
+                {/*<Link to={"/"}>*/}
+                {/*    <button type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-2">*/}
+                {/*        <span className="me-2">Sửa</span>*/}
+                {/*        <i className="fa-solid fa-pen-to-square"></i>*/}
+                {/*    </button>*/}
+                {/*</Link>*/}
+                <div className="flex-grow-1">
+                    {editBtn}
+                    {deleteBtn}
+                </div>
 
             </div>
         </div>

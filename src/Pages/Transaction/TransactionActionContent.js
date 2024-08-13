@@ -47,13 +47,6 @@ function TransactionActionContent({closeModal}) {
         <div className="card-body">
           {
             <TransactionFormik transactionType={transactionType} closeModal={closeModal}/>
-          //   transactionType === "income" && <IncomeTransactionForm  closeModal={closeModal}  />
-          // }
-          // {
-          //   transactionType === "outcome" && <OutcomeTransactionForm closeModal={closeModal} />
-          // }
-          // {
-          //   transactionType === "transfer" && <TransferTransactionForm closeModal={closeModal}/>
           }
         </div>
       </div>
