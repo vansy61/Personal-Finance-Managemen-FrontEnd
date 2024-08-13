@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
 
-function CategoryForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
+function CategoryForm({formik, submitText = "Tạo mới" }) {
 
 
-  const categoryTypeOptions = [{type: "income", value: 1}, {type: "outcome", value: 2}].map(el => {
+  const categoryTypeOptions = [{type: "income", value: 1}, {type: "outcome", value: 0}].map(el => {
     return (
       <option key={el.value} value={el.value}>
         {el.type}
@@ -14,21 +14,25 @@ function CategoryForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
     <form onSubmit={formik.handleSubmit}>
       <div className="row">
         <div className="col-6">
-          <div className="mb-3">
-            <label>Loại phân loại</label>
-            <select
-              name="categoryType"
-              id="categoryType"
-              onChange={formik.handleChange}
-              value={formik.values.categoryType}
-              className="form-select"
-            >
-              <option value="">Chọn một loại phân loại</option>
-              {categoryTypeOptions}
-            </select>
-            {formik.touched.categoryType && formik.errors.categoryType ?
-              <div className="text-danger">{formik.errors.categoryType}</div> : null}
-          </div>
+          {
+            ('categoryType' in formik.values && !('parentId' in formik.values)) &&
+            <div className="mb-3">
+              <label>Loại phân loại</label>
+              <select
+                name="categoryType"
+                id="categoryType"
+                onChange={formik.handleChange}
+                value={formik.values.categoryType}
+                className="form-select"
+              >
+                <option value="">Chọn một loại phân loại</option>
+                {categoryTypeOptions}
+              </select>
+              {formik.touched.categoryType && formik.errors.categoryType ?
+                <div className="text-danger">{formik.errors.categoryType}</div> : null}
+            </div>
+          }
+
           <div className="mb-3">
             <label>Tên phân loại</label>
             <input
@@ -48,7 +52,7 @@ function CategoryForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
               className="form-control"
               id="note"
               name="note"
-              type="number"
+              type="text"
               onChange={formik.handleChange}
               value={formik.values.note}
             />
@@ -87,17 +91,10 @@ function CategoryForm({formik, submitText = "Tạo mới", deleteBtn = <></>}) {
       </div>
 
 
-      <div className="d-flex align-items-center justify-content-between">
-        <div>
-          {deleteBtn}
-        </div>
-
-        <div>
-          <Link to={"/wallets"} className="btn btn-secondary btn-sm">Hủy</Link>
+      <div className="text-end">
+          <Link to={"/categories"} className="btn btn-secondary btn-sm">Hủy</Link>
           <button type="submit" className="btn btn-success mx-2 px-4 btn-sm" disabled={formik.isSubmitting}>{submitText}
           </button>
-        </div>
-
       </div>
     </form>
   )

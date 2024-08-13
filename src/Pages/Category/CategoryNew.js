@@ -3,7 +3,7 @@ import {useFormik} from "formik";
 import Helper from "../../utils/helpers";
 import WalletForm from "../../Components/Wallet/WalletForm";
 import WalletApi from "../../Apis/WalletApi";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import CategoryForm from "./CategoryForm";
 import CategoryApi from "../../Apis/CategoryApi";
 
@@ -16,6 +16,9 @@ const validationSchema = Yup.object({
 
 function CategoryNew() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const parentId = searchParams.get('parentId');
 
 
   const formik = useFormik({
@@ -23,7 +26,8 @@ function CategoryNew() {
       categoryName: "",
       icon: "icon_0",
       categoryType: 1,
-      note: ""
+      note: "",
+      parentId: parentId? parseInt(parentId) : null
     },
     validationSchema,
     onSubmit: async (values, { setSubmitting }) => {

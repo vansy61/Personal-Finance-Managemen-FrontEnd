@@ -2,6 +2,7 @@ import SubCategoryItem from "./SubCategoryItem";
 import {useState} from "react";
 import {Collapse} from "react-bootstrap";
 import CategoryDelete from "./CategoryDelete";
+import {Link} from "react-router-dom";
 
 function CategoryItem({category, handleReload}) {
   const [open, setOpen] = useState(false);
@@ -33,23 +34,28 @@ function CategoryItem({category, handleReload}) {
             <span className="me-2">Mục con</span>
             <i className="fa-solid fa-network-wired"></i>
           </button>
-          <button type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2">
+          <Link to={"/categories/" + category.id} className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2">
             <span className="me-2">Sửa</span>
             <i className="fa-solid fa-pen-to-square"></i>
-          </button>
+          </Link>
           <CategoryDelete category={category} handleReload={handleReload}/>
         </div>
       </div>
 
         <Collapse in={open}>
-        <div className="mt-4">
-          {
-            category.subCategories.length > 0 ?
-            category.subCategories.map((subcategory, index) => <SubCategoryItem key={subcategory.id} category={subcategory} handleReload={handleReload}/>) :
-              <div className="text-center">Không có mục con</div>
-          }
-
-        </div>
+          <div className="mt-4">
+            {
+              category.subCategories.length > 0 ?
+              category.subCategories.map((subcategory, index) => <SubCategoryItem key={subcategory.id} category={subcategory} handleReload={handleReload}/>) :
+                <div className="text-center">Không có mục con</div>
+            }
+            <div className="mt-2 text-center">
+              <Link to={'/categories/new?parentId=' + category.id} className="btn btn-primary btn-sm">
+                <span className="me-2">Tạo con mới</span>
+                <i className="fa-solid fa-plus"></i>
+              </Link>
+            </div>
+          </div>
         </Collapse>
 
     </div>
