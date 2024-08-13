@@ -2,7 +2,8 @@ import {useState} from "react";
 import IncomeTransactionForm from "./IncomeTransactionForm";
 import OutcomeTransactionForm from "./OutcomeTransactionForm";
 import TransferTransactionForm from "./TransferTransactionForm";
-import IncomesTransactionNew from "./IncomesTransactionNew";
+import TransactionFormik from "./TransactionFormik";
+import transactionFormik from "./TransactionFormik";
 
 function TransactionActionContent({closeModal}) {
   const [transactionType, setTransactionType] = useState('income');
@@ -45,13 +46,14 @@ function TransactionActionContent({closeModal}) {
       <div className="card mt-4">
         <div className="card-body">
           {
-            transactionType === "income" && <IncomesTransactionNew closeModal={closeModal}/>
-          }
-          {
-            transactionType === "outcome" && <OutcomeTransactionForm closeModal={closeModal}/>
-          }
-          {
-            transactionType === "transfer" && <TransferTransactionForm closeModal={closeModal}/>
+            <TransactionFormik transactionType={transactionType} closeModal={closeModal}/>
+          //   transactionType === "income" && <IncomeTransactionForm  closeModal={closeModal}  />
+          // }
+          // {
+          //   transactionType === "outcome" && <OutcomeTransactionForm closeModal={closeModal} />
+          // }
+          // {
+          //   transactionType === "transfer" && <TransferTransactionForm closeModal={closeModal}/>
           }
         </div>
       </div>

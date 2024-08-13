@@ -12,7 +12,7 @@ const CustomOption = (props) => {
         <div ref={innerRef} {...innerProps}
              style={{display: 'flex', alignItems: 'center', padding: '5px', cursor: 'pointer'}}>
             <img
-                src={`/images/icons/${data.icon}.png`}
+                src={`/images/icons/${data.icon}`}
                 style={{width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%'}}
             />
             {data.categoryName || data.walletName}
@@ -40,9 +40,7 @@ function IncomeTransactionForm({formik,closeModal}) {
   const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
     const [wallets, setWallets] = useState([]);
-    console.log(formik)
-    console.log(closeModal)
-    console.log(123)
+
     const getAllCategoryByUserId = async () => {
         const response = await CategoryApi.getAll();
         const newCategories = response.data.filter((e) => e.categoryType == 1);
@@ -54,17 +52,7 @@ function IncomeTransactionForm({formik,closeModal}) {
         setWallets(response.data);
     }
 
-    // const categories = [
-    //     {id: 1, categoryName: 'Tiền Thuê Nhà', icon: 'icon_4'},
-    //     {id: 2, categoryName: 'Tiền Abc', icon: 'icon_5'},
-    //     {id: 3, categoryName: 'Tiền XYZ', icon: 'icon_6'},
-    // ];
-    //
-    // const wallets = [
-    //     {id: 1, walletName: 'Ví tiền mặt', icon: 'icon_25'},
-    //     {id: 2, walletName: 'Ví Abc', icon: 'icon_10'},
-    //     {id: 3, walletName: 'Ví XYZ', icon: 'icon_50'},
-    // ];
+
 
     useEffect(() => {
         getAllCategoryByUserId();

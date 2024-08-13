@@ -4,6 +4,8 @@ import Helper from "../../utils/helpers";
 import IncomeTransactionForm from "./IncomeTransactionForm";
 import TransactionApi from "../../Apis/TransactionApi";
 import {useNavigate} from "react-router-dom";
+import OutcomeTransactionForm from "./OutcomeTransactionForm";
+import TransferTransactionForm from "./TransferTransactionForm";
 
 const validationSchema = Yup.object({
     amount: Yup.number().min(0, "Số tiền phải lớn hơn 0"),
@@ -13,8 +15,8 @@ const validationSchema = Yup.object({
     walletId: Yup.number().required("Không đuc để trông")
 })
 
-function IncomesTransactionNew({closeModal}) {
-const navigate = useNavigate();
+function TransactionFormik({closeModal, transactionType}) {
+    const navigate = useNavigate();
 
     const formik = useFormik({
             initialValues: {
@@ -44,9 +46,16 @@ const navigate = useNavigate();
     )
     return (
         <>
-            <IncomeTransactionForm formik={formik} closeModal={closeModal}/>
+            {
+                transactionType == "income" ? (
+                        <IncomeTransactionForm formik={formik} closeModal={closeModal}/>) :
+                    (transactionType == "outcome" ?
+                            <OutcomeTransactionForm formik={formik} closeModal={closeModal}/> :
+                            <TransferTransactionForm closeModal={closeModal}/>
+                    )
+            }
         </>
     )
 }
 
-export default IncomesTransactionNew;
+export default TransactionFormik;
