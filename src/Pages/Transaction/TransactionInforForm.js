@@ -1,11 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import Select from 'react-select';
-import {Link} from "react-router-dom";
+import Select from "react-select";
+import React, {useEffect, useState} from "react";
 import CategoryApi from "../../Apis/CategoryApi";
 import WalletApi from "../../Apis/WalletApi";
+import {useFormik} from "formik";
+import TransactionApi from "../../Apis/TransactionApi";
+import Helper from "../../utils/helpers";
+import * as Yup from "yup";
 
-
-// Custom option component to include images
 const CustomOption = (props) => {
     const {innerRef, innerProps, data} = props;
     return (
@@ -34,13 +35,44 @@ const customStyles = {
     }),
 };
 
+const validationSchema = Yup.object({
+    amount: Yup.number().min(0, "Số tiền phải lớn hơn 0"),
+    note: Yup.string().required("Vui lòng nhập ghi chú"),
+    datetime: Yup.date().required("vui lòng nhập ngày giao dịch"),
+    categoryId: Yup.number().required("Không được để trống"),
+    walletId: Yup.number().required("Không đuợc để trông")
+})
 
-function IncomeTransactionForm({formik,closeModal}) {
-  const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
-  const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
+function TransactionInforForm({closeModal}){
+    const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
+    const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
     const [wallets, setWallets] = useState([]);
 
+    const formik = useFormik({
+            initialValues: {
+                amount: 0,
+                note: "",
+                datetime: new Date(),
+                categoryId: 0,
+                walletId: 0
+            },
+            validationSchema,
+            onSubmit: async (values, {setSubmitting}) => {
+                try {
+                    await TransactionApi.createTransaction(values)
+                    closeModal();
+                    Helper.toastSuccess("Tạo giao dịch mới thành công")
+                } catch (error) {
+                    console.log(error)
+                    Helper.toastError("Tạo giao dịch thất bại")
+                } finally {
+                    setSubmitting(false);
+                }
+            },
+            validateOnMount: false
+        }
+    )
     const getAllCategoryByUserId = async () => {
         const response = await CategoryApi.getAll();
         const newCategories = response.data.filter((e) => e.categoryType == 1);
@@ -60,15 +92,14 @@ function IncomeTransactionForm({formik,closeModal}) {
     }, []);
 
     const handleSelectCategoryChange = (selectedOption) => {
-      setSelectedOptionCategory(selectedOption);
-      formik.setFieldValue('categoryId', selectedOption? selectedOption.id : '');
+        setSelectedOptionCategory(selectedOption);
+        formik.setFieldValue('categoryId', selectedOption? selectedOption.id : '');
     };
 
     const handleSelectWalletChange = (selectedOption) => {
-      setSelectedOptionWallet(selectedOption);
-      formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
+        setSelectedOptionWallet(selectedOption);
+        formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
     };
-
     return (
         <div>
             <form onSubmit={formik.handleSubmit}>
@@ -152,6 +183,6 @@ function IncomeTransactionForm({formik,closeModal}) {
             </form>
         </div>
     );
-}
 
-export default IncomeTransactionForm;
+}
+export default TransactionInforForm;

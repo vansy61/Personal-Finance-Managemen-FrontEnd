@@ -32,7 +32,7 @@ function TransactionFormik({closeModal, transactionType}) {
                     await TransactionApi.createTransaction(values)
                     closeModal();
                     Helper.toastSuccess("Tạo giao dịch mới thành công")
-                    // window.location.reload();
+                    window.location.reload();
                     navigate("/transactions")
                 } catch (error) {
                     console.log(error)
@@ -51,7 +51,7 @@ function TransactionFormik({closeModal, transactionType}) {
                         <IncomeTransactionForm formik={formik} closeModal={closeModal}/>) :
                     (transactionType == "outcome" ?
                             <OutcomeTransactionForm formik={formik} closeModal={closeModal}/> :
-                            <TransferTransactionForm closeModal={closeModal}/>
+                            <TransferTransactionForm formik={formik} closeModal={closeModal}/>
                     )
             }
         </>

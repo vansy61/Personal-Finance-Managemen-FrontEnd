@@ -2,10 +2,11 @@ import TransactionActionModal from "./TransactionActionModal";
 import {useEffect, useState} from "react";
 import TransactionApi from "../../Apis/TransactionApi";
 import TransactionItem from "./TransactionItem";
-import TransactionDelete from "../../Components/TransactionDelete/TransactionDelete";
+import TransactionDelete from "../../Components/Transaction/TransactionDelete";
 import Lottie from "lottie-react";
 import AniEmpty from "../../LottieData/empty.json";
 import Skeleton from "react-loading-skeleton";
+import TransactionEditModal from "../../Components/Transaction/TrasactionEditModal";
 
 function Transaction() {
     const [transactions, setTransactions] = useState([]);
@@ -89,7 +90,8 @@ function Transaction() {
                                                                   transaction={transaction}
                                                                   deleteBtn={<TransactionDelete
                                                                       transactionId={transaction.id}
-                                                                      handleShow={true}/>}
+                                                                      />}
+                                                                  editBtn={<TransactionEditModal transactionId={transaction.id}/>}
                                                 />))
                                         }</>)
                             }
