@@ -9,7 +9,6 @@ export default function Header() {
   const { t } = useTranslation();
   const location = useLocation();
   const user = useSelector((state) => state.auth.user);
-  console.log('User:', user);
 
   const getTitle = () => {
     const path = location.pathname;

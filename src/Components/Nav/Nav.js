@@ -1,7 +1,9 @@
 import {NavLink} from "react-router-dom";
 import Logo from "../Logo";
+import {useTranslation} from "react-i18next";
 
 function Nav() {
+  const { t } = useTranslation();
   return (
     <div className="dlabnav box-style">
       <div className="nav-header">
@@ -14,50 +16,50 @@ function Nav() {
           <li>
             <NavLink to={"/"} className="has-arrow ai-icon">
               <i className="fa-solid fa-house"></i>
-              <span className="nav-text">Tổng Quan</span>
+              <span className="nav-text">{t("dashboard")}</span>
             </NavLink>
           </li>
 
           <li>
             <NavLink to={"/wallets"} className="has-arrow ai-icon">
               <i className="fa-solid fa-wallet"></i>
-              <span className="nav-text">Ví tiền</span>
+              <span className="nav-text">{t("wallet")}</span>
             </NavLink>
           </li>
           <li>
             <NavLink to={"/transactions"} className="has-arrow ai-icon">
               <i className="fa-solid fa-money-bill-transfer"></i>
-              <span className="nav-text">Sổ Giao Dịch</span>
+              <span className="nav-text">{t("transaction")}</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/budgets"} className="has-arrow ai-icon">
+          <NavLink to={"/budgets"} className="has-arrow ai-icon">
               <i className="fa-solid fa-coins"></i>
-              <span className="nav-text">Ngân Sách</span>
-            </NavLink>
+              <span className="nav-text">{t("budget")}</span>
+          </NavLink>
           </li>
           <li>
-            <NavLink to={"/categories"} className="has-arrow ai-icon">
+          <NavLink to={"/categories"} className="has-arrow ai-icon">
               <i className="fa-solid fa-layer-group"></i>
-              <span className="nav-text">Danh Mục</span>
-            </NavLink>
+              <span className="nav-text">{t("category")}</span>
+          </NavLink>
           </li>
           <li>
-            <NavLink to={"/reports"} className="has-arrow ai-icon">
+          <NavLink to={"/reports"} className="has-arrow ai-icon">
               <i className="fa-solid fa-chart-line"></i>
-              <span className="nav-text">Báo cáo</span>
-            </NavLink>
+              <span className="nav-text">{t("report")}</span>
+          </NavLink>
           </li>
           <li>
             <NavLink to={"/profile"} className="has-arrow ai-icon">
               <i className="fa-solid fa-user"></i>
-              <span className="nav-text">Tài Khoản</span>
+              <span className="nav-text">{t("profile")}</span>
             </NavLink>
           </li>
           <li>
             <NavLink to={"/setting"} className="has-arrow ai-icon">
               <i className="fa-solid fa-gear"></i>
-              <span className="nav-text">Cài Đặt</span>
+              <span className="nav-text">{t("setting")}</span>
             </NavLink>
           </li>
 
