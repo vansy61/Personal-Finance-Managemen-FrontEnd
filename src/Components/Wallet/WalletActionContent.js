@@ -1,14 +1,13 @@
-import { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
+import Helper from "../../utils/helpers";
 
-function WalletActionContent({ walletId, closeModal }) {
+function WalletActionContent({ walletId, closeModal, onShareSuccess }) {
   const [email, setEmail] = useState('');
-  const [role, setRole] = useState('READ_ONLY');
+  const [role, setRole] = useState('READ_ONLY'); // Mặc định là READ_ONLY
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log(`Sending request to share wallet ${walletId} with email ${email} and role ${role}`);
 
     try {
       const response = await axios.post(
@@ -21,9 +20,23 @@ function WalletActionContent({ walletId, closeModal }) {
           }
         }
       );
-      console.log('Wallet shared successfully:', response.data);
+
+      Helper.toastSuccess('Đã chia sẻ ví thành công!');
       closeModal();
     } catch (error) {
+      if (error.response && error.response.data) {
+        const errorMessage = error.response.data.message || error.response.data;
+
+        if (errorMessage.includes("Người dùng không tồn tại")) {
+          Helper.toastError('Người dùng không tồn tại!');
+        } else if (errorMessage.includes("Ví này đã được chia sẻ với người dùng này")) {
+          Helper.toastError('Ví này đã được chia sẻ với người dùng này.');
+        } else {
+          Helper.toastError(`Đã xảy ra lỗi: ${errorMessage}`);
+        }
+      } else {
+         Helper.toastError('Đã xảy ra lỗi khi chia sẻ ví!');
+      }
       console.error('Error sharing wallet:', error.response ? error.response.data : error.message);
     }
   };
@@ -58,6 +71,20 @@ function WalletActionContent({ walletId, closeModal }) {
                 required
               />
             </div>
+
+            <div className="mb-3">
+              <label htmlFor="role" className="form-label">Chọn quyền:</label>
+              <select
+                id="role"
+                className="form-select"
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+              >
+                <option value="READ_ONLY">READ_ONLY</option>
+                <option value="OWNER">OWNER</option>
+              </select>
+            </div>
+
             <div className="d-flex justify-content-center w-100">
               <button type="submit" className="btn btn-primary">
                 Thêm
