@@ -2,21 +2,22 @@ import {useLocation} from "react-router-dom";
 import Logout from "./Auth/Logout";
 import {useSelector} from "react-redux";
 import Helper from "../utils/helpers";
-import TransactionActionModal from "../Pages/Transaction/TransactionActionModal";
+import LanguageSwitch from "../translate/LanguageSwitch";
+import {useTranslation} from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
   const location = useLocation();
   const user = useSelector((state) => state.auth.user);
-  console.log('User:', user);
 
   const getTitle = () => {
     const path = location.pathname;
 
     if (/^\/transactions/.test(path)) {
-      return 'Giao dịch';
+      return t("transaction");
     }
     if (/^\/wallets/.test(path)) {
-      return 'Ví tiền';
+      return t("wallet");
     }
     if (/^\/budgets/.test(path)) {
       return 'Ngân sách';
@@ -46,6 +47,9 @@ export default function Header() {
               <div className="dashboard_bar">{getTitle()}</div>
             </div>
             <ul className="navbar-nav header-right">
+              <li className="nav-item">
+                <LanguageSwitch />
+              </li>
               <li className="nav-item">
                 <div className="user-con"><img src={user?.avatar ? Helper.imageHostUrl(user.avatar) : "./images/avatar.png"} alt=""/>
                   <div className="text">

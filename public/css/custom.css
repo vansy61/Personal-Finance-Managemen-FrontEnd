@@ -112,3 +112,22 @@
 .box-icon input[type="radio"]:checked ~ label {
     border-color: #5ccfc6;
 }
+
+
+.languageSwithcher img, .languageSwithcherList img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.languageSwithcher {
+    padding: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+
+
+.languageSwithcher:after {
+    display: none;
+}

@@ -64,13 +64,13 @@ function IncomeTransactionForm({formik,closeModal}) {
       formik.setFieldValue('categoryId', selectedOption? selectedOption.id : '');
     };
 
-  const handleSelectWalletChange = (selectedOption) => {
-    setSelectedOptionWallet(selectedOption);
-    formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
-  };
+    const handleSelectWalletChange = (selectedOption) => {
+      setSelectedOptionWallet(selectedOption);
+      formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
+    };
 
     return (
-        <div>
+        <div>x
             <form onSubmit={formik.handleSubmit}>
                 <div className="row">
                     <div className="col-6">
