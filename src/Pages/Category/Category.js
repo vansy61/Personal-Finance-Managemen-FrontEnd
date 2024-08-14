@@ -13,6 +13,7 @@ function Category() {
     const fetchCategories = async () => {
       try {
         const response = await CategoryApi.getAll();
+        console.log(response.data)
         setCategories(response.data);
       } catch (error) {
         setCategories([]);
