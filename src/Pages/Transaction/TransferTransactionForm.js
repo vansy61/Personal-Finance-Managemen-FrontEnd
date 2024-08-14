@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Select from "react-select";
 import WalletApi from "../../Apis/WalletApi";
+import Helper from "../../utils/helpers";
 
 const CustomOption = (props) => {
     const {innerRef, innerProps, data} = props;
@@ -61,13 +62,13 @@ function TransferTransactionForm({formik, closeModal}) {
         if (fromWalletId && toWalletId && amount) {
             try {
                 const response = await WalletApi.transferMoney(fromWalletId, toWalletId, amount);
-                alert("Chuyển tiền thành công");
+                Helper.toastSuccess("Chuyển tiền thành công");
             } catch (error) {
                 console.error("Lỗi khi chuyển tiền:", error);
-                alert("Chuyển tiền thất bại");
+                Helper.toastError("Chuyển tiền thất bại");
             }
         } else {
-            alert("Vui lòng điền đầy đủ thông tin");
+            Helper.toastError("Vui lòng điền đầy đủ thông tin");
         }
     };
 
