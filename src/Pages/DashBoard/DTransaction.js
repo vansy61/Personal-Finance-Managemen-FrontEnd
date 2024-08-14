@@ -1,14 +1,17 @@
 import IncomeSvg from "../../Components/Icon/IncomeSvg";
 import OutComeSvg from "../../Components/Icon/OutComeSvg";
+import {useTranslation} from "react-i18next";
 
 function DTransaction() {
+  const { t } = useTranslation();
+
   return (
     <div className="card">
       <div className="card-header d-block d-sm-flex border-0">
         <div className="me-3">
-          <h4 className="card-title mb-2">Giao Dịch Gần Đây</h4>
+          <h4 className="card-title mb-2">{t("recentTransactions")}</h4>
           <span className="fs-12">
-          5 giao dịch gần nhất
+          {t("lastFiveTransactions")}
           </span>
         </div>
       </div>

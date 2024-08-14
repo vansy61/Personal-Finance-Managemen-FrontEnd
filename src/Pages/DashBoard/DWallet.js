@@ -1,8 +1,11 @@
 import Lottie from "lottie-react";
 import WalletBounce from "../../LottieData/walletBounce.json";
 import PolarBasic from "../../Components/Chart/PolarBasic";
+import {useTranslation} from "react-i18next";
 
 function DWallet() {
+  const { t } = useTranslation();
+
   const chartOptions = {
     chart: {
       type: 'polarArea',
@@ -43,9 +46,9 @@ function DWallet() {
                 src="/images/pattern/pattern6.png"
               />
               <div className="card-info text-white">
-                <p className="fs-16 mb-4">Tổng tiền hiện có</p>
+                <p className="fs-16 mb-4">{t("totalBalance")}</p>
                 <h2 className="text-white card-balance">8.000.000 đ</h2>
-                <span>+0,8% so với tuần trước</span>
+                <span>+0,8% {t("percentageChange")}</span>
               </div>
               <div className="w-45">
                 <Lottie animationData={WalletBounce}/>
@@ -55,7 +58,7 @@ function DWallet() {
           <div className="col-xl-6">
             <div className="row  mt-xl-0 mt-4">
               <div className="col-md-6">
-                <h4 className="card-title">Tổng quan ví tiền</h4>
+                <h4 className="card-title">{t("overviewWallet")}</h4>
                 <span>
                         Tiền không phải là tất cả, nhưng nó là một phần quan trọng trong cuộc sống của chúng ta.
                       </span>
