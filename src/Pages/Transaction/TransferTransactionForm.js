@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import Select from "react-select";
 import WalletApi from "../../Apis/WalletApi";
 
-
 const CustomOption = (props) => {
     const {innerRef, innerProps, data} = props;
     return (
@@ -31,25 +30,54 @@ const customStyles = {
     }),
 };
 
-function TransferTransactionForm({formik,closeModal}) {
+function TransferTransactionForm({formik, closeModal}) {
 
-    const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
-
+    const [selectedSourceWallet, setSelectedSourceWallet] = useState(null);
+    const [selectedDestinationWallet, setSelectedDestinationWallet] = useState(null);
     const [wallets, setWallets] = useState([]);
+
     const getAllWalletByUserId = async () => {
         const response = await WalletApi.getAll();
         setWallets(response.data);
     }
-    const handleSelectWalletChange = (selectedOption) => {
-        setSelectedOptionWallet(selectedOption);
-        formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
+
+    const handleSourceWalletChange = (selectedOption) => {
+        setSelectedSourceWallet(selectedOption);
+        formik.setFieldValue('sourceWalletId', selectedOption ? selectedOption.id : '');
     };
+
+    const handleDestinationWalletChange = (selectedOption) => {
+        setSelectedDestinationWallet(selectedOption);
+        formik.setFieldValue('destinationWalletId', selectedOption ? selectedOption.id : '');
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const fromWalletId = selectedSourceWallet ? selectedSourceWallet.id : null;
+        const toWalletId = selectedDestinationWallet ? selectedDestinationWallet.id : null;
+        const amount = formik.values.amount;
+
+        if (fromWalletId && toWalletId && amount) {
+            try {
+                const response = await WalletApi.transferMoney(fromWalletId, toWalletId, amount);
+                alert("Chuyển tiền thành công");
+            } catch (error) {
+                console.error("Lỗi khi chuyển tiền:", error);
+                alert("Chuyển tiền thất bại");
+            }
+        } else {
+            alert("Vui lòng điền đầy đủ thông tin");
+        }
+    };
+
     useEffect(() => {
         getAllWalletByUserId();
     }, []);
+
     return (
         <div>
-            <form onSubmit={formik.handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-6">
                         <div className="mb-3">
@@ -87,14 +115,13 @@ function TransferTransactionForm({formik,closeModal}) {
                         </div>
                     </div>
                     <div className="col-6">
-
                         <div className="mb-3">
                             <label>Ví chuyển tiền</label>
                             <Select
                                 defaultValue={0}
-                                onChange={handleSelectWalletChange}
-                                name="walletId"
-                                value={selectedOptionWallet}
+                                onChange={handleSourceWalletChange}
+                                name="sourceWalletId"
+                                value={selectedSourceWallet}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
                                 options={wallets}
@@ -103,12 +130,12 @@ function TransferTransactionForm({formik,closeModal}) {
                             />
                         </div>
                         <div className="mb-3">
-                            <label>Ví nhận tièn</label>
+                            <label>Ví nhận tiền</label>
                             <Select
                                 defaultValue={0}
-                                onChange={handleSelectWalletChange}
-                                name="walletId"
-                                value={selectedOptionWallet}
+                                onChange={handleDestinationWalletChange}
+                                name="destinationWalletId"
+                                value={selectedDestinationWallet}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
                                 options={wallets}
@@ -116,7 +143,6 @@ function TransferTransactionForm({formik,closeModal}) {
                                 styles={customStyles}
                             />
                         </div>
-
                     </div>
                     <div className="text-end">
                         <button className="btn btn-secondary btn-sm" type="button" onClick={closeModal}>Hủy</button>
@@ -131,3 +157,4 @@ function TransferTransactionForm({formik,closeModal}) {
 }
 
 export default TransferTransactionForm;
+
