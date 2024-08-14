@@ -15,7 +15,7 @@ function CategoryForm({formik, submitText = "Tạo mới" }) {
       <div className="row">
         <div className="col-6">
           {
-            ('categoryType' in formik.values && !('parentId' in formik.values)) &&
+            ('categoryType' in formik.values && (formik.values.parentId == null)) &&
             <div className="mb-3">
               <label>Loại phân loại</label>
               <select

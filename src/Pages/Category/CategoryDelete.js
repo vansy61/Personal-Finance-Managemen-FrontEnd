@@ -21,7 +21,7 @@ function CategoryDelete({category, handleReload}) {
 
   return (
     <>
-      <button type="button" className="btn btn-rounded btn-outline-danger btn-sm p-2 ms-2" onClick={handleShow}>
+      <button type="button" className="btn btn-rounded btn-outline-danger btn-sm p-1 ms-2" onClick={handleShow}>
         <span className="me-2">Xóa</span>
         <i className="fa-solid fa-trash"></i>
       </button>
