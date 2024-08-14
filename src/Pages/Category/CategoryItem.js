@@ -33,11 +33,16 @@ function CategoryItem({category, handleReload}) {
             <span className="me-2">Mục con</span>
             <i className="fa-solid fa-network-wired"></i>
           </button>
-          <Link to={"/categories/" + category.id} className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2">
+          {
+            !category.isDefault &&
+            <>
+            <Link to={"/categories/" + category.id} className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2">
             <span className="me-2">Sửa</span>
             <i className="fa-solid fa-pen-to-square"></i>
           </Link>
           <CategoryDelete category={category} handleReload={handleReload}/>
+            </>
+          }
         </div>
       </div>
 
