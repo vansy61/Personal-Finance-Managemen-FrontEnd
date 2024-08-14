@@ -1,8 +1,6 @@
 import * as Yup from "yup";
 import {useFormik} from "formik";
 import Helper from "../../utils/helpers";
-import WalletForm from "../../Components/Wallet/WalletForm";
-import WalletApi from "../../Apis/WalletApi";
 import {useLocation, useNavigate} from "react-router-dom";
 import CategoryForm from "./CategoryForm";
 import CategoryApi from "../../Apis/CategoryApi";

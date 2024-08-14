@@ -6,7 +6,7 @@ function TransactionItem({transaction, deleteBtn, editBtn}) {
     return (
         <div className="transaction-item bg-white shadow-sm p-3 rounded-3 d-flex align-items-center mb-2">
             <div className="border-end pe-3">
-                <span className="badge light badge-danger">{transaction.categoryType === 1 ? "Thu" : "Chi"}</span>
+                <span className={`badge light badge-${transaction.categoryType === 1 ? "success" : "danger"}`}>{transaction.categoryType === 1 ? "Thu" : "Chi"}</span>
             </div>
             <div className="border-end px-3">
                 <div className="d-flex align-items-center">

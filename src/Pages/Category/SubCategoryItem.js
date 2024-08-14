@@ -1,5 +1,6 @@
 import CategoryDelete from "./CategoryDelete";
 import {Link} from "react-router-dom";
+import CategoryTransaction from "./CategoryTransaction";
 
 function SubCategoryItem({category, handleReload}) {
   return (
@@ -22,11 +23,9 @@ function SubCategoryItem({category, handleReload}) {
         <span className="ms-2 fs-14">{category.note}</span>
       </div>
       <div className="flex-grow-1 ps-3 text-end">
-        <button type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2">
-          <span className="me-2">Giao dịch</span>
-          <i className="fa-solid fa-chart-line"></i>
-        </button>
-        <Link to={"/categories/" + category.id} type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2">
+        <CategoryTransaction categoryId={category.id} />
+
+        <Link to={"/categories/" + category.id} type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-1 ms-2">
           <span className="me-2">Sửa</span>
           <i className="fa-solid fa-pen-to-square"></i>
         </Link>

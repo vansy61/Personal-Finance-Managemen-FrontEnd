@@ -18,5 +18,9 @@ class TransactionApi{
     static async deleteTransaction(transactionId){
         return axiosInstance.delete(url + '/' + transactionId);
     }
+
+    static async getByCategoryId(categoryId) {
+      return axiosInstance.get(url + '/search?categoryId=' + categoryId);
+    }
 }
 export default TransactionApi;

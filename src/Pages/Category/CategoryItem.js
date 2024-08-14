@@ -3,6 +3,7 @@ import {useState} from "react";
 import {Collapse} from "react-bootstrap";
 import CategoryDelete from "./CategoryDelete";
 import {Link} from "react-router-dom";
+import CategoryTransaction from "./CategoryTransaction";
 
 function CategoryItem({category, handleReload}) {
   const [open, setOpen] = useState(false);
@@ -26,10 +27,8 @@ function CategoryItem({category, handleReload}) {
           <span className="ms-2 fs-14">{category.note}</span>
         </div>
         <div className="flex-grow-1 ps-3 text-end">
-          <button type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2">
-            <span className="me-2">Giao dịch</span>
-            <i className="fa-solid fa-chart-line"></i>
-          </button>
+          <CategoryTransaction categoryId={category.id} />
+
           <button type="button" className="btn btn-rounded btn-outline-secondary btn-sm p-2 ms-2" onClick={() => setOpen(!open)}>
             <span className="me-2">Mục con</span>
             <i className="fa-solid fa-network-wired"></i>
