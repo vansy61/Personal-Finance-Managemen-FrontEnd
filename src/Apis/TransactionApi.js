@@ -6,7 +6,7 @@ class TransactionApi{
         return axiosInstance.get(url)
     }
     static async createTransaction(data){
-        return axiosInstance.post(url + '/add',data)
+        return axiosInstance.post(url ,data)
     }
     static async getTransactionById(id){
         return axiosInstance.get(url + `/` + id);
