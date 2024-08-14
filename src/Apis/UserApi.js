@@ -16,7 +16,9 @@ class UserApi {
       },
     });
   }
-
+  static deleteUserAll(){
+    return axiosInstance.delete('/api/v1/user/delete');
+  }
 
 }
 
