@@ -1,12 +1,8 @@
 import {useState} from "react";
-import IncomeTransactionForm from "./IncomeTransactionForm";
-import OutcomeTransactionForm from "./OutcomeTransactionForm";
-import TransferTransactionForm from "./TransferTransactionForm";
 import TransactionFormik from "./TransactionFormik";
-import transactionFormik from "./TransactionFormik";
 
-function TransactionActionContent({closeModal}) {
-  const [transactionType, setTransactionType] = useState('income');
+function TransactionActionContent({closeModal, actionType = "income"}) {
+  const [transactionType, setTransactionType] = useState(actionType);
 
   const handleTransactionTypeChange = (type) => {
     setTransactionType(type);

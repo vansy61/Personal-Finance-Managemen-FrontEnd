@@ -85,7 +85,7 @@
     transition: 0.3s;
 }
 
-.invoice-card:hover {
+.invoice-wrapper:hover .invoice-card {
     transform: translateY(-10px);
 }
 .login-page {
@@ -130,4 +130,18 @@
 
 .languageSwithcher:after {
     display: none;
+}
+
+.wallet-item-action {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.invoice-wrapper:hover .wallet-item-action {
+    opacity: 1;
 }

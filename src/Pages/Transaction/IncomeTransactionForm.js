@@ -3,6 +3,7 @@ import Select from 'react-select';
 import {Link} from "react-router-dom";
 import CategoryApi from "../../Apis/CategoryApi";
 import WalletApi from "../../Apis/WalletApi";
+import {useSelector} from "react-redux";
 
 
 // Custom option component to include images
@@ -36,6 +37,7 @@ const customStyles = {
 
 
 function IncomeTransactionForm({formik,closeModal}) {
+  const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
   const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
   const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
@@ -48,8 +50,15 @@ function IncomeTransactionForm({formik,closeModal}) {
     }
 
     const getAllWalletByUserId = async () => {
-        const response = await WalletApi.getAll();
-        setWallets(response.data);
+      const response = await WalletApi.getAll();
+      setWallets(response.data);
+
+      if(selectedWalletId) {
+        const defaultWallet = response.data.find(wallet => wallet.id === selectedWalletId);
+        setSelectedOptionWallet(defaultWallet);
+        formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
+      }
+
     }
 
 
@@ -68,6 +77,7 @@ function IncomeTransactionForm({formik,closeModal}) {
       setSelectedOptionWallet(selectedOption);
       formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
     };
+    console.log(selectedOptionWallet)
 
     return (
         <div>
@@ -129,15 +139,14 @@ function IncomeTransactionForm({formik,closeModal}) {
                         <div className="mb-3">
                             <label>Ví tiền</label>
                             <Select
-                                defaultValue={0}
-                                onChange={handleSelectWalletChange}
-                                name="walletId"
-                                value={selectedOptionWallet}
-                                getOptionValue={(option) => option.id}
-                                getOptionLabel={(option) => option.walletName}
-                                options={wallets}
-                                components={{Option: CustomOption}}
-                                styles={customStyles}
+                              onChange={handleSelectWalletChange}
+                              name="walletId"
+                              value={selectedOptionWallet}
+                              getOptionValue={(option) => option.id}
+                              getOptionLabel={(option) => option.walletName}
+                              options={wallets}
+                              components={{ Option: CustomOption }}
+                              styles={customStyles}
                             />
                         </div>
 

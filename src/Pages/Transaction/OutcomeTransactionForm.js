@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import CategoryApi from "../../Apis/CategoryApi";
 import WalletApi from "../../Apis/WalletApi";
 import Select from "react-select";
+import {useSelector} from "react-redux";
 const CustomOption = (props) => {
     const {innerRef, innerProps, data} = props;
     return (
@@ -30,6 +31,7 @@ const customStyles = {
     }),
 };
 function OutcomeTransactionForm({formik, closeModal}) {
+  const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
     const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
     const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
@@ -44,6 +46,11 @@ function OutcomeTransactionForm({formik, closeModal}) {
     const getAllWalletByUserId = async () => {
         const response = await WalletApi.getAll();
         setWallets(response.data);
+        if(selectedWalletId) {
+          const defaultWallet = response.data.find(wallet => wallet.id === selectedWalletId);
+          setSelectedOptionWallet(defaultWallet);
+          formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
+        }
     }
 
     useEffect(() => {
