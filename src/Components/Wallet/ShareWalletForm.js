@@ -1,8 +1,8 @@
 import { Button, Modal } from "react-bootstrap";
-import { useState } from "react";
+import React, { useState } from "react";
 import WalletActionContent from "./WalletActionContent";
 
-function ShareWalletForms({ walletId }) { 
+function ShareWalletForms({ walletId, handleSetNewShare }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -18,12 +18,21 @@ function ShareWalletForms({ walletId }) {
         <span className="mx-2">Thêm người được chia sẻ ví</span>
         <i className="fa-solid fa-plus"></i>
       </Button>
-      <Modal show={show} onHide={handleClose} size="lg" className="modal-box-style">
+      <Modal show={show} onHide={handleClose} className="modal-box-style">
+        <Modal.Header closeButton>
+          <Modal.Title>Chia sẻ ví</Modal.Title>
+        </Modal.Header>
         <Modal.Body>
           {walletId !== null && walletId !== undefined && (
-            <WalletActionContent walletId={walletId} closeModal={handleClose} />
+            <WalletActionContent walletId={walletId} closeModal={handleClose} handleSetNewShare={handleSetNewShare}/>
           )}
         </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" className="btn-sm" onClick={handleClose}>Đóng</Button>
+          <button type="submit" className="btn btn-primary btn-sm" form={"form-shared-waller"}>
+            Thêm
+          </button>
+        </Modal.Footer>
       </Modal>
     </div>
   );

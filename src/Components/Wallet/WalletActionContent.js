@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import Helper from "../../utils/helpers";
-
-function WalletActionContent({ walletId, closeModal, onShareSuccess }) {
+import {useSelector} from "react-redux";
+import WalletApi from "../../Apis/WalletApi";
+function WalletActionContent({ walletId, closeModal, handleSetNewShare }) {
   const [email, setEmail] = useState('');
   const [role, setRole] = useState('READ_ONLY'); // Mặc định là READ_ONLY
+  const user = useSelector((state) => state.auth.user);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        `http://localhost:8080/api/v1/wallets/share-wallet/${walletId}`,
-        null,
-        {
-          params: {
-            email: email,
-            role: role
-          }
+      const response = await WalletApi.shareWallet(walletId,{
+          email: email,
+          role: role
         }
       );
+      handleSetNewShare(response.data.walletRoles.filter(role => role.userId !== user.id));
 
       Helper.toastSuccess('Đã chia sẻ ví thành công!');
       closeModal();
@@ -42,58 +40,36 @@ function WalletActionContent({ walletId, closeModal, onShareSuccess }) {
   };
 
   return (
-    <div>
-      <div className="me-auto">
-        <div className="card-tabs style-1 mt-3 mt-sm-0">
-          <ul className="nav nav-tabs mx-auto shadow-sm" role="tablist">
-            <li className="nav-item">
-              <a className="nav-link active">
-                Thêm Người dùng
-              </a>
-            </li>
-          </ul>
-        </div>
+    <form onSubmit={handleSubmit} id={"form-shared-waller"}>
+      <div className="mb-3">
+        <label htmlFor="email" className="form-label">
+          Nhập Gmail của người dùng
+        </label>
+        <input
+          type="email"
+          className="form-control"
+          id="email"
+          placeholder="example@gmail.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
       </div>
-      <div className="card mt-4">
-        <div className="card-body">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Nhập Gmail của người dùng
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="example@gmail.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
 
-            <div className="mb-3">
-              <label htmlFor="role" className="form-label">Chọn quyền:</label>
-              <select
-                id="role"
-                className="form-select"
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-              >
-                <option value="READ_ONLY">READ_ONLY</option>
-                <option value="OWNER">OWNER</option>
-              </select>
-            </div>
-
-            <div className="d-flex justify-content-center w-100">
-              <button type="submit" className="btn btn-primary">
-                Thêm
-              </button>
-            </div>
-          </form>
-        </div>
+      <div className="mb-3">
+        <label htmlFor="role" className="form-label">Chọn quyền:</label>
+        <select
+          id="role"
+          className="form-select"
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+        >
+          <option value="READ_ONLY">READ_ONLY</option>
+          <option value="OWNER">OWNER</option>
+        </select>
       </div>
-    </div>
+    </form>
+
   );
 }
 

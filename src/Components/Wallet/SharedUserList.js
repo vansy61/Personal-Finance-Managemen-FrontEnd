@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Helper from "../../utils/helpers";
 import UnshareModal from "../../Pages/Wallet/UnshareModal";
+import WalletApi from "../../Apis/WalletApi";
 
 function SharedUserList({ sharedUsers, walletId, onUpdateRole, handleUnshare }) {
   const [roles, setRoles] = useState(
@@ -18,15 +19,11 @@ function SharedUserList({ sharedUsers, walletId, onUpdateRole, handleUnshare }) 
     }));
 
     try {
-      await axios.put(
-        `http://localhost:8080/api/v1/wallets/share-wallet/${walletId}`,
-        null,
-        {
-          params: {
+      await WalletApi.updateShareWallet(
+        walletId, {
             userId: userId,
             role: newRole
           }
-        }
       );
       Helper.toastSuccess('Cập nhật quyền thành công!');
       onUpdateRole(userId, newRole);

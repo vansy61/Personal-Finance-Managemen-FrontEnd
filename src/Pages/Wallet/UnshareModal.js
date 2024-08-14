@@ -14,7 +14,7 @@ function UnshareModal({ email, handleUnshare }) {
 
   return (
     <>
-      <Button className="btn-sm btn-danger" onClick={handleShow}>
+      <Button variant={"danger"} size={"sm"} onClick={handleShow}>
         Xóa liên kết
       </Button>
 

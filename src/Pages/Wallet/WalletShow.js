@@ -11,7 +11,8 @@ import WalletApi from '../../Apis/WalletApi';
 import WalletDelete from '../../Components/Wallet/WalletDelete';
 import ShareWalletForms from '../../Components/Wallet/ShareWalletForm';
 import SharedUserList from '../../Components/Wallet/SharedUserList';
-
+import Lottie from "lottie-react";
+import AniEmpty from "../../LottieData/empty.json";
 
 const validationSchema = Yup.object({
   amount: Yup.number().min(0, 'Số tiền hiện tại phải lớn hơn 0'),
@@ -28,6 +29,7 @@ function WalletShow() {
   const [wallet, setWallet] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isOwner, setIsOwner] = useState(false);
+  const [sharedUsers, setSharedUsers] = useState([]);
 
   useEffect(() => {
     const fetchWallet = async () => {
@@ -39,7 +41,7 @@ function WalletShow() {
         const userRole = response.data.walletRoles.find(role => role.userId == currentUserId);
 
         setIsOwner(userRole && userRole.role === "OWNER");
-
+        setSharedUsers(response.data.walletRoles.filter(role => role.userId !== user.id));
       } catch (error) {
         navigate("/wallets");
       } finally {
@@ -48,7 +50,7 @@ function WalletShow() {
     };
 
     fetchWallet();
-  }, [walletId]);
+  }, []);
 
   const handleDelete = async () => {
     try {
@@ -62,16 +64,14 @@ function WalletShow() {
 
   const handleUnshare = async (email) => {
     try {
-      await axios.delete(
-        `http://localhost:8080/api/v1/wallets/share-wallet/${walletId}`,
+      await WalletApi.unShareWallet(
+        walletId,
         { params: { email } }
       );
       Helper.toastSuccess("Xóa liên kết chia sẻ thành công!");
-
-      setWallet((prevWallet) => ({
-        ...prevWallet,
-        walletRoles: prevWallet.walletRoles.filter((role) => role.userEmail !== email)
-      }));
+      setSharedUsers((prevSharedUsers) => {
+        return  prevSharedUsers.filter(user => user.userEmail !== email);
+      });
     } catch (error) {
       Helper.toastError("Không thể xóa liên kết chia sẻ: " + (error.response?.data || error.message));
     }
@@ -85,8 +85,6 @@ function WalletShow() {
       )
     }));
   };
-
-  const sharedUsers = wallet ? wallet.walletRoles.filter(role => role.userId !== user.id) : [];
 
   const formik = useFormik({
     initialValues: wallet ? {
@@ -139,7 +137,10 @@ function WalletShow() {
       {isOwner && (
         <div className="card mb-4">
           <div className="card-body">
-            <h5>Danh sách shared của ví</h5>
+            <div className="d-flex align-items-center justify-content-between mb-4">
+              <h5>Danh sách shared của ví</h5>
+              <ShareWalletForms walletId={walletId} handleSetNewShare={setSharedUsers}/>
+            </div>
             {sharedUsers.length > 0 ? (
               <SharedUserList
                 sharedUsers={sharedUsers}
@@ -148,11 +149,10 @@ function WalletShow() {
                 handleUnshare={handleUnshare}
               />
             ) : (
-              <p>Không có người dùng nào được chia sẻ.</p>
+              <div className="w-25 mx-auto">
+                <Lottie animationData={AniEmpty} />
+              </div>
             )}
-            <div className="mt-3">
-              <ShareWalletForms walletId={walletId} />
-            </div>
           </div>
         </div>
       )}
