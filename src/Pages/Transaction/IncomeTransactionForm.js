@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import CategoryApi from "../../Apis/CategoryApi";
 import WalletApi from "../../Apis/WalletApi";
 import {useSelector} from "react-redux";
+import Helper from "../../utils/helpers";
 
 
 // Custom option component to include images
@@ -34,7 +35,6 @@ const customStyles = {
         alignItems: 'center',
     }),
 };
-
 
 function IncomeTransactionForm({formik,closeModal}) {
   const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
@@ -77,7 +77,11 @@ function IncomeTransactionForm({formik,closeModal}) {
       setSelectedOptionWallet(selectedOption);
       formik.setFieldValue('walletId', selectedOption? selectedOption.id : '');
     };
-    console.log(selectedOptionWallet)
+
+  const handleAmountChange = (e) => {
+    const value = Helper.parseNumber(e.target.value);
+    formik.setFieldValue('amount', value);
+  };
 
     return (
         <div>
@@ -88,10 +92,10 @@ function IncomeTransactionForm({formik,closeModal}) {
                             <label>Số tiền</label>
                             <input
                                 className="form-control"
-                                type="number"
+                                type="text"
                                 name="amount"
-                                onChange={formik.handleChange}
-                                value={formik.values.amount}/>
+                                onChange={handleAmountChange}
+                                value={Helper.formatNumber(formik.values.amount)}/>
                             {formik.touched.amount && formik.errors.amount ?
                                 <div className="text-danger">{formik.errors.amount}</div> : null}
                         </div>

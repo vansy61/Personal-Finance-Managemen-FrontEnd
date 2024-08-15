@@ -83,6 +83,17 @@ class Helper {
       Helper.toastError(mes)
     }
   }
+
+  static formatNumber(value) {
+    return new Intl.NumberFormat('vi-VN', {
+      style: 'decimal',
+      maximumFractionDigits: 2,
+    }).format(value);
+  };
+
+  static parseNumber(value) {
+    return value.replace(/\./g, '').replace(/,/g, '') // Remove commas for numeric parsing
+  };
 }
 
 export default Helper;

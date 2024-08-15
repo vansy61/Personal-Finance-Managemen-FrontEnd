@@ -2,8 +2,8 @@ import axiosInstance from "./axiosInstance";
 const url = 'api/v1/transaction';
 class TransactionApi{
 
-    static async getAll(){
-        return axiosInstance.get(url)
+    static async getAll(data){
+        return axiosInstance.get(url, {params: data});
     }
     static async createTransaction(data){
         return axiosInstance.post(url ,data)
