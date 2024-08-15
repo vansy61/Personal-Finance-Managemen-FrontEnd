@@ -45,7 +45,7 @@ const validationSchema = Yup.object({
     categoryId: Yup.number().required("Không được để trống"),
     walletId: Yup.number().required("Không đuc để trông")
 })
-function TransactionEditModal({transactionId}){
+function TransactionEditModal({transactionId, reload}){
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -111,7 +111,7 @@ function TransactionEditModal({transactionId}){
                     await TransactionApi.updateTransaction(transactionId,values)
 
                     Helper.toastSuccess("Cập nhật giao dịch mới thành công")
-                    window.location.reload()
+                    reload(true)
 
                 } catch (error) {
                     console.log(error)

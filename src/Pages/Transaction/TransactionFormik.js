@@ -15,8 +15,7 @@ const validationSchema = Yup.object({
     walletId: Yup.number().required("Không đuc để trông")
 })
 
-function TransactionFormik({closeModal, transactionType}) {
-    const navigate = useNavigate();
+function TransactionFormik({closeModal, transactionType, reload}) {
 
     const formik = useFormik({
             initialValues: {
@@ -32,8 +31,7 @@ function TransactionFormik({closeModal, transactionType}) {
                     await TransactionApi.createTransaction(values)
                     closeModal();
                     Helper.toastSuccess("Tạo giao dịch mới thành công")
-                    window.location.reload();
-                    navigate("/transactions")
+                    reload(true);
                 } catch (error) {
                     console.log(error)
                     Helper.toastError("Tạo giao dịch thất bại")

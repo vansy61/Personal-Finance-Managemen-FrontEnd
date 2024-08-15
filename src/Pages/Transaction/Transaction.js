@@ -48,9 +48,9 @@ function Transaction() {
     }
 
     useEffect(() => {
-
+        if (!loading) return;
         fetchTransaction();
-    }, []);
+    }, [loading]);
 
     return (
         <div>
@@ -70,7 +70,7 @@ function Transaction() {
                         </ul>
                     </div>
                 </div>
-                <TransactionActionModal/>
+                <TransactionActionModal reload={setLoading}/>
             </div>
             <div className="row">
                 <div className="col-12">
@@ -89,9 +89,9 @@ function Transaction() {
                                                 (<TransactionItem key={transaction.id}
                                                                   transaction={transaction}
                                                                   deleteBtn={<TransactionDelete
-                                                                      transactionId={transaction.id}
+                                                                      transactionId={transaction.id} reload={setLoading}
                                                                       />}
-                                                                  editBtn={<TransactionEditModal transactionId={transaction.id}/>}
+                                                                  editBtn={<TransactionEditModal transactionId={transaction.id} reload={setLoading}/>}
                                                 />))
                                         }</>)
                             }

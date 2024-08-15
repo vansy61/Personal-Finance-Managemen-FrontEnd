@@ -3,7 +3,7 @@ import ProfileUpdatePasswordForm from "../../Components/Profile/ProfileUpdatePas
 import {useState} from "react";
 import TransactionActionContent from "./TransactionActionContent";
 
-function TransactionActionModal() {
+function TransactionActionModal({reload}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -16,7 +16,7 @@ function TransactionActionModal() {
       </Button>
       <Modal show={show} onHide={handleClose} size="lg" className="modal-box-style">
         <Modal.Body>
-          <TransactionActionContent closeModal={handleClose} />
+          <TransactionActionContent closeModal={handleClose} reload={reload}/>
         </Modal.Body>
       </Modal>
     </div>

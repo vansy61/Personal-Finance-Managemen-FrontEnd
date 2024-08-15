@@ -4,7 +4,7 @@ import TransactionApi from "../../Apis/TransactionApi";
 import Helper from "../../utils/helpers";
 import {useNavigate} from "react-router-dom";
 
-function TransactionDelete({transactionId}) {
+function TransactionDelete({transactionId, reload}) {
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
     const handleClose = () => setShow(false);
@@ -14,8 +14,7 @@ function TransactionDelete({transactionId}) {
             await TransactionApi.deleteTransaction(transactionId)
             handleClose()
             Helper.toastSuccess("Xoá thành công")
-            window.location.reload();
-            navigate("/transactions")
+            reload(true);
         } catch (error) {
             Helper.toastError("Xoá thất bại")
         }
