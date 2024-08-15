@@ -11,6 +11,9 @@ function Wallet() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if(!loading) {
+      return;
+    }
     const fetchWallets = async () => {
       try {
         const response = await WalletApi.getAll();
@@ -23,7 +26,7 @@ function Wallet() {
     };
 
     fetchWallets();
-  }, []);
+  }, [loading]);
   return (
     <div>
       <div className="text-end">
@@ -46,7 +49,7 @@ function Wallet() {
                     </div> :
                   <>
                     {
-                      wallets.map((w, index) => <WalletItem key={w.id} wallet={w} index={index} />)
+                      wallets.map((w, index) => <WalletItem key={w.id} wallet={w} index={index} reload={setLoading}/>)
                     }
                   </>
 

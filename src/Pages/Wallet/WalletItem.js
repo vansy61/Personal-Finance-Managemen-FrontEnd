@@ -11,7 +11,7 @@ const walletColors = [
   '#496ecc',
   '#5bcfc5',
 ]
-function WalletItem({ wallet, index}) {
+function WalletItem({ wallet, index, reload}) {
   const user = useSelector((state) => state.auth.user);
   return (
     <div className="col-4 position-relative invoice-wrapper">
@@ -35,7 +35,7 @@ function WalletItem({ wallet, index}) {
       </Link>
       {
         wallet.walletRoles.some(role => role.userId === user.id && role.role === "OWNER") &&
-        <WalletAction walletId={wallet.id}/>
+        <WalletAction walletId={wallet.id} reload={reload}/>
       }
 
     </div>
