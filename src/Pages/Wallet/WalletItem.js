@@ -2,6 +2,7 @@ import GradientLineChart from "../../Components/Chart/GradientLineChart";
 import {Link} from "react-router-dom";
 import {FormattedNumber} from "react-intl";
 import WalletAction from "./WalletAction";
+import {useSelector} from "react-redux";
 const walletColors = [
   '#ffa755',
   '#b48dd3',
@@ -11,6 +12,7 @@ const walletColors = [
   '#5bcfc5',
 ]
 function WalletItem({ wallet, index}) {
+  const user = useSelector((state) => state.auth.user);
   return (
     <div className="col-4 position-relative invoice-wrapper">
       <Link to={"/wallets/" + wallet.id} className="card card-bx p-0 invoice-card"
@@ -31,7 +33,11 @@ function WalletItem({ wallet, index}) {
         </div>
 
       </Link>
-      <WalletAction walletId={wallet.id}/>
+      {
+        wallet.walletRoles.some(role => role.userId === user.id && role.role === "OWNER") &&
+        <WalletAction walletId={wallet.id}/>
+      }
+
     </div>
   )
 }

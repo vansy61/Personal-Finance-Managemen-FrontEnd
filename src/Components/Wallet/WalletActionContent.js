@@ -43,7 +43,7 @@ function WalletActionContent({ walletId, closeModal, handleSetNewShare }) {
     <form onSubmit={handleSubmit} id={"form-shared-waller"}>
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
-          Nhập Gmail của người dùng
+          Nhập mail của người dùng
         </label>
         <input
           type="email"

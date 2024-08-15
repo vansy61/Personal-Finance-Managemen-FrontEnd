@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import GradientLineChart from "../../Components/Chart/GradientLineChart";
 import WalletItem from "./WalletItem";
 import { useEffect, useState } from "react";
-import UserApi from "../../Apis/UserApi";
 import WalletApi from "../../Apis/WalletApi";
 import Skeleton from "react-loading-skeleton";
-import ProfileForm from "../../Components/Profile/ProfileForm";
 import Lottie from "lottie-react";
 import AniEmpty from "../../LottieData/empty.json";
 
@@ -17,7 +14,6 @@ function Wallet() {
     const fetchWallets = async () => {
       try {
         const response = await WalletApi.getAll();
-
         setWallets(response.data);
       } catch (error) {
         console.error('Error', error);
