@@ -49,7 +49,7 @@ function TransactionFormik({closeModal, transactionType, reload}) {
                         <IncomeTransactionForm formik={formik} closeModal={closeModal} />) :
                     (transactionType == "outcome" ?
                             <OutcomeTransactionForm formik={formik} closeModal={closeModal}/> :
-                            <TransferTransactionForm formik={formik} closeModal={closeModal}/>
+                            <TransferTransactionForm formik={formik} closeModal={closeModal} reload={reload}/>
                     )
             }
         </>

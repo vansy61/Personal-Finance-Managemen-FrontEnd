@@ -31,7 +31,7 @@ const customStyles = {
     }),
 };
 
-function TransferTransactionForm({formik, closeModal}) {
+function TransferTransactionForm({formik, closeModal, reload}) {
 
     const [selectedSourceWallet, setSelectedSourceWallet] = useState(null);
     const [selectedDestinationWallet, setSelectedDestinationWallet] = useState(null);
@@ -63,6 +63,7 @@ function TransferTransactionForm({formik, closeModal}) {
             try {
                 const response = await WalletApi.transferMoney(fromWalletId, toWalletId, amount);
                 Helper.toastSuccess("Chuyển tiền thành công");
+              reload(true);
             } catch (error) {
                 console.error("Lỗi khi chuyển tiền:", error);
                 Helper.toastError("Chuyển tiền thất bại");
