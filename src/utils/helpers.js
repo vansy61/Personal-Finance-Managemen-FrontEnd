@@ -94,6 +94,26 @@ class Helper {
   static parseNumber(value) {
     return value.replace(/\./g, '').replace(/,/g, '') // Remove commas for numeric parsing
   };
+
+  static groupBy(arr, key) {
+    return arr.reduce((acc, item) => {
+      const group = item[key];
+      acc[group] = (acc[group] || []).concat(item);
+      return acc;
+    }, {});
+  }
+
+  static sortStringDate(arr) {
+    //date is "17-08-2024"
+    //format is "dd-MM-yyyy"
+    return arr.sort((a, b) => {
+      const [day, month, year] = a.split("-");
+      const [day1, month1, year1] = b.split("-");
+      const date = new Date(`${year}-${month}-${day}T00:00:00`);
+      const date1 = new Date(`${year1}-${month1}-${day1}T00:00:00`);
+      return date1 - date;
+    });
+  }
 }
 
 export default Helper;

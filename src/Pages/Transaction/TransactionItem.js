@@ -15,7 +15,6 @@ function TransactionItem({transaction, deleteBtn, editBtn}) {
                     </div>
                     <div className="ms-3">
                         <h5 className="mb-0">{transaction.categoryName}</h5>
-                        <p className="mb-0"><small>{transaction.datetime}</small></p>
                     </div>
                 </div>
             </div>
