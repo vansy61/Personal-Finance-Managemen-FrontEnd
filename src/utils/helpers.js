@@ -1,6 +1,15 @@
 import {Flip, toast} from "react-toastify";
 
+const appColors = [
+  '#ffa755',
+  '#b48dd3',
+  '#68e365',
+  '#709fba',
+  '#496ecc',
+  '#5bcfc5',
+]
 class Helper {
+  static exchangeRates;
   static delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -95,6 +104,11 @@ class Helper {
     return value.replace(/\./g, '').replace(/,/g, '') // Remove commas for numeric parsing
   };
 
+  static parseFloat(value) {
+    //value is "24,870.00"
+    return Number.parseFloat(value.replace(',', ''));
+  }
+
   static groupBy(arr, key) {
     return arr.reduce((acc, item) => {
       const group = item[key];
@@ -104,8 +118,6 @@ class Helper {
   }
 
   static sortStringDate(arr) {
-    //date is "17-08-2024"
-    //format is "dd-MM-yyyy"
     return arr.sort((a, b) => {
       const [day, month, year] = a.split("-");
       const [day1, month1, year1] = b.split("-");
@@ -113,6 +125,31 @@ class Helper {
       const date1 = new Date(`${year1}-${month1}-${day1}T00:00:00`);
       return date1 - date;
     });
+  }
+
+  static async vcbExchangeRates() {
+    if (!Helper.exchangeRates) {
+      const response = await fetch('https://portal.vietcombank.com.vn/Usercontrols/TVPortal.TyGia/pXML.aspx?b=10');
+      const xmlText = await response.text();
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+      const exrateList = Array.from(xmlDoc.getElementsByTagName('Exrate')).map((exrate) => ({
+        currencyCode: exrate.getAttribute('CurrencyCode'),
+        currencyName: exrate.getAttribute('CurrencyName'),
+        buy: exrate.getAttribute('Buy'),
+        transfer: exrate.getAttribute('Transfer'),
+        sell: exrate.getAttribute('Sell'),
+      }));
+      Helper.exchangeRates = exrateList;
+    }
+    return Helper.exchangeRates;
+  }
+
+  static getColorByIndex(index) {
+    return appColors[index];
+  }
+  static getArrayColor(length) {
+    return Array.from({length}, (_, index) => Helper.getColorByIndex(index));
   }
 }
 
