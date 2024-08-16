@@ -38,8 +38,8 @@ function TransactionItem({transaction, deleteBtn, editBtn}) {
                 {/*    </button>*/}
                 {/*</Link>*/}
                 <div className="flex-grow-1">
-                    {editBtn}
-                    {deleteBtn}
+                    {!transaction.isTransfer && editBtn}
+                    {!transaction.isTransfer && deleteBtn}
                 </div>
 
             </div>
