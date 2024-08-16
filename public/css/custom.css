@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap); /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
 #main-wrapper {
     background-image: url("../images/bg.png");
     padding: 15px;
@@ -144,4 +146,13 @@
 
 .invoice-wrapper:hover .wallet-item-action {
     opacity: 1;
+}
+
+
+.logo-text {
+    color: #193b62;
+    font-size: 31px;
+    margin-left: 15px;
+    margin-top: 10px;
+    font-family: Montserrat, sans-serif;
 }
