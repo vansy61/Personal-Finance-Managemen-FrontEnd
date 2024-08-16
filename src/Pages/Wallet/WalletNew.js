@@ -6,7 +6,7 @@ import WalletApi from "../../Apis/WalletApi";
 import {useNavigate} from "react-router-dom";
 
 const validationSchema = Yup.object({
-  amount: Yup.number(),
+  amount: Yup.number().min(0, "Tiền hiện có phải lớn hơn 0!"),
   walletName: Yup.string().required("Vui lòng nhập tên ví!"),
   icon: Yup.string().required("Vui lòng chọn icon!"),
   currency: Yup.string().required("Vui lòng chọn loại tiền tệ!"),

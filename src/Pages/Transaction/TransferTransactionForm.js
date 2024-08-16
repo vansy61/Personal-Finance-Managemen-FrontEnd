@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Select from "react-select";
 import { useSelector } from "react-redux";
 import WalletApi from "../../Apis/WalletApi";
@@ -63,10 +63,10 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
             try {
                 await WalletApi.transferMoney(fromWalletId, toWalletId, amount);
                 Helper.toastSuccess("Chuyển tiền thành công");
+                closeModal();
                 reload(true);
             } catch (error) {
-                console.error("Lỗi khi chuyển tiền:", error);
-                Helper.toastError("Chuyển tiền thất bại");
+                Helper.parseError(error);
             }
         } else {
             Helper.toastError("Vui lòng điền đầy đủ thông tin");
@@ -78,7 +78,7 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
     }, []);
 
     // Lọc các ví nhận tiền (loại trừ ví đã được chọn làm ví chuyển tiền)
-    const availableDestinationWallets = wallets.filter(wallet => 
+    const availableDestinationWallets = wallets.filter(wallet =>
         wallet.id !== selectedSourceWallet?.id
     );
 
@@ -96,7 +96,7 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
                                 onChange={formik.handleChange}
                                 value={formik.values.amount}
                             />
-                            {formik.touched.amount && formik.errors.amount ? 
+                            {formik.touched.amount && formik.errors.amount ?
                                 <div className="text-danger">{formik.errors.amount}</div> : null}
                         </div>
                         <div className="mb-3">
@@ -108,7 +108,7 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
                                 onChange={formik.handleChange}
                                 value={formik.values.note}
                             />
-                            {formik.touched.note && formik.errors.note ? 
+                            {formik.touched.note && formik.errors.note ?
                                 <div className="text-danger">{formik.errors.note}</div> : null}
                         </div>
                         <div className="mb-3">
@@ -120,7 +120,7 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
                                 onChange={formik.handleChange}
                                 value={formik.values.datetime}
                             />
-                            {formik.touched.datetime && formik.errors.datetime ? 
+                            {formik.touched.datetime && formik.errors.datetime ?
                                 <div className="text-danger">{formik.errors.datetime}</div> : null}
                         </div>
                     </div>
@@ -128,12 +128,13 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
                         <div className="mb-3">
                             <label>Ví chuyển tiền</label>
                             <Select
+                                defaultValue={0}
                                 onChange={handleSourceWalletChange}
                                 name="sourceWalletId"
                                 value={selectedSourceWallet}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
-                                options={wallets.filter(wallet => 
+                                options={wallets.filter(wallet =>
                                     wallet.walletRoles.some(role => role.userId === currentUserId && role.role === 'OWNER')
                                 )}
                                 components={{ Option: CustomOption }}
@@ -165,3 +166,4 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
 }
 
 export default TransferTransactionForm;
+

@@ -33,8 +33,7 @@ function TransactionFormik({closeModal, transactionType, reload}) {
                     Helper.toastSuccess("Tạo giao dịch mới thành công")
                     reload(true);
                 } catch (error) {
-                    console.log(error)
-                    Helper.toastError("Tạo giao dịch thất bại")
+                    Helper.parseError(error)
                 } finally {
                     setSubmitting(false);
                 }
