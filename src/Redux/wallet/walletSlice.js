@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  selectedWalletId: null,  // Khởi tạo ID của ví được chọn
+  selectedWalletId: null, // Khởi tạo ID của ví được chọn
 };
 
 const walletSlice = createSlice({
