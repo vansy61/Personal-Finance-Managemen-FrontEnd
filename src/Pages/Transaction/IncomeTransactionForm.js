@@ -42,6 +42,7 @@ function IncomeTransactionForm({formik,closeModal}) {
   const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
     const [wallets, setWallets] = useState([]);
+    const currentUser = useSelector((state) => state.auth.user);
 
     const getAllCategoryByUserId = async () => {
         const response = await CategoryApi.getAll();
@@ -49,17 +50,28 @@ function IncomeTransactionForm({formik,closeModal}) {
         setCategories(newCategories);
     }
 
-    const getAllWalletByUserId = async () => {
+   
+  const getAllWalletByUserId = async () => {
+    try {
       const response = await WalletApi.getAll();
-      setWallets(response.data);
 
-      if(selectedWalletId) {
-        const defaultWallet = response.data.find(wallet => wallet.id === selectedWalletId);
+      
+      const ownerWallets = response.data.filter(wallet =>
+        wallet.walletRoles.some(role => role.role === 'OWNER' && role.userId === currentUser.id)
+      );
+
+      setWallets(ownerWallets);
+
+      if (selectedWalletId) {
+        const defaultWallet = ownerWallets.find(wallet => wallet.id === selectedWalletId);
         setSelectedOptionWallet(defaultWallet);
         formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
       }
-
+    } catch (error) {
+      console.error("Error fetching wallets:", error);
     }
+  };
+
 
 
 

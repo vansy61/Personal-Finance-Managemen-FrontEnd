@@ -145,7 +145,7 @@ function Transaction() {
                                   </div>
                                 </>)
                           }
-                          < />
+                          </>
                       )
                   }
               </div>
