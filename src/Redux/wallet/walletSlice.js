@@ -5,13 +5,19 @@ import WalletApi from "../../Apis/WalletApi";
 const initialState = {
   selectedWalletId: null,
   wallets: [],
+  ownerWallets: [],
   status: 'idle',
   selectedWallet: null
 };
 
-export const fetchWallets = createAsyncThunk('wallets/fetchWallets', async () => {
+export const fetchWallets = createAsyncThunk('wallets/fetchWallets', async (userId) => {
   const response = await WalletApi.getAll();
-  return response.data;
+  const wallets = response.data;
+  const ownerWallets = wallets.filter(wallet =>
+      wallet.walletRoles.some(role => role.userId === userId && role.role === 'OWNER')
+  );
+
+  return { wallets, ownerWallets };
 });
 
 const walletSlice = createSlice({
@@ -31,7 +37,8 @@ const walletSlice = createSlice({
       })
       .addCase(fetchWallets.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.wallets = action.payload;
+        state.wallets = action.payload.wallets;
+        state.ownerWallets = action.payload.ownerWallets;
       })
       .addCase(fetchWallets.rejected, (state, action) => {
         state.status = 'failed';

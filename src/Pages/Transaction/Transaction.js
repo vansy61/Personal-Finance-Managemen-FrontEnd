@@ -9,25 +9,20 @@ import Skeleton from "react-loading-skeleton";
 import TransactionEditModal from "../../Components/Transaction/TrasactionEditModal";
 import Helper from "../../utils/helpers";
 import DateRangePicker from "react-bootstrap-daterangepicker";
-import {Button, Form} from "react-bootstrap";
 import moment from "moment";
+import {useSelector} from "react-redux";
 
 
 function Transaction() {
-
-    const [transactions, setTransactions] = useState([]);
+    const [transactions, setTransactions] = useState(null);
     const [categoryType, setCategoryType] = useState(2);
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(1);
-    const [loading, setLoading] = useState(true);
     const [startDate, setStartDate] = useState(moment().subtract(30, 'days'));
     const [endDate, setEndDate] = useState(moment());
-
-
-
+    const statusReloadWallet = useSelector((state) => state.wallet.status);
 
     useEffect(() => {
-        if (!loading) return;
         const fetchTransaction = async () => {
           await Helper.delay(600)
           try {
@@ -41,22 +36,19 @@ function Transaction() {
             setTotalPages(response.data.totalPages);
           } catch (error) {
             console.error('Error', error)
-          } finally {
-            setLoading(false);
           }
         };
+        setTransactions(null);
         fetchTransaction();
-    }, [loading]);
+    }, [statusReloadWallet, categoryType, page, startDate, endDate]);
 
     const handleTypeChange = (type) => {
       setCategoryType(type);
-      setLoading(true);
     };
 
   const handlePageChange = (newPage) => {
     if (newPage >= 0 && newPage < totalPages) {
       setPage(newPage);
-      setLoading(true);
     }
   };
 
@@ -94,32 +86,31 @@ function Transaction() {
     const handleApplyDate = (event, picker) => {
         setStartDate(picker.startDate);
         setEndDate(picker.endDate);
-        setLoading(true);
     };
 
 
-    const transactionsGrouped = Helper.groupBy(transactions, "datetime");
-  const sortedTransactions = Helper.sortStringDate(Object.keys(transactionsGrouped));
-  const renderTransactions = () => {
-    return sortedTransactions.map((datetime) => {
-      console.log(datetime);
-      return (
-        <div key={datetime} className="p-3 bg-white mb-3 rounded-1">
-          <h4 className="mb-3"><span className="badge light badge-secondary">{datetime}</span></h4>
-          {transactionsGrouped[datetime].map((transaction, j) => {
-            console.log(transaction);
-            return (
-              <TransactionItem key={transaction.id}
-               transaction={transaction}
-               deleteBtn={<TransactionDelete transactionId={transaction.id} reload={setLoading}/>}
-               editBtn={<TransactionEditModal transactionId={transaction.id} reload={setLoading}/>}
-               />
-            )
-          })}
-        </div>
-      );
-    })
-  }
+
+    const renderTransactions = () => {
+        const transactionsGrouped = Helper.groupBy(transactions, "datetime");
+        const sortedTransactions = Helper.sortStringDate(Object.keys(transactionsGrouped));
+        return sortedTransactions.map((datetime) => {
+          return (
+            <div key={datetime} className="p-3 bg-white mb-3 rounded-1">
+              <h4 className="mb-3"><span className="badge light badge-secondary">{datetime}</span></h4>
+              {transactionsGrouped[datetime].map((transaction, j) => {
+                console.log(transaction);
+                return (
+                  <TransactionItem key={transaction.id}
+                   transaction={transaction}
+                   deleteBtn={<TransactionDelete transactionId={transaction.id} />}
+                   editBtn={<TransactionEditModal transactionId={transaction.id} />}
+                   />
+                )
+              })}
+            </div>
+          );
+        })
+    }
   return (
       <div>
           <div className="d-flex flex-wrap align-items-center mb-3">
@@ -156,12 +147,12 @@ function Transaction() {
                   </DateRangePicker>
               </div>
 
-              <TransactionActionModal reload={setLoading}/>
+              <TransactionActionModal />
           </div>
           <div className="row">
               <div className="col-12">
                   {
-                      loading ? (
+                      transactions === null ? (
                           <Skeleton count={2} height={200}/>
                       ) : (
                           <>{

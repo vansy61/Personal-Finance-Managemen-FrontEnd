@@ -6,6 +6,8 @@ import TransactionApi from "../../Apis/TransactionApi";
 import {useNavigate} from "react-router-dom";
 import OutcomeTransactionForm from "./OutcomeTransactionForm";
 import TransferTransactionForm from "./TransferTransactionForm";
+import {useDispatch} from "react-redux";
+import {fetchWallets} from "../../Redux/wallet/walletSlice";
 
 const validationSchema = Yup.object({
     amount: Yup.number().min(0, "Số tiền phải lớn hơn 0"),
@@ -15,7 +17,8 @@ const validationSchema = Yup.object({
     walletId: Yup.number().required("Không đuc để trông")
 })
 
-function TransactionFormik({closeModal, transactionType, reload}) {
+function TransactionFormik({closeModal, transactionType}) {
+    const dispatch = useDispatch();
 
     const formik = useFormik({
             initialValues: {
@@ -31,7 +34,7 @@ function TransactionFormik({closeModal, transactionType, reload}) {
                     await TransactionApi.createTransaction(values)
                     closeModal();
                     Helper.toastSuccess("Tạo giao dịch mới thành công")
-                    reload(true);
+                    dispatch(fetchWallets());
                 } catch (error) {
                     Helper.parseError(error)
                 } finally {
@@ -44,11 +47,11 @@ function TransactionFormik({closeModal, transactionType, reload}) {
     return (
         <>
             {
-                transactionType == "income" ? (
+                transactionType === "income" ? (
                         <IncomeTransactionForm formik={formik} closeModal={closeModal} />) :
-                    (transactionType == "outcome" ?
+                    (transactionType === "outcome" ?
                             <OutcomeTransactionForm formik={formik} closeModal={closeModal}/> :
-                            <TransferTransactionForm formik={formik} closeModal={closeModal} reload={reload}/>
+                            <TransferTransactionForm formik={formik} closeModal={closeModal}/>
                     )
             }
         </>

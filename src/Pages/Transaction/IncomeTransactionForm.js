@@ -7,77 +7,28 @@ import {useSelector} from "react-redux";
 import Helper from "../../utils/helpers";
 
 
-// Custom option component to include images
-const CustomOption = (props) => {
-    const {innerRef, innerProps, data} = props;
-    return (
-        <div ref={innerRef} {...innerProps}
-             style={{display: 'flex', alignItems: 'center', padding: '5px', cursor: 'pointer'}}>
-            <img
-                src={`/images/icons/${data.icon}.png`}
-                style={{width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%'}}
-            />
-            {data.categoryName || data.walletName}
-        </div>
-    );
-};
-
-const customStyles = {
-    control: (provided) => ({
-        ...provided,
-        height: '56px',  // Set the desired height
-        minHeight: '56px',  // Ensure the height is not less than this value
-    }),
-    valueContainer: (provided) => ({
-        ...provided,
-        height: '56px',  // Match the height of the control
-        display: 'flex',
-        alignItems: 'center',
-    }),
-};
 
 function IncomeTransactionForm({formik,closeModal}) {
-  const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
-  const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
-  const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
+    const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
+    const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
+    const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
-    const [wallets, setWallets] = useState([]);
-    const currentUser = useSelector((state) => state.auth.user);
+    const ownerWallets = useSelector((state) => state.wallet.ownerWallets);
 
     const getAllCategoryByUserId = async () => {
         const response = await CategoryApi.getAll();
         const newCategories = response.data.filter((e) => e.categoryType == 1);
         setCategories(newCategories);
     }
-
-   
-  const getAllWalletByUserId = async () => {
-    try {
-      const response = await WalletApi.getAll();
-
-      
-      const ownerWallets = response.data.filter(wallet =>
-        wallet.walletRoles.some(role => role.role === 'OWNER' && role.userId === currentUser.id)
-      );
-
-      setWallets(ownerWallets);
-
-      if (selectedWalletId) {
+    if (selectedWalletId) {
         const defaultWallet = ownerWallets.find(wallet => wallet.id === selectedWalletId);
         setSelectedOptionWallet(defaultWallet);
         formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
-      }
-    } catch (error) {
-      console.error("Error fetching wallets:", error);
     }
-  };
-
-
 
 
     useEffect(() => {
         getAllCategoryByUserId();
-        getAllWalletByUserId();
     }, []);
 
     const handleSelectCategoryChange = (selectedOption) => {
@@ -146,9 +97,8 @@ function IncomeTransactionForm({formik,closeModal}) {
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.categoryName}
                                 options={categories}
-                                components={{Option: CustomOption}}
-
-                                styles={customStyles}
+                                components={{Option: Helper.customOptionSelect}}
+                                styles={Helper.customStylesSelect}
                             />
 
                         </div>
@@ -160,9 +110,9 @@ function IncomeTransactionForm({formik,closeModal}) {
                               value={selectedOptionWallet}
                               getOptionValue={(option) => option.id}
                               getOptionLabel={(option) => option.walletName}
-                              options={wallets}
-                              components={{ Option: CustomOption }}
-                              styles={customStyles}
+                              options={ownerWallets}
+                              components={{Option: Helper.customOptionSelect}}
+                              styles={Helper.customStylesSelect}
                             />
                         </div>
 

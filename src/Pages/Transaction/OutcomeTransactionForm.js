@@ -1,42 +1,14 @@
 import React, {useEffect, useState} from "react";
 import CategoryApi from "../../Apis/CategoryApi";
-import WalletApi from "../../Apis/WalletApi";
 import Select from "react-select";
 import {useSelector} from "react-redux";
-const CustomOption = (props) => {
-    const {innerRef, innerProps, data} = props;
-    return (
-        <div ref={innerRef} {...innerProps}
-             style={{display: 'flex', alignItems: 'center', padding: '5px', cursor: 'pointer'}}>
-            <img
-                src={`/images/icons/${data.icon}.png`}
-                style={{width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%'}}
-            />
-            {data.categoryName || data.walletName}
-        </div>
-    );
-};
-
-const customStyles = {
-    control: (provided) => ({
-        ...provided,
-        height: '56px',  // Set the desired height
-        minHeight: '56px',  // Ensure the height is not less than this value
-    }),
-    valueContainer: (provided) => ({
-        ...provided,
-        height: '56px',  // Match the height of the control
-        display: 'flex',
-        alignItems: 'center',
-    }),
-};
+import Helper from "../../utils/helpers";
 function OutcomeTransactionForm({formik, closeModal}) {
   const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
     const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
     const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
     const [categories, setCategories] = useState([]);
-    const [wallets, setWallets] = useState([]);
-    const currentUser = useSelector((state) => state.auth.user);
+    const ownerWallets = useSelector((state) => state.wallet.ownerWallets);
 
     const getAllCategoryByUserId = async () => {
         const response = await CategoryApi.getAll();
@@ -44,30 +16,14 @@ function OutcomeTransactionForm({formik, closeModal}) {
         setCategories(newCategories);
     }
 
-    const getAllWalletByUserId = async () => {
-        try {
-          const response = await WalletApi.getAll();
-    
-          
-          const ownerWallets = response.data.filter(wallet =>
-            wallet.walletRoles.some(role => role.role === 'OWNER' && role.userId === currentUser.id)
-          );
-    
-          setWallets(ownerWallets);
-    
-          if (selectedWalletId) {
-            const defaultWallet = ownerWallets.find(wallet => wallet.id === selectedWalletId);
-            setSelectedOptionWallet(defaultWallet);
-            formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
-          }
-        } catch (error) {
-          console.error("Error fetching wallets:", error);
-        }
-      };
+    if (selectedWalletId) {
+        const defaultWallet = ownerWallets.find(wallet => wallet.id === selectedWalletId);
+        setSelectedOptionWallet(defaultWallet);
+        formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
+    }
 
     useEffect(() => {
         getAllCategoryByUserId();
-        getAllWalletByUserId();
     }, []);
 
     const handleSelectCategoryChange = (selectedOption) => {
@@ -132,9 +88,9 @@ function OutcomeTransactionForm({formik, closeModal}) {
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.categoryName}
                                 options={categories}
-                                components={{Option: CustomOption}}
+                                components={{Option: Helper.customOptionSelect}}
 
-                                styles={customStyles}
+                                styles={Helper.customStylesSelect}
                             />
                             {formik.touched.categoryId && formik.errors.categoryId ?
                                 <div className="text-danger">{formik.errors.categoryId}</div> : null}
@@ -148,9 +104,9 @@ function OutcomeTransactionForm({formik, closeModal}) {
                                 value={selectedOptionWallet}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
-                                options={wallets}
-                                components={{Option: CustomOption}}
-                                styles={customStyles}
+                                options={ownerWallets}
+                                components={{Option: Helper.customOptionSelect}}
+                                styles={Helper.customStylesSelect}
                             />
                             {formik.touched.walletId && formik.errors.walletId ?
                                 <div className="text-danger">{formik.errors.walletId}</div> : null}

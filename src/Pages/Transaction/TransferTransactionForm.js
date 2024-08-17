@@ -1,48 +1,23 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Select from "react-select";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import WalletApi from "../../Apis/WalletApi";
 import Helper from "../../utils/helpers";
+import {fetchWallets} from "../../Redux/wallet/walletSlice";
 
-const CustomOption = (props) => {
-    const { innerRef, innerProps, data } = props;
-    return (
-        <div ref={innerRef} {...innerProps} style={{ display: 'flex', alignItems: 'center', padding: '5px', cursor: 'pointer' }}>
-            <img src={`/images/icons/${data.icon}.png`} style={{ width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%' }} />
-            {data.walletName}
-        </div>
-    );
-};
 
-const customStyles = {
-    control: (provided) => ({
-        ...provided,
-        height: '56px',
-        minHeight: '56px',
-    }),
-    valueContainer: (provided) => ({
-        ...provided,
-        height: '56px',
-        display: 'flex',
-        alignItems: 'center',
-    }),
-};
-
-function TransferTransactionForm({ formik, closeModal, reload }) {
-    const currentUserId = useSelector(state => state.auth.user.id);  // Lấy ID người dùng hiện tại
+function TransferTransactionForm({ formik, closeModal}) {
     const [selectedSourceWallet, setSelectedSourceWallet] = useState(null);
     const [selectedDestinationWallet, setSelectedDestinationWallet] = useState(null);
-    const [wallets, setWallets] = useState([]);
+    const ownerWallets = useSelector((state) => state.wallet.ownerWallets);
+    const dispatch = useDispatch();
 
-    const getAllWalletByUserId = async () => {
-        const response = await WalletApi.getAll();
-        const userWallets = response.data.filter(wallet =>
-            wallet.walletRoles.some(role => role.userId === currentUserId)
-        );
-        setWallets(userWallets);
-    };
 
     const handleSourceWalletChange = (selectedOption) => {
+        if(selectedOption === selectedDestinationWallet) {
+            formik.setFieldValue('destinationWalletId', '');
+            setSelectedDestinationWallet(null);
+        }
         setSelectedSourceWallet(selectedOption);
         formik.setFieldValue('sourceWalletId', selectedOption ? selectedOption.id : '');
     };
@@ -60,15 +35,11 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
         const amount = formik.values.amount;
 
         if (fromWalletId && toWalletId && amount) {
-            if(fromWalletId === toWalletId) {
-                Helper.toastError("Ví nhận không được giống ví chuyển!");
-                return;
-            }
             try {
                 await WalletApi.transferMoney(fromWalletId, toWalletId, amount);
                 Helper.toastSuccess("Chuyển tiền thành công");
                 closeModal();
-                reload(true);
+                dispatch(fetchWallets());
             } catch (error) {
                 Helper.parseError(error);
             }
@@ -77,12 +48,8 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
         }
     };
 
-    useEffect(() => {
-        getAllWalletByUserId();
-    }, []);
-
     // Lọc các ví nhận tiền (loại trừ ví đã được chọn làm ví chuyển tiền)
-    const availableDestinationWallets = wallets.filter(wallet =>
+    const availableDestinationWallets = ownerWallets.filter(wallet =>
         wallet.id !== selectedSourceWallet?.id
     );
 
@@ -114,11 +81,9 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
                                 value={selectedSourceWallet}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
-                                options={wallets.filter(wallet =>
-                                    wallet.walletRoles.some(role => role.userId === currentUserId && role.role === 'OWNER')
-                                )}
-                                components={{ Option: CustomOption }}
-                                styles={customStyles}
+                                options={ownerWallets}
+                                components={{Option: Helper.customOptionSelect}}
+                                styles={Helper.customStylesSelect}
                             />
                         </div>
                         <div className="mb-3">
@@ -130,8 +95,8 @@ function TransferTransactionForm({ formik, closeModal, reload }) {
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
                                 options={availableDestinationWallets}
-                                components={{ Option: CustomOption }}
-                                styles={customStyles}
+                                components={{Option: Helper.customOptionSelect}}
+                                styles={Helper.customStylesSelect}
                             />
                         </div>
                     </div>

@@ -1,4 +1,6 @@
 import {Flip, toast} from "react-toastify";
+import React from "react";
+import {FormattedNumber} from "react-intl";
 
 const appColors = [
   '#ffa755',
@@ -10,6 +12,19 @@ const appColors = [
 ]
 class Helper {
   static exchangeRates;
+  static customStylesSelect = {
+    control: (provided) => ({
+      ...provided,
+      height: '56px',  // Set the desired height
+      minHeight: '56px',  // Ensure the height is not less than this value
+    }),
+    valueContainer: (provided) => ({
+      ...provided,
+      height: '56px',  // Match the height of the control
+      display: 'flex',
+      alignItems: 'center',
+    }),
+  }
   static delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -151,6 +166,20 @@ class Helper {
   static getArrayColor(length) {
     return Array.from({length}, (_, index) => Helper.getColorByIndex(index));
   }
+
+  static customOptionSelect(props) {
+    const {innerRef, innerProps, data} = props;
+    return (
+        <div ref={innerRef} {...innerProps}
+             style={{display: 'flex', alignItems: 'center', padding: '5px', cursor: 'pointer'}}>
+          <img
+              src={`/images/icons/${data.icon}.png`}
+              style={{width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%'}}
+          />
+          {data.categoryName || <span>{data.walletName} (<FormattedNumber value={data.amount} style="currency" currency={data.currency}/>)</span> }
+        </div>
+    );
+  };
 }
 
 export default Helper;

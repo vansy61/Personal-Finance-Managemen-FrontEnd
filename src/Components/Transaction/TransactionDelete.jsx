@@ -2,17 +2,21 @@ import {useState} from "react";
 import {Button, Modal} from "react-bootstrap";
 import TransactionApi from "../../Apis/TransactionApi";
 import Helper from "../../utils/helpers";
+import {useDispatch} from "react-redux";
+import {fetchWallets} from "../../Redux/wallet/walletSlice";
 
-function TransactionDelete({transactionId, reload}) {
+function TransactionDelete({transactionId}) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const dispatch = useDispatch();
+
     const handleDeleteTransactionById = async () => {
         try {
             await TransactionApi.deleteTransaction(transactionId)
             handleClose()
             Helper.toastSuccess("Xoá thành công")
-            reload(true);
+            dispatch(fetchWallets());
         } catch (error) {
 
             Helper.parseError(error)

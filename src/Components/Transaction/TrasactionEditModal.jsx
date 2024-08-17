@@ -1,42 +1,14 @@
-import {Button, Modal} from "react-bootstrap";
-import TransactionActionContent from "../../Pages/Transaction/TransactionActionContent";
+import {Modal} from "react-bootstrap";
 import React, {useEffect, useState} from "react";
-import TransactionFormik from "../../Pages/Transaction/TransactionFormik";
 import Select from "react-select";
 import {useFormik} from "formik";
 import TransactionApi from "../../Apis/TransactionApi";
 import Helper from "../../utils/helpers";
 import * as Yup from "yup";
 import CategoryApi from "../../Apis/CategoryApi";
-import WalletApi from "../../Apis/WalletApi";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchWallets} from "../../Redux/wallet/walletSlice";
 
-const CustomOption = (props) => {
-    const {innerRef, innerProps, data} = props;
-    return (
-        <div ref={innerRef} {...innerProps}
-             style={{display: 'flex', alignItems: 'center', padding: '5px', cursor: 'pointer'}}>
-            <img
-                src={`/images/icons/${data.icon}.png`}
-                style={{width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%'}}
-            />
-            {data.categoryName || data.walletName}
-        </div>
-    );
-};
-
-const customStyles = {
-    control: (provided) => ({
-        ...provided,
-        height: '56px',  // Set the desired height
-        minHeight: '56px',  // Ensure the height is not less than this value
-    }),
-    valueContainer: (provided) => ({
-        ...provided,
-        height: '56px',  // Match the height of the control
-        display: 'flex',
-        alignItems: 'center',
-    }),
-};
 
 const validationSchema = Yup.object({
     amount: Yup.number().min(0, "Số tiền phải lớn hơn 0"),
@@ -45,38 +17,36 @@ const validationSchema = Yup.object({
     categoryId: Yup.number().required("Không được để trống"),
     walletId: Yup.number().required("Không đuc để trông")
 })
-function TransactionEditModal({transactionId, reload}){
+function TransactionEditModal({transactionId}){
     const [show, setShow] = useState(false);
+    const wallets = useSelector((state) => state.wallet.wallets);
+    const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
+    const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
+    const [categories, setCategories] = useState([]);
+    const [transaction, setTransaction] = useState(null );
+    const dispatch = useDispatch();
+
 
     const handleClose = () => setShow(false);
     const handleShow = () => {
         setShow(true)
         getTransactionById();
         getAllCategoryByUserId();
-        getAllWalletByUserId();
-        const category =categories.find(c => c.id == transaction.categoryId)
+        const category =categories.find(c => c.id === transaction.categoryId)
         setSelectedOptionCategory(category.categoryName)
-        const wallet = wallets.find(w=> w.id == transaction.walletId)
+        const wallet = wallets.find(w=> w.id === transaction.walletId)
         setSelectedOptionWallet(wallet.walletName)
     };
-
-    const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
-    const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
-    const [categories, setCategories] = useState([]);
-    const [wallets, setWallets] = useState([]);
-    const [transaction, setTransaction] = useState(null )
 
     const getTransactionById = async ()=>{
         const resp = await TransactionApi.getTransactionById(transactionId)
 
-        formik.setFieldValue("amount", resp.data.amount)
-        formik.setFieldValue("note", resp.data.note)
-        formik.setFieldValue("datetime", resp.data.datetime)
-        formik.setFieldValue("categoryId", resp.data.categoryId)
-        formik.setFieldValue("walletId", resp.data.walletId)
+        await formik.setFieldValue("amount", resp.data.amount)
+        await formik.setFieldValue("note", resp.data.note)
+        await formik.setFieldValue("datetime", resp.data.datetime)
+        await formik.setFieldValue("categoryId", resp.data.categoryId)
+        await formik.setFieldValue("walletId", resp.data.walletId)
         setTransaction({...resp.data})
-
-
     }
 
     const getAllCategoryByUserId = async () => {
@@ -84,17 +54,9 @@ function TransactionEditModal({transactionId, reload}){
         setCategories(response.data);
     }
 
-    const getAllWalletByUserId = async () => {
-        const response = await WalletApi.getAll();
-        setWallets(response.data);
-    }
-
-
-
     useEffect(() => {
         getTransactionById();
         getAllCategoryByUserId();
-        getAllWalletByUserId();
     }, []);
     const formik = useFormik({
             initialValues: {
@@ -111,11 +73,10 @@ function TransactionEditModal({transactionId, reload}){
                     await TransactionApi.updateTransaction(transactionId,values)
 
                     Helper.toastSuccess("Cập nhật giao dịch mới thành công")
-                    reload(true)
+                    dispatch(fetchWallets());
 
                 } catch (error) {
-                    console.log(error)
-                    Helper.toastError("Cập nhật giao dịch thất bại")
+                    Helper.parseError(error);
                 } finally {
                     setSubmitting(false);
                 }
@@ -193,9 +154,9 @@ function TransactionEditModal({transactionId, reload}){
                                                     getOptionValue={(option) => option.id}
                                                     getOptionLabel={(option) => option.categoryName}
                                                     options={categories}
-                                                    components={{Option: CustomOption}}
+                                                    components={{Option: Helper.customOptionSelect}}
                                                     placeholder={selectedOptionCategory}
-                                                    styles={customStyles}
+                                                    styles={Helper.customStylesSelect}
                                                 />
 
                                             </div>
@@ -209,10 +170,9 @@ function TransactionEditModal({transactionId, reload}){
                                                     getOptionValue={(option) => option.id}
                                                     getOptionLabel={(option) => option.walletName}
                                                     options={wallets}
-                                                    components={{Option: CustomOption}}
+                                                    components={{Option: Helper.customOptionSelect}}
                                                     placeholder={selectedOptionWallet}
-
-                                                    styles={customStyles}
+                                                    styles={Helper.customStylesSelect}
                                                 />
                                             </div>
 
