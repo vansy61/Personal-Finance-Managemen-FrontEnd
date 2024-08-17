@@ -126,7 +126,7 @@ function WalletShow() {
             ) : (
               <WalletForm
                 formik={formik}
-                submitText={"Cập nhật"}
+                isUpdate={true}
                 deleteBtn={isOwner ? <WalletDelete handleDelete={handleDelete} /> : null}
                 isReadOnly={!isOwner}
               />
