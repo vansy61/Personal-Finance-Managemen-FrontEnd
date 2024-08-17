@@ -8,13 +8,22 @@ import AniEmpty from "../../LottieData/empty.json";
 import Skeleton from "react-loading-skeleton";
 import TransactionEditModal from "../../Components/Transaction/TrasactionEditModal";
 import Helper from "../../utils/helpers";
+import DateRangePicker from "react-bootstrap-daterangepicker";
+import {Button, Form} from "react-bootstrap";
+import moment from "moment";
+
 
 function Transaction() {
+
     const [transactions, setTransactions] = useState([]);
     const [categoryType, setCategoryType] = useState(2);
     const [page, setPage] = useState(0);
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(true);
+    const [startDate, setStartDate] = useState(moment().subtract(30, 'days'));
+    const [endDate, setEndDate] = useState(moment());
+
+
 
 
     useEffect(() => {
@@ -24,6 +33,8 @@ function Transaction() {
           try {
             const response = await TransactionApi.getAll({
               categoryType,
+                startDate: startDate.format('YYYY-MM-DD'),
+                endDate: endDate.format('YYYY-MM-DD'),
               page
             });
             setTransactions(response.data.content);
@@ -80,7 +91,14 @@ function Transaction() {
     );
   };
 
-  const transactionsGrouped = Helper.groupBy(transactions, "datetime");
+    const handleApplyDate = (event, picker) => {
+        setStartDate(picker.startDate);
+        setEndDate(picker.endDate);
+        setLoading(true);
+    };
+
+
+    const transactionsGrouped = Helper.groupBy(transactions, "datetime");
   const sortedTransactions = Helper.sortStringDate(Object.keys(transactionsGrouped));
   const renderTransactions = () => {
     return sortedTransactions.map((datetime) => {
@@ -102,13 +120,11 @@ function Transaction() {
       );
     })
   }
-
-
   return (
       <div>
           <div className="d-flex flex-wrap align-items-center mb-3">
-              <div className="me-auto">
-                  <div className="card-tabs style-1 mt-3 mt-sm-0">
+              <div className="me-auto d-flex">
+                  <div className="card-tabs style-1 mt-3 mt-sm-0 me-3">
                       <ul className="nav nav-tabs" role="tablist">
                           <li className="nav-item">
                               <button className={categoryType === 2 ? "nav-link active" : "nav-link"} onClick={() => handleTypeChange(2)}>Tất cả</button>
@@ -121,7 +137,25 @@ function Transaction() {
                           </li>
                       </ul>
                   </div>
+                  <DateRangePicker
+                      initialSettings={{
+                          startDate: startDate.toDate(),
+                          endDate: endDate.toDate(),
+                          locale: {
+                              format: 'DD/MM/YYYY',
+                          },
+                      }}
+                      onApply={handleApplyDate}
+                  >
+                      <input
+                          type="text"
+                          className="form-control"
+                          value={`${startDate.format('DD/MM/YYYY')} - ${endDate.format('DD/MM/YYYY')}`}
+                          readOnly
+                      />
+                  </DateRangePicker>
               </div>
+
               <TransactionActionModal reload={setLoading}/>
           </div>
           <div className="row">

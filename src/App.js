@@ -1,5 +1,6 @@
 import 'react-toastify/dist/ReactToastify.css';
-import "react-datepicker/dist/react-datepicker.css";
+import 'bootstrap-daterangepicker/daterangepicker.css';
+import 'bootstrap-daterangepicker';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainLayout from "./Layout/MainLayout";
 import Dashboard from "./Pages/DashBoard/Dashboard";
