@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { Navigate, Outlet } from 'react-router-dom';
 import {fetchUser, setToken} from "../Redux/auth/authSlice";
+import {fetchWallets} from "../Redux/wallet/walletSlice";
 
 const ProtectedRoute = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const ProtectedRoute = () => {
     if (storedToken) {
       dispatch(setToken(storedToken));
       dispatch(fetchUser());
+      dispatch(fetchWallets());
     }
   }, [dispatch]);
 
