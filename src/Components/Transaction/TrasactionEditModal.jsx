@@ -5,7 +5,6 @@ import {useFormik} from "formik";
 import TransactionApi from "../../Apis/TransactionApi";
 import Helper from "../../utils/helpers";
 import * as Yup from "yup";
-import CategoryApi from "../../Apis/CategoryApi";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchWallets} from "../../Redux/wallet/walletSlice";
 import moment from "moment/moment";
