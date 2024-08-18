@@ -37,7 +37,7 @@ jobs:
           # Deploy the app
           ssh -o StrictHostKeyChecking=no root@14.225.218.31 << 'EOF'
             cd /var/www/qnsk-app || exit
-            git pull origin main
+            git pull origin develop
             npm install
             npm run build
             sudo systemctl restart nginx
