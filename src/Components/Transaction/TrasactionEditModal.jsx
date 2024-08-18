@@ -70,7 +70,7 @@ function TransactionEditModal({transactionId}){
 
                     Helper.toastSuccess("Cập nhật giao dịch mới thành công")
                     dispatch(fetchWallets());
-
+                    handleClose();
                 } catch (error) {
                     Helper.parseError(error);
                 } finally {
@@ -174,7 +174,7 @@ function TransactionEditModal({transactionId}){
                                             <button className="btn btn-secondary btn-sm" type="button"
                                                    onClick={handleClose}>Hủy
                                             </button>
-                                            <button type="submit" className="btn btn-success mx-2 px-4 btn-sm" onClick={handleClose}>
+                                            <button type="submit" className="btn btn-success mx-2 px-4 btn-sm">
                                                 Update
                                             </button>
                                         </div>

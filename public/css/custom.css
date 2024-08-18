@@ -187,3 +187,17 @@
 .select-filter >div >div >div >span {
     display: none;
 }
+
+#no-support {
+    display: none;
+}
+@media screen and (max-width: 1400px) {
+    #root {
+        display: none!important;
+    }
+
+    #no-support {
+        display: block!important;
+    }
+    
+}
