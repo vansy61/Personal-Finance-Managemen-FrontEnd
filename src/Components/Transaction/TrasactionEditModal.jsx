@@ -22,17 +22,17 @@ function TransactionEditModal({transactionId}){
     const wallets = useSelector((state) => state.wallet.wallets);
     const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
     const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
-    const [categories, setCategories] = useState([]);
     const [transaction, setTransaction] = useState(null );
     const dispatch = useDispatch();
+    const categories = useSelector((state) => state.category.categories);
+
 
 
     const handleClose = () => setShow(false);
     const handleShow = () => {
         setShow(true)
         getTransactionById();
-        getAllCategoryByUserId();
-        const category =categories.find(c => c.id === transaction.categoryId)
+        const category = categories.find(c => c.id === transaction.categoryId)
         setSelectedOptionCategory(category.categoryName)
         const wallet = wallets.find(w=> w.id === transaction.walletId)
         setSelectedOptionWallet(wallet.walletName)
@@ -49,14 +49,9 @@ function TransactionEditModal({transactionId}){
         setTransaction({...resp.data})
     }
 
-    const getAllCategoryByUserId = async () => {
-        const response = await CategoryApi.getAll();
-        setCategories(response.data);
-    }
 
     useEffect(() => {
         getTransactionById();
-        getAllCategoryByUserId();
     }, []);
     const formik = useFormik({
             initialValues: {

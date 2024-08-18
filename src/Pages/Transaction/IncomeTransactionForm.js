@@ -12,24 +12,15 @@ function IncomeTransactionForm({formik,closeModal}) {
     const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
     const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
     const [selectedOptionWallet, setSelectedOptionWallet] = useState(null);
-    const [categories, setCategories] = useState([]);
     const ownerWallets = useSelector((state) => state.wallet.ownerWallets);
+    const incomeCategories = useSelector((state) => state.category.incomeCategories);
 
-    const getAllCategoryByUserId = async () => {
-        const response = await CategoryApi.getAll();
-        const newCategories = response.data.filter((e) => e.categoryType == 1);
-        setCategories(newCategories);
-    }
+
     if (selectedWalletId) {
         const defaultWallet = ownerWallets.find(wallet => wallet.id === selectedWalletId);
         setSelectedOptionWallet(defaultWallet);
         formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
     }
-
-
-    useEffect(() => {
-        getAllCategoryByUserId();
-    }, []);
 
     const handleSelectCategoryChange = (selectedOption) => {
       setSelectedOptionCategory(selectedOption);
@@ -96,7 +87,7 @@ function IncomeTransactionForm({formik,closeModal}) {
                                 value={selectedOptionCategory}
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.categoryName}
-                                options={categories}
+                                options={incomeCategories}
                                 components={{Option: Helper.customOptionSelect}}
                                 styles={Helper.customStylesSelect}
                             />

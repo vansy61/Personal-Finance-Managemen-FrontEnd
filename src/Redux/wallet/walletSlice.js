@@ -10,15 +10,26 @@ const initialState = {
   selectedWallet: null
 };
 
-export const fetchWallets = createAsyncThunk('wallets/fetchWallets', async (userId) => {
-  const response = await WalletApi.getAll();
-  const wallets = response.data;
-  const ownerWallets = wallets.filter(wallet =>
-      wallet.walletRoles.some(role => role.userId === userId && role.role === 'OWNER')
-  );
 
-  return { wallets, ownerWallets };
-});
+// Fetch all wallets
+export const fetchWallets = createAsyncThunk(
+    'wallets/fetchWallets',
+    async (_, { getState }) => {
+      const response = await WalletApi.getAll();
+      const wallets = response.data;
+
+      // Get userId from the state
+      const { user } = getState().auth;
+      const userId = user?.id;
+
+      // Filter wallets where the user is an "OWNER"
+      const ownerWallets = wallets.filter(wallet =>
+          wallet.walletRoles.some(role => role.userId === userId && role.role === 'OWNER')
+      );
+
+      return { wallets, ownerWallets };
+    }
+);
 
 const walletSlice = createSlice({
   name: 'wallet',

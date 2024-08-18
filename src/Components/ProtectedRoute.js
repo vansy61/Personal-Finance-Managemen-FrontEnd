@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { Navigate, Outlet } from 'react-router-dom';
-import {fetchUser, logout, setToken} from "../Redux/auth/authSlice";
+import {fetchUser, setToken} from "../Redux/auth/authSlice";
 import {fetchWallets} from "../Redux/wallet/walletSlice";
+import {fetchCategories} from "../Redux/category/categorySlice";
 
 const ProtectedRoute = () => {
   const dispatch = useDispatch();
@@ -15,9 +16,8 @@ const ProtectedRoute = () => {
     if (storedToken) {
       dispatch(setToken(storedToken));
       dispatch(fetchUser());
-      if (userId) {
-        dispatch(fetchWallets(userId)); // Pass userId to filter wallets
-      }
+      dispatch(fetchWallets());
+      dispatch(fetchCategories());
     }
   }, [dispatch, userId]);
 

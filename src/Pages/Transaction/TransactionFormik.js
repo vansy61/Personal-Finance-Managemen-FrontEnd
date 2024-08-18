@@ -3,7 +3,6 @@ import {useFormik} from "formik";
 import Helper from "../../utils/helpers";
 import IncomeTransactionForm from "./IncomeTransactionForm";
 import TransactionApi from "../../Apis/TransactionApi";
-import {useNavigate} from "react-router-dom";
 import OutcomeTransactionForm from "./OutcomeTransactionForm";
 import TransferTransactionForm from "./TransferTransactionForm";
 import {useDispatch} from "react-redux";
