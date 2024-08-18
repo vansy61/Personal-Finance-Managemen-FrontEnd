@@ -7,7 +7,7 @@ import {useSelector} from "react-redux";
 function Category() {
   const categories = useSelector((state) => state.category.categories);
   const status = useSelector((state) => state.category.status);
-
+    console.log(categories);
   return (
     <div>
 

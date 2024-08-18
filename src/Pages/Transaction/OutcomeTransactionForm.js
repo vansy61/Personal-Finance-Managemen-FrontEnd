@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import CategoryApi from "../../Apis/CategoryApi";
 import Select from "react-select";
 import {useSelector} from "react-redux";
 import Helper from "../../utils/helpers";
+import moment from "moment/moment";
 function OutcomeTransactionForm({formik, closeModal}) {
   const selectedWalletId = useSelector((state) => state.wallet.selectedWalletId);
     const [selectedOptionCategory, setSelectedOptionCategory] = useState(null);
@@ -11,11 +11,13 @@ function OutcomeTransactionForm({formik, closeModal}) {
     const outcomeCategories = useSelector((state) => state.category.outcomeCategories);
 
 
-    if (selectedWalletId) {
-        const defaultWallet = ownerWallets.find(wallet => wallet.id === selectedWalletId);
-        setSelectedOptionWallet(defaultWallet);
-        formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
-    }
+    useEffect(() => {
+        if (selectedWalletId) {
+            const defaultWallet = ownerWallets.find(wallet => wallet.id === selectedWalletId);
+            setSelectedOptionWallet(defaultWallet);
+            formik.setFieldValue('walletId', defaultWallet ? defaultWallet.id : '');
+        }
+    }, [])
 
     const handleSelectCategoryChange = (selectedOption) => {
         setSelectedOptionCategory(selectedOption);
@@ -62,7 +64,9 @@ function OutcomeTransactionForm({formik, closeModal}) {
                                 type="date"
                                 name="datetime"
                                 onChange={formik.handleChange}
-                                value={formik.values.datetime}/>
+                                value={formik.values.datetime}
+                                max={moment().format("YYYY-MM-DD")}
+                            />
                             {formik.touched.datetime && formik.errors.datetime ?
                                 <div className="text-danger">{formik.errors.datetime}</div> : null}
                         </div>
@@ -79,7 +83,7 @@ function OutcomeTransactionForm({formik, closeModal}) {
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.categoryName}
                                 options={outcomeCategories}
-                                components={{Option: Helper.customOptionSelect}}
+                                components={{Option: Helper.customOptionSelect, SingleValue: Helper.customSingleValueSelect}}
 
                                 styles={Helper.customStylesSelect}
                             />
@@ -96,7 +100,7 @@ function OutcomeTransactionForm({formik, closeModal}) {
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
                                 options={ownerWallets}
-                                components={{Option: Helper.customOptionSelect}}
+                                components={{Option: Helper.customOptionSelect, SingleValue: Helper.customSingleValueSelect}}
                                 styles={Helper.customStylesSelect}
                             />
                             {formik.touched.walletId && formik.errors.walletId ?

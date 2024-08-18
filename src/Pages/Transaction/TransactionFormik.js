@@ -7,6 +7,7 @@ import OutcomeTransactionForm from "./OutcomeTransactionForm";
 import TransferTransactionForm from "./TransferTransactionForm";
 import {useDispatch} from "react-redux";
 import {fetchWallets} from "../../Redux/wallet/walletSlice";
+import moment from "moment";
 
 const validationSchema = Yup.object({
     amount: Yup.number().min(0, "Số tiền phải lớn hơn 0"),
@@ -23,7 +24,7 @@ function TransactionFormik({closeModal, transactionType}) {
             initialValues: {
                 amount: 0,
                 note: "",
-                datetime: new Date(),
+                datetime: moment().format("YYYY-MM-DD"),
                 categoryId: 0,
                 walletId: 0
             },

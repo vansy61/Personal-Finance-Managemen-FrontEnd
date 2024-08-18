@@ -4,6 +4,7 @@ import CategoryApi from "../../Apis/CategoryApi";
 
 const initialState = {
     categories: [],
+    allCategories: [],
     incomeCategories: [],
     outcomeCategories: [],
     status: 'idle',
@@ -13,9 +14,21 @@ const initialState = {
 export const fetchCategories = createAsyncThunk('categories/fetchCategories', async (token) => {
     const res= await CategoryApi.getAll();
     const categories = res.data;
-    const outcomeCategories = categories.filter((e) => e.categoryType === 0);
-    const incomeCategories = categories.filter((e) => e.categoryType === 1);
-    return {categories, incomeCategories, outcomeCategories};
+
+    const allCategories = categories.flatMap(category => [
+        {
+            ...category,
+            subCategories: undefined
+        },
+        ...category.subCategories.map(subCategory => ({
+            ...subCategory,
+        }))
+    ]);
+
+    console.log(allCategories);
+    const outcomeCategories = allCategories.filter((e) => e.categoryType === 0);
+    const incomeCategories = allCategories.filter((e) => e.categoryType === 1);
+    return {categories, incomeCategories, outcomeCategories, allCategories};
 });
 const categorySlice = createSlice({
     name: 'category',
@@ -32,6 +45,7 @@ const categorySlice = createSlice({
                 state.categories = action.payload.categories;
                 state.incomeCategories = action.payload.incomeCategories;
                 state.outcomeCategories = action.payload.outcomeCategories;
+                state.allCategories = action.payload.allCategories;
             })
             .addCase(fetchCategories.rejected, (state, action) => {
                 state.status = 'failed';

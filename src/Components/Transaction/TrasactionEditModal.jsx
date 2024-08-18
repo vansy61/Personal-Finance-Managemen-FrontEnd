@@ -8,6 +8,7 @@ import * as Yup from "yup";
 import CategoryApi from "../../Apis/CategoryApi";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchWallets} from "../../Redux/wallet/walletSlice";
+import moment from "moment/moment";
 
 
 const validationSchema = Yup.object({
@@ -33,9 +34,9 @@ function TransactionEditModal({transactionId}){
         setShow(true)
         getTransactionById();
         const category = categories.find(c => c.id === transaction.categoryId)
-        setSelectedOptionCategory(category.categoryName)
+        setSelectedOptionCategory(category)
         const wallet = wallets.find(w=> w.id === transaction.walletId)
-        setSelectedOptionWallet(wallet.walletName)
+        setSelectedOptionWallet(wallet)
     };
 
     const getTransactionById = async ()=>{
@@ -132,7 +133,9 @@ function TransactionEditModal({transactionId}){
                                                     type="date"
                                                     name="datetime"
                                                     onChange={formik.handleChange}
-                                                    value={formik.values.datetime}/>
+                                                    value={formik.values.datetime}
+                                                    max={moment().format("YYYY-MM-DD")}
+                                                />
                                                 {formik.touched.datetime && formik.errors.datetime ?
                                                     <div className="text-danger">{formik.errors.datetime}</div> : null}
                                             </div>
@@ -141,16 +144,13 @@ function TransactionEditModal({transactionId}){
                                             <div className="mb-3">
                                                 <label>Loại giao dịch</label>
                                                 <Select
-
-                                                    defaultValue={selectedOptionCategory}
                                                     onChange={handleSelectCategoryChange}
                                                     name="categoryId"
                                                     value={selectedOptionCategory}
                                                     getOptionValue={(option) => option.id}
                                                     getOptionLabel={(option) => option.categoryName}
                                                     options={categories}
-                                                    components={{Option: Helper.customOptionSelect}}
-                                                    placeholder={selectedOptionCategory}
+                                                    components={{Option: Helper.customOptionSelect, SingleValue: Helper.customSingleValueSelect}}
                                                     styles={Helper.customStylesSelect}
                                                 />
 
@@ -158,15 +158,13 @@ function TransactionEditModal({transactionId}){
                                             <div className="mb-3">
                                                 <label>Ví tiền</label>
                                                 <Select
-                                                    defaultValue={transaction != null && "gengern"}
                                                     onChange={handleSelectWalletChange}
                                                     name="walletId"
                                                     value={selectedOptionWallet}
                                                     getOptionValue={(option) => option.id}
                                                     getOptionLabel={(option) => option.walletName}
                                                     options={wallets}
-                                                    components={{Option: Helper.customOptionSelect}}
-                                                    placeholder={selectedOptionWallet}
+                                                    components={{Option: Helper.customOptionSelect, SingleValue: Helper.customSingleValueSelect}}
                                                     styles={Helper.customStylesSelect}
                                                 />
                                             </div>

@@ -1,6 +1,7 @@
 import {Flip, toast} from "react-toastify";
 import React from "react";
 import {FormattedNumber} from "react-intl";
+import {components} from "react-select";
 
 const appColors = [
   '#ffa755',
@@ -15,12 +16,12 @@ class Helper {
   static customStylesSelect = {
     control: (provided) => ({
       ...provided,
-      height: '56px',  // Set the desired height
-      minHeight: '56px',  // Ensure the height is not less than this value
+      height: '54px',  // Set the desired height
+      minHeight: '54px',  // Ensure the height is not less than this value
     }),
     valueContainer: (provided) => ({
       ...provided,
-      height: '56px',  // Match the height of the control
+      height: '54px',  // Match the height of the control
       display: 'flex',
       alignItems: 'center',
     }),
@@ -172,14 +173,43 @@ class Helper {
     return (
         <div ref={innerRef} {...innerProps}
              style={{display: 'flex', alignItems: 'center', padding: '5px', cursor: 'pointer'}}>
-          <img
-              src={`/images/icons/${data.icon}.png`}
-              style={{width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%'}}
-          />
-          {data.categoryName || <span>{data.walletName} (<FormattedNumber value={data.amount} style="currency" currency={data.currency}/>)</span> }
+          {
+              data.icon && <img
+                  src={`/images/icons/${data.icon}.png`}
+                  style={{width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%'}}
+              />
+          }
+          {data.categoryName ||
+              <span>{data.walletName} {
+                data.amount && <>(<FormattedNumber value={data.amount} style="currency" currency={data.currency}/>)</>
+              }</span>}
         </div>
     );
   };
+
+  static customSingleValueSelect = (props) => {
+    const { data } = props;
+    return (
+        <components.SingleValue {...props}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            {
+                data.icon &&
+                <img
+                    src={`/images/icons/${data.icon}.png`}
+                    style={{width: '20px', height: '20px', marginRight: '10px', borderRadius: '50%'}}
+                    alt={data.categoryName || data.walletName}
+                />
+            }
+            {data.categoryName || (
+                <span>
+            {data.walletName}
+          </span>
+            )}
+          </div>
+        </components.SingleValue>
+    );
+  };
+
 }
 
 export default Helper;

@@ -53,6 +53,7 @@ function TransferTransactionForm({ formik, closeModal}) {
         wallet.id !== selectedSourceWallet?.id
     );
 
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -82,7 +83,7 @@ function TransferTransactionForm({ formik, closeModal}) {
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
                                 options={ownerWallets}
-                                components={{Option: Helper.customOptionSelect}}
+                                components={{Option: Helper.customOptionSelect, SingleValue: Helper.customSingleValueSelect}}
                                 styles={Helper.customStylesSelect}
                             />
                         </div>
@@ -95,7 +96,7 @@ function TransferTransactionForm({ formik, closeModal}) {
                                 getOptionValue={(option) => option.id}
                                 getOptionLabel={(option) => option.walletName}
                                 options={availableDestinationWallets}
-                                components={{Option: Helper.customOptionSelect}}
+                                components={{Option: Helper.customOptionSelect, SingleValue: Helper.customSingleValueSelect}}
                                 styles={Helper.customStylesSelect}
                             />
                         </div>
